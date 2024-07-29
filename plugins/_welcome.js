@@ -3,10 +3,9 @@ import fetch from 'node-fetch'
 
 export async function before(m, {conn, participants, groupMetadata}) {
   if (!m.messageStubType || !m.isGroup) return !0
-  let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => imagen1)
-  let imgbot = await (await fetch(`${pp}`)).buffer()
+  let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => `${imagen1}`)
+  let img = await (await fetch(`${pp}`)).buffer()
   let vn = 'https://qu.ax/cUYg.mp3'
-  let img = imagen1
   let chat = global.db.data.chats[m.chat]
 
   if (chat.welcome && m.messageStubType == 27) {
