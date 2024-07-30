@@ -13,7 +13,7 @@ this.sendMessage(m.chat, { audio: { url: vn }, contextInfo:{ mentionedJid:[nombr
   }
 
   if (chat.welcome && m.messageStubType == 28) {
-this.sendMessage(m.chat, { text: `\`\`\`[!] C fue alv : @${name.split("@")[0]} 😹\`\`\``,
+this.sendMessage(m.chat, { text: `\`\`\`[!] C fue alv : @${m.messageStubParameters[0].split`@`[0]} 😹\`\`\``,
 contextInfo:{
 forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363160031023229@newsletter', 
@@ -28,7 +28,7 @@ mentionedJid:[nombre],
 body: `Esperemos que no vuelva -_-`,
 "previewType": "PHOTO",
 "thumbnailUrl": ``,
-"thumbnail": leave,
+"thumbnail": img,
 "sourceUrl": `${pickRandom([channel, md, yt, tiktok])}`}}}, {quoted: null, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
   }
 
