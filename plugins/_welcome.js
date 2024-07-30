@@ -29,7 +29,7 @@ body: `Esperemos que no vuelva -_-`,
 "previewType": "PHOTO",
 "thumbnailUrl": ``,
 "thumbnail": img,
-"sourceUrl": `${pickRandom([channel, md, yt, tiktok])}`}}}, {quoted: null, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+"sourceUrl": `${redes}`}}}, {quoted: null, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
   }
 
   if (chat.welcome && m.messageStubType == 32) {
