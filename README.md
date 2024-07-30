@@ -6,7 +6,7 @@
 
 ---
 
-> **AVISO**: Ai - Yaemori no funciona en la terminal (termux), **Ai - Yaemori** es un bot de WhatsApp que funciona para cualquier usuario de WhatsApp.
+> **AVISO**: Ai - Yaemori no funciona en la terminal (termux), **Ai - Yaemori** es un bot con super funciones para todos los usuarios.
 
 > **`Ai Yaemori - MD`** es un super bot de WhatsApp con multi funciones.
 ---
