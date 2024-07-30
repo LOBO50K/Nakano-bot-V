@@ -13,7 +13,7 @@ this.sendMessage(m.chat, { audio: { url: vn }, contextInfo:{ mentionedJid:[nombr
   }
 
   if (chat.welcome && m.messageStubType == 28) {
-sock.sendMessage(anu.id, { text: `\`\`\`[!] C fue alv : @${name.split("@")[0]} 😹\`\`\``,
+this.sendMessage(m.chat, { text: `\`\`\`[!] C fue alv : @${name.split("@")[0]} 😹\`\`\``,
 contextInfo:{
 forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363160031023229@newsletter', 
