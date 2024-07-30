@@ -6,7 +6,7 @@
 
 ---
 
-> **AVISO**: Este bot está hecho para que los usuarios lo usen en algun grupo, este bot es publico para todos los miembros que usen *Ai- Yaemori*, este bot funciona correctamente en cualquier servidor gratis he de paga.
+> **AVISO**: Ai - Yaemori no funciona en la terminal (termux), **Ai - Yaemori** es un bot de WhatsApp que funciona para cualquier usuario de WhatsApp.
 
 > **`Ai Yaemori - MD`** es un super bot de WhatsApp con multi funciones.
 ---
