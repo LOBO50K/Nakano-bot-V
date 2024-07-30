@@ -13,23 +13,7 @@ this.sendMessage(m.chat, { audio: { url: vn }, contextInfo:{ mentionedJid:[nombr
   }
 
   if (chat.welcome && m.messageStubType == 28) {
-this.sendMessage(m.chat, { text: `\`\`\`[!] C fue alv : @${m.messageStubParameters[0].split`@`[0]} 😹\`\`\``,
-contextInfo:{
-forwardedNewsletterMessageInfo: { 
-newsletterJid: '120363160031023229@newsletter', 
-serverMessageId: '', 
-newsletterName: namechannel }, 
-forwardingScore: 9999999,
-isForwarded: true,  
-mentionedJid:[nombre],
-"externalAdReply": {"showAdAttribution": true,
-"containsAutoReply": true,
-"title": '乂 Ａ Ｄ Ｉ Ｏ́ Ｓ 乂', 
-body: `Esperemos que no vuelva -_-`,
-"previewType": "PHOTO",
-"thumbnailUrl": ``,
-"thumbnail": img,
-"sourceUrl": `${redes}`}}}, {quoted: null, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+this.sendFile(m.chat, byegc, 'sticker.webp', '', null, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: '乂 Ａ Ｄ Ｉ Ｏ́ Ｓ 乂', body: `${dev}`, mediaType: 2, sourceUrl: `${redes}`, thumbnail: img}}})
   }
 
   if (chat.welcome && m.messageStubType == 32) {
