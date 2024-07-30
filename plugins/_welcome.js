@@ -1,4 +1,4 @@
-/*import {WAMessageStubType} from '@whiskeysockets/baileys'
+import {WAMessageStubType} from '@whiskeysockets/baileys'
 import fetch from 'node-fetch'
 
 export async function before(m, {conn, participants, groupMetadata}) {
@@ -19,7 +19,7 @@ await conn.sendMini(m.chat, packname, dev, bye, img, img, redes, fkontak)
   if (chat.welcome && m.messageStubType == 32) {
     let kick = `┌─★ *Ai Yaemori - MD* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Se fue\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
 await conn.sendMini(m.chat, packname, dev, kick, img, img, redes, fkontak)
-}}*/
+}}
 
 /*import {WAMessageStubType} from '@whiskeysockets/baileys'
 import fetch from 'node-fetch'
