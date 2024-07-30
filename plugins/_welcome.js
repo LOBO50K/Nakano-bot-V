@@ -4,6 +4,7 @@ import fetch from 'node-fetch'
 export async function before(m, {conn, participants, groupMetadata}) {
   if (!m.messageStubType || !m.isGroup) return !0
   let vn = 'https://qu.ax/cUYg.mp3'
+  let byegc = 'https://qu.ax/WUEu.webp'
   let img = imagen1
   let chat = global.db.data.chats[m.chat]
 
@@ -12,8 +13,23 @@ this.sendMessage(m.chat, { audio: { url: vn }, contextInfo:{ mentionedJid:[nombr
   }
 
   if (chat.welcome && m.messageStubType == 28) {
-    let bye = `┌─★ *Ai Yaemori - MD* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Se fue\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
-await conn.sendMini(m.chat, packname, dev, bye, img, img, redes, fkontak)
+sock.sendMessage(anu.id, { text: `\`\`\`[!] C fue alv : @${name.split("@")[0]} 😹\`\`\``,
+contextInfo:{
+forwardedNewsletterMessageInfo: { 
+newsletterJid: '120363160031023229@newsletter', 
+serverMessageId: '', 
+newsletterName: namechannel }, 
+forwardingScore: 9999999,
+isForwarded: true,  
+mentionedJid:[nombre],
+"externalAdReply": {"showAdAttribution": true,
+"containsAutoReply": true,
+"title": '乂 Ａ Ｄ Ｉ Ｏ́ Ｓ 乂', 
+body: `Esperemos que no vuelva -_-`,
+"previewType": "PHOTO",
+"thumbnailUrl": ``,
+"thumbnail": leave,
+"sourceUrl": `${pickRandom([channel, md, yt, tiktok])}`}}}, {quoted: null, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
   }
 
   if (chat.welcome && m.messageStubType == 32) {
