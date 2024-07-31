@@ -26,11 +26,11 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
             await m.reply(description);
         } catch (error) {
             console.error('Error al analizar la imagen:', error);
-            await m.reply('Error al analizar la imagen.');
+            await conn.reply(m.chat, 'Error al analizar la imagen.', m, fake);
         }
     } else {
         if (!text) {
-            conn.reply(m.chat, `🍟 *Ingrese su petición*\n🚩 *Ejemplo de uso:* ${usedPrefix + command} Como hacer un avión de papel`, m, rcanal);
+           return conn.reply(m.chat, `🍟 *Ingrese su petición*\n🚩 *Ejemplo de uso:* ${usedPrefix + command} Como hacer un avión de papel`, m, rcanal)
         }
         await m.react('💬');
 
