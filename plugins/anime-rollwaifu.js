@@ -11,7 +11,7 @@ const waifus = [
 
 handler.command = ['c']
 //conn.reply('message', async message => {
-  if (message.type === 'chat' && message.body.startsWith('!c ')) {
+  //if (message.type === 'chat' && message.body.startsWith('!c ')) {
     const waifuNombre = message.body.substring(3).trim();
     const waifu = waifus.find(waifu => waifu.nombre.toLowerCase() === waifuNombre.toLowerCase());
 
