@@ -53,15 +53,6 @@ handler.estrellas = 5;
 handler.command = ['ia', 'chatgpt'];
 
 
-// Añadimos la función `before` para interceptar mensajes
-handler.before = async (m, { conn }) => {
-    if (m.isBaileys) return; // Ignorar mensajes del propio bot
-    const text = m.text.toLowerCase();
-  //  if (text.startsWith('ia') || text.startsWith('kurumi')) {
-        await handler(m, { conn, text }); // Llamar al manejador principal
-    }
-};
-
 export default handler;
 
 // Función para enviar una imagen y obtener el análisis
