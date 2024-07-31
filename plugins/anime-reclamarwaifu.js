@@ -9,6 +9,8 @@
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
+if (!text) throw `😊 *Responde al mensaje de la waifu enviada.*`;
+
 // Función para reclamar la waifu
 function reclamarWaifu() {
 // Simulamos un roll de dados para determinar si ganamos la waifu
