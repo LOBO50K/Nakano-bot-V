@@ -1,29 +1,22 @@
+import fetch from 'node-fetch'
+
 var handler = async (m, { text,  usedPrefix, command }) => {
+if (!text) return conn.reply(m.chat, `🍟 *Ingresé una petición*\n\nEjemplo, ${usedPrefix + command} Conoces a Ai-Yaemori?`, m, rcanal)
+try {
+await m.react('🕒')
+conn.sendPresenceUpdate('composing', m.chat)
+var apii = await fetch(`https://aemt.me/bard?text=${text}`)
+var res = await apii.json()
+await conn.reply(m.chat, res.result, m, rcanal)
+await m.react('✅️')
+} catch (error) {
+await m.react('✖️')
+console.error(error)
+return conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, rcanal)
+}}
 
-const waifus = [
-{ nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin' },
-{ nombre: 'Asuna Yuuki', anime: 'Sword Art Online' },
-{ nombre: 'Hestia', anime: 'DanMachi' },
-{ nombre: 'Rias Gremory', anime: 'High School DxD' },
-{ nombre: 'Saber', anime: 'Fate/stay night' },
-// Agrega más waifus aquí...
-]
-
-// Función para obtener una waifu aleatoria
-function obtenerWaifuAleatoria() {
-const indiceAleatorio = Math.floor(Math.random() * waifus.length)
-return waifus[indiceAleatorio]}
-
-// Función para mostrar la waifu obtenida
-function mostrarWaifu(waifu) {
-console.log(`Tu waifu es: ${waifu.nombre} de ${waifu.anime}`)}
-
-// Ejecuta la función para obtener y mostrar una waifu aleatoria
-const waifuAleatoria = obtenerWaifuAleatoria();
-mostrarWaifu(waifuAleatoria)}
-
-handler.command = ['rw', 'rollwaifu']
-handler.help = ['rw']
-handler.tags = ['anime']
+handler.command = ['bard']
+handler.help = ['bard']
+handler.tags = ['ai']
 handler.premium = false
 export default handler
