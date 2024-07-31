@@ -11,7 +11,7 @@ var handler = async (m, { text,  usedPrefix, command }) => {
 
 if (!text) conn.reply(m.chat, '😊 *Responde al mensaje de la waifu enviada.*', m, fake)
 
-try {
+try { }
 
 // Función para reclamar la waifu
 function reclamarWaifu() {
