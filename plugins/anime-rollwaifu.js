@@ -1,5 +1,5 @@
 
-const { WAConnection } = require('@adiwajshing/baileys');
+const { WAConnection } = require('@whiskeysockets/baileys');
 
 const conn = new WAConnection();
 
