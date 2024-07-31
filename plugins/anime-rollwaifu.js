@@ -27,7 +27,7 @@ conn.reply('message', async message => {
   }
 });
 
-conn.connect();
+// conn.connect();
 
 // Este código utiliza la biblioteca `baileys` para crear un cliente de WhatsApp y escuchar mensajes entrantes. Cuando se recibe un mensaje que comienza con `!c `, se busca la waifu con el nombre especificado en la lista. Si la waifu existe y no ha sido reclamada, se marca como reclamada y se envía un mensaje de confirmación. Si la waifu ya ha sido reclamada o no existe, se envía un mensaje de error.
 
