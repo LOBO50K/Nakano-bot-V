@@ -16,7 +16,7 @@ try {
 const imageAnalysis = await fetchImageBuffer(content, img)
 const query = '😊 Descríbeme la imagen y detalla por qué actúan así. También dime quién eres'
 const prompt = `${basePrompt}. La imagen que se analiza es: ${imageAnalysis.result}`
-const description = await luminsesi(query, username, prompt);
+const description = await luminsesi(query, username, prompt)
 await conn.reply(m.chat, description, m, fake)
 } catch (error) {
 console.error('🚩 Error al analizar la imagen:', error)
