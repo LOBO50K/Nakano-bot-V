@@ -1,34 +1,48 @@
-// RollWaifu.js
 
-// Array de waifus
-const waifus = [
-  { nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin' },
-  { nombre: 'Asuna Yuuki', anime: 'Sword Art Online' },
-  { nombre: 'Hestia', anime: 'DanMachi' },
-  { nombre: 'Rias Gremory', anime: 'High School DxD' },
-  { nombre: 'Saber', anime: 'Fate/stay night' },
-  // Agrega más waifus aquí...
-];
+// Importamos las librerías necesarias
+const axios = require('axios');
+const fs = require('fs');
+const path = require('path');
 
-// Función para obtener una waifu aleatoria
-function obtenerWaifuAleatoria() {
-  const indiceAleatorio = Math.floor(Math.random() * waifus.length);
-  return waifus[indiceAleatorio];
+// Función para descargar música
+async function descargarMusica(nombreCancion) {
+  // Configuración para la petición a la API
+  const apiEndpoint = 'https://api.ejemplo.com/buscar';
+  const apiKey = 'TU_API_KEY_AQUÍ';
+  const params = {
+    q: nombreCancion,
+    apiKey: apiKey
+  };
+
+  try {
+    // Realizamos la petición a la API
+    const respuesta = await axios.get(apiEndpoint, { params });
+    const datosCancion = respuesta.data;
+
+    // Comprobamos si se encontró la canción
+    if (datosCancion && datosCancion.urlDescarga) {
+      // Descargamos la canción
+      const respuestaDescarga = await axios.get(datosCancion.urlDescarga, { responseType: 'stream' });
+      const rutaDescarga = path.join(__dirname, `${nombreCancion}.mp3`);
+
+      // Guardamos el archivo
+      const writer = fs.createWriteStream(rutaDescarga);
+      respuestaDescarga.data.pipe(writer);
+
+      // Esperamos a que termine la descarga
+      await new Promise((resolve, reject) => {
+        writer.on('finish', resolve);
+        writer.on('error', reject);
+      });
+
+      console.log(`La canción ${nombreCancion} se ha descargado correctamente.`);
+    } else {
+      console.log(`No se encontró la canción ${nombreCancion}.`);
+    }
+  } catch (error) {
+    console.error(`Error al descargar la canción: ${error.message}`);
+  }
 }
 
-// Función para mostrar la waifu obtenida
-function mostrarWaifu(waifu) {
-  console.log(`Tu waifu es: ${waifu.nombre} de ${waifu.anime}`);
-}
-
-// Ejecuta la función para obtener y mostrar una waifu aleatoria
-const waifuAleatoria = obtenerWaifuAleatoria();
-mostrarWaifu(waifuAleatoria);
-
-/*};
-handler.help = ['rollwaifu'];
-handler.tags = ['anime'];
-handler.command = ['rw', 'rollwaifu'];
-handler.register = true;
-
-export default handler;*/
+// Ejemplo de uso
+descargarMusica('Nombre de la canción');
