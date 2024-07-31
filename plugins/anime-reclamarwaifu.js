@@ -54,7 +54,7 @@ class Rollwaifu {
     if (!this.reclamada) {
       this.reclamada = true;
       this.dueno = dueno;
-      return `¡Felicitaciones, ${dueno}! Has reclamado a ${this.nombre}.`;
+      return `¡Felicitaciones, ${dueno}! Has reclamado a ${global.anime}.`;
     } else {
       return `Lo siento, ${this.nombre} ya ha sido reclamada por ${this.dueno}.`;
     }
