@@ -1,5 +1,7 @@
-// 💥 Codigo Realizado Por : OfcDiego (https://github.com/OfcDiego)
-// ✨️ Creado Para: Ai Yaemori - MD
+// 💥 Codigo Realizado Por : 
+• OfcDiego (https://github.com/OfcDiego)
+// ✨️ Creado Para : 
+• Ai Yaemori - MD
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
