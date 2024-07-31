@@ -17,7 +17,7 @@ return waifus[indiceAleatorio]}
 
 // Función para mostrar la waifu obtenida
 function mostrarWaifu(waifu) {
-m.reply(`Tu waifu es: ${waifu.nombre} de ${waifu.anime}`)}
+conn.reply(m.chat. `Tu waifu es: ${waifu.nombre} de ${waifu.anime}`, m, rcanal)}
 
 // Ejecuta la función para obtener y mostrar una waifu aleatoria
 const waifuAleatoria = obtenerWaifuAleatoria();
