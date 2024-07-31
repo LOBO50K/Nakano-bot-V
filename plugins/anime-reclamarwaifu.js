@@ -1,44 +1,38 @@
+//aun no funciona correctamente.
+
 var handler = async (m, { text,  usedPrefix, command }) => {
 
-// Función para reclamar la waifu
-function reclamarWaifu(waifuId, usuarioId) {
-  // Configura la API de RollWaifu
-  const apiRollWaifu = 'https://rollwaifu.com/api/waifus/';
-  const token = 'TU_TOKEN_DE_BOT_DE_DISCORD';
-
-  // Crea un objeto con los datos para reclamar la waifu
-  const datos = {
-    waifuId: waifuId,
-    usuarioId: usuarioId,
-  };
-
-  // Envía la solicitud para reclamar la waifu
-  fetch(`${apiRollWaifu}${waifuId}/claim`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`,
-    },
-    body: JSON.stringify(datos),
-  })
-    .then((respuesta) => respuesta.json())
-    .then((datos) => {
-      // Verifica si la waifu se reclamó correctamente
-      if (datos.success) {
-        m.reply(`¡Waifu reclamada con éxito! ${usuarioId} ahora es dueño de ${datos.waifu.name}`);
-      } else {
-        m.reply(`Error al reclamar la waifu: ${datos.error}`);
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-}
-
-// Ejemplo de uso
-const waifuId = 'Ai Hoshino';
-const usuarioId = 'ID_DEL_USUARIO';
-reclamarWaifu(waifuId, usuarioId)}
+// Clase Waifu
+class Waifu {
+constructor(nombre, precio) {
+this.nombre = nombre
+this.precio = precio 
+}}
+// Clase Tienda
+class Tienda {
+constructor() {
+this.waifus = []}
+agregarWaifu(waifu) {
+this.waifus.push(waifu)}
+comprarWaifu(nombre, dinero) {
+const waifu = this.waifus.find((w) => w.nombre === nombre);
+if (waifu) {
+if (dinero >= waifu.precio) {
+conn.reply(m.chat, `😊 Waifu: ${waifu.nombre}\n🌟 Precio: ${waifu.precio} monedas.\n💥 Reclamada Por: ${nombre}`, m, rcanal);
+return waifu;
+} else {
+conn.reply(m.chat, `😊 No tienes suficiente dinero para comprar a ${waifu.nombre}.`, m, rcanal)}
+} else {
+conn.reply(m.chat, `✨️ No se encuentra a ${nombre} en la tienda.`, m, fake)}}}
+// Crear tienda y agregar waifus
+const tienda = new Tienda()
+tienda.agregarWaifu(new Waifu("Mikasa", 100))
+tienda.agregarWaifu(new Waifu("Asuna", 200))
+tienda.agregarWaifu(new Waifu("Rias", 300))
+tienda.agregarWaifu(new Waifu("Yaemori", 400))
+// Comprar waifu
+const dinero = 250;
+const waifuComprada = tienda.comprarWaifu("Yaemori", dinero)}
 
 handler.command = ['c', 'reclamar']
 handler.help = ['c']
