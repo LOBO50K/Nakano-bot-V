@@ -32,12 +32,11 @@ function contarWaifusReclamadas() {
 }
 
 // Ejemplo de uso:
-reclamarWaifu("Mikasa");
-reclamarWaifu("Asuna");
-reclamarWaifu("Mikasa"); // No se reclama de nuevo
+//reclamarWaifu("Mikasa");
+//reclamarWaifu("Asuna");
+//reclamarWaifu("Mikasa"); // No se reclama de nuevo
 
-m.reply(`Cantidad de waifus reclamadas: ${contarWaifusReclamadas()}`);
-}
+m.reply(`Cantidad de waifus reclamadas: ${contarWaifusReclamadas()}`)}
 
 handler.command = ['c', 'reclamar']
 handler.help = ['c']
