@@ -64,7 +64,7 @@ const rollwaifu = new Rollwaifu("Ai", 20, "amable y divertida");
 // Función para reclamar la rollwaifu
 function reclamarRollwaifu() {
   const respuesta = rollwaifu.reclamar();
-  console.log(respuesta);
+  m.reply(respuesta);
 }
 
 // Llamamos a la función para reclamar la rollwaifu
