@@ -24,6 +24,10 @@ const waifus = [
 { nombre: 'Kana Arima', anime: 'Oshi no Ko', precio: '550' },
 { nombre: 'Akane Kurokawa', anime: 'Oshi no Ko', precio: '600' },
 { nombre: 'Mem-cho', anime: 'Oshi no Ko', precio: '650' },
+{ nombre: 'Yotsuba Nakano', anime: 'Las Quintillizas', precio: '700' },
+{ nombre: 'Nino Nakano', anime: 'Las Quintillizas', precio: '750' },
+{ nombre: 'Miku Nakano', anime: 'Las Quintillizas', precio: '800' },
+{ nombre: 'Itsuki Nakano	', anime: 'Las Quintillizas', precio: '850' },
 // Agrega más waifus aquí...
 ]
 
