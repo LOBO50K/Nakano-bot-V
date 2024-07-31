@@ -39,14 +39,32 @@ export default handler*/
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
+// Clase Rollwaifu para representar a la rollwaifu
+class Rollwaifu {
+  constructor(nombre, edad, personalidad) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.personalidad = personalidad;
+    this.reclamada = false;
+  }
+
+  reclamar() {
+    if (!this.reclamada) {
+      this.reclamada = true;
+      return `¡Felicitaciones, has reclamado a ${this.nombre}!`;
+    } else {
+      return `Lo siento, ${this.nombre} ya ha sido reclamada por alguien más.`;
+    }
+  }
+}
+
+// Creamos una instancia de la clase Rollwaifu
+const rollwaifu = new Rollwaifu("Ai", 20, "amable y divertida");
+
 // Función para reclamar la rollwaifu
 function reclamarRollwaifu() {
-  // Simulamos una petición a un servidor para reclamar la rollwaifu
-  // En realidad, esto podría ser una llamada a una API o un servidor
-  const respuesta = Math.random() < 0.5 ? "¡Felicitaciones, has reclamado a la rollwaifu!" : "Lo siento, la rollwaifu ya ha sido reclamada por alguien más.";
-
-  // Mostramos la respuesta al usuario
-  m.reply(respuesta);
+  const respuesta = rollwaifu.reclamar();
+  console.log(respuesta);
 }
 
 // Llamamos a la función para reclamar la rollwaifu
