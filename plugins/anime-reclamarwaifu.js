@@ -42,7 +42,7 @@ var handler = async (m, { text,  usedPrefix, command }) => {
 // Función para reclamar la rollwaifu
 function reclamarRollwaifu() {
 // Simulamos una petición a un servidor para reclamar la rollwaifu  
-fetch('https://api.rollwaifu.com', {
+fetch('https://api.rollwaifu.com/reclamar', {
 method: 'POST',
 headers: {
 'Content-Type': 'application/json'
