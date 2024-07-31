@@ -14,6 +14,8 @@ function reclamarWaifu() {
 // Simulamos un roll de dados para determinar si ganamos la waifu
 const roll = Math.floor(Math.random() * 100) + 1
 
+if (!text) throw `*🚩 Uso Correcto: ${usedPrefix + command} Ai Yaemori*`;
+
 // Si el roll es mayor o igual a 50, ganamos la waifu
 if (roll >= 10) {
 m.reply("😊 ¡Felicidades! Has ganado la waifu 🌟")
