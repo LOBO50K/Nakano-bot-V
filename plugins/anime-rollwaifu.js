@@ -23,6 +23,7 @@ const waifus = [
 { nombre: 'Ai Hoshino', anime: 'Oshi no Ko', precio: '500' },
 { nombre: 'Kana Arima', anime: 'Oshi no Ko', precio: '550' },
 { nombre: 'Akane Kurokawa', anime: 'Oshi no Ko', precio: '600' },
+{ nombre: 'Mem-cho', anime: 'Oshi no Ko', precio: '650' },
 // Agrega más waifus aquí...
 ]
 
