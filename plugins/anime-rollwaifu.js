@@ -1,34 +1,37 @@
-// RollWaifu.js
 
-// Array de waifus
+const { WAConnection } = require('@adiwajshing/baileys');
+
+const conn = new WAConnection();
+
 const waifus = [
-  { nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin' },
-  { nombre: 'Asuna Yuuki', anime: 'Sword Art Online' },
-  { nombre: 'Hestia', anime: 'DanMachi' },
-  { nombre: 'Rias Gremory', anime: 'High School DxD' },
-  { nombre: 'Saber', anime: 'Fate/stay night' },
-  // Agrega más waifus aquí...
+  { nombre: 'Asuna', reclamada: false },
+  { nombre: 'Rias Gremory', reclamada: false },
+  { nombre: 'Hestia', reclamada: false },
+  { nombre: 'Maka Albarn', reclamada: false },
+  { nombre: 'Yuno Gasai', reclamada: false },
+  // Agrega más waifus a la lista!
 ];
 
-// Función para obtener una waifu aleatoria
-function obtenerWaifuAleatoria() {
-  const indiceAleatorio = Math.floor(Math.random() * waifus.length);
-  return waifus[indiceAleatorio];
-}
+conn.on('message', async message => {
+  if (message.type === 'chat' && message.body.startsWith('!c ')) {
+    const waifuNombre = message.body.substring(3).trim();
+    const waifu = waifus.find(waifu => waifu.nombre.toLowerCase() === waifuNombre.toLowerCase());
 
-// Función para mostrar la waifu obtenida
-function mostrarWaifu(waifu) {
-  console.log(`Tu waifu es: ${waifu.nombre} de ${waifu.anime}`);
-}
+    if (waifu) {
+      if (waifu.reclamada) {
+        await conn.sendMessage(message.from, `Lo siento, ${waifu.nombre} ya ha sido reclamada.`);
+      } else {
+        waifu.reclamada = true;
+        await conn.sendMessage(message.from, `¡Felicidades! Has reclamado a ${waifu.nombre}.`);
+      }
+    } else {
+      await conn.sendMessage(message.from, `Lo siento, no conozco a ninguna waifu llamada ${waifuNombre}.`);
+    }
+  }
+});
 
-// Ejecuta la función para obtener y mostrar una waifu aleatoria
-const waifuAleatoria = obtenerWaifuAleatoria();
-mostrarWaifu(waifuAleatoria);
+conn.connect();
 
-/*};
-handler.help = ['rollwaifu'];
-handler.tags = ['anime'];
-handler.command = ['rw', 'rollwaifu'];
-handler.register = true;
+// Este código utiliza la biblioteca `baileys` para crear un cliente de WhatsApp y escuchar mensajes entrantes. Cuando se recibe un mensaje que comienza con `!c `, se busca la waifu con el nombre especificado en la lista. Si la waifu existe y no ha sido reclamada, se marca como reclamada y se envía un mensaje de confirmación. Si la waifu ya ha sido reclamada o no existe, se envía un mensaje de error.
 
-export default handler;*/
+// **¿Quieres agregar más waifus a la lista?**
