@@ -28,7 +28,7 @@ try {
 const query = text;
 const prompt = `${basePrompt}. Responde lo siguiente: ${query}`
 const response = await luminsesi(query, username, prompt)
-await m.reply(response)
+await conn.reply(m.chat, response, m, rcanal)
 } catch (error) {
 console.error('Error al obtener la respuesta:', error)
 await conn.reply(m.chat, 'Error: intenta más tarde.', m, fake)}}}
