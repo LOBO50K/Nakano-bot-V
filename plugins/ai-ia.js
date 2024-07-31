@@ -57,7 +57,7 @@ export default handler;
 // Añadimos la función `before` para interceptar mensajes
 handler.before = async (m, { conn }) => {
     if (m.isBaileys) return; // Ignorar mensajes del propio bot
-    // const text = m.text.toLowerCase();
+    const text = m.text.toLowerCase();
   //  if (text.startsWith('ia') || text.startsWith('kurumi')) {
         await handler(m, { conn, text }); // Llamar al manejador principal
     }
