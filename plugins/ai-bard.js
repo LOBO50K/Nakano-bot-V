@@ -1,3 +1,5 @@
+var handler = async (m, { text,  usedPrefix, command }) => {
+
 const waifus = [
 { nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin' },
 { nombre: 'Asuna Yuuki', anime: 'Sword Art Online' },
