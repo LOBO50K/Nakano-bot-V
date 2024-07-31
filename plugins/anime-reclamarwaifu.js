@@ -27,9 +27,10 @@ const tienda = new Tienda()
 tienda.agregarWaifu(new Waifu("Mikasa", 100))
 tienda.agregarWaifu(new Waifu("Asuna", 200))
 tienda.agregarWaifu(new Waifu("Rias", 300))
+tienda.agregarWaifu(new Waifu("Yaemori", 400))
 // Comprar waifu
 const dinero = 250;
-// const waifuComprada = tienda.comprarWaifu("Ai Yaemori", dinero)}
+// const waifuComprada = tienda.comprarWaifu("Yaemori", dinero)}
 
 handler.command = ['c', 'reclamar']
 handler.help = ['c']
