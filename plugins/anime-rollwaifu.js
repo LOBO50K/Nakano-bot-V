@@ -1,3 +1,15 @@
+/*
+
+       • ⚠ PROHIBIDO EDITAR ⚠ •
+
+El codigo de este archivo fue realizado por:
+• OfcDiego
+• 🔗 Url: https://github.com/OfcDiego
+
+       • ⚠ PROHIBIDO EDITAR ⚠ •
+
+*/
+
 var handler = async (m, { text,  usedPrefix, command }) => {
 
 //rollwaifus
