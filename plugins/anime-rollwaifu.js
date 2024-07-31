@@ -9,19 +9,7 @@
 var handler = async (m, { text,  usedPrefix, command }) => {
 
 //rollwaifus
-const waifus = [
-{ nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin', precio: '10' },
-{ nombre: 'Asuna Yuuki', anime: 'Sword Art Online', precio: '50' },
-{ nombre: 'Rem', anime: 'Re:Zero', precio: '80' },
-{ nombre: 'Hestia', anime: 'DanMachi', precio: '100' },
-{ nombre: 'Emilia', anime: 'Re:Zero', precio: '120' },
-{ nombre: 'Rias Gremory', anime: 'High School DxD', precio: '200' },
-{ nombre: 'Saber', anime: 'Fate/stay night', precio: '300' },
-{ nombre: 'Mini Yaemori', anime: 'Rent-A-Girlfriend', precio: '400' },
-{ nombre: 'Sumi Sakurasawa', anime: 'Rent-A-Girlfriend', precio: '450' },
-{ nombre: 'Ai Hoshino', anime: 'Oshi no Ko', precio: '500' },
-{ nombre: 'Kana Arima', anime: 'Oshi no Ko', precio: '550' },
-{ nombre: 'Akane Kurokawa', anime: 'Oshi no Ko', precio: '600' },
+const waifus = [{ nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin', precio: '10' }, { nombre: 'Asuna Yuuki', anime: 'Sword Art Online', precio: '50' }, { nombre: 'Rem', anime: 'Re:Zero', precio: '80' }, { nombre: 'Hestia', anime: 'DanMachi', precio: '100' }, { nombre: 'Emilia', anime: 'Re:Zero', precio: '120' }, { nombre: 'Rias Gremory', anime: 'High School DxD', precio: '200' }, { nombre: 'Saber', anime: 'Fate/stay night', precio: '300' }, { nombre: 'Mini Yaemori', anime: 'Rent-A-Girlfriend', precio: '400' }, { nombre: 'Sumi Sakurasawa', anime: 'Rent-A-Girlfriend', precio: '450' }, { nombre: 'Ai Hoshino', anime: 'Oshi no Ko', precio: '500' }, { nombre: 'Kana Arima', anime: 'Oshi no Ko', precio: '550' }, { nombre: 'Akane Kurokawa', anime: 'Oshi no Ko', precio: '600' },
 // Agrega más waifus aquí...
 ]
 
