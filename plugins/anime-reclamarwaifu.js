@@ -16,7 +16,7 @@ comprarWaifu(nombre, dinero) {
 const waifu = this.waifus.find((w) => w.nombre === nombre);
 if (waifu) {
 if (dinero >= waifu.precio) {
-conn.reply(m.chat, `😊 Waifu: {waifu.nombre}\n🌟 Precio: ${waifu.precio} monedas.\n💥 Reclamada Por: ${nombre}`, m, rcanal);
+conn.reply(m.chat, `😊 Waifu: ${waifu.nombre}\n🌟 Precio: ${waifu.precio} monedas.\n💥 Reclamada Por: ${nombre}`, m, rcanal);
 return waifu;
 } else {
 conn.reply(m.chat, `😊 No tienes suficiente dinero para comprar a ${waifu.nombre}.`, m, rcanal)}
@@ -29,7 +29,7 @@ tienda.agregarWaifu(new Waifu("Asuna", 200))
 tienda.agregarWaifu(new Waifu("Rias", 300))
 // Comprar waifu
 const dinero = 250;
-const waifuComprada = tienda.comprarWaifu("Asuna", dinero)}
+const waifuComprada = tienda.comprarWaifu("Mikasa", dinero)}
 
 handler.command = ['c', 'reclamar']
 handler.help = ['c']
