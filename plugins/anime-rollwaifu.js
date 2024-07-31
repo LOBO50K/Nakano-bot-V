@@ -10,8 +10,8 @@ var handler = async (m, { text,  usedPrefix, command }) => {
 
 //rollwaifus
 const waifus = [
-{ nombre: 'Ruby Hoshino', anime: 'Oshi no Ko', precio: '5', img: 'https://telegra.ph/file/651922149737fd9f6533c.jpg' },
-{ nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin', precio: '10', img: 'https://telegra.ph/file/651922149737fd9f6533c.jpg' },
+{ nombre: 'Ruby Hoshino', anime: 'Oshi no Ko', img: 'https://telegra.ph/file/651922149737fd9f6533c.jpg' },
+{ nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin', img: 'https://telegra.ph/file/651922149737fd9f6533c.jpg' },
 // Agrega más waifus aquí...
 ]
 
@@ -22,7 +22,7 @@ return waifus[indiceAleatorio]}
 
 // Función para mostrar la waifu obtenida
 function mostrarWaifu(waifu) {
-// conn.reply(m.chat, `🚩 Nombre: ${waifu.nombre}\n✨️ Base: ${waifu.anime}\n💰 Valor: ${waifu.precio}`, m, rcanal)
+// conn.reply(m.chat, `🚩 Nombre: ${waifu.nombre}\n✨️ Base: ${waifu.anime}\n💰 Valor: no c`, m, rcanal)
   conn.sendFile(m.chat, img, 'error.jpg', `🚩 Nombre: ${waifu.nombre}\n✨️ Base: ${waifu.anime}\n💰 Valor: ${waifu.precio}`, m, null, rcanal);}
 
 // Ejecuta la función para obtener y mostrar una waifu aleatoria
