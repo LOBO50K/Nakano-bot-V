@@ -7,36 +7,21 @@
 
 //aun no funciona correctamente.
 
-// Creamos un objeto para almacenar las waifus reclamadas
-let waifusReclamadas = {};
+var handler = async (m, { text,  usedPrefix, command }) => {
 
-// Función para reclamar una waifu
-function reclamarWaifu(nombreWaifu) {
-  // Si la waifu ya ha sido reclamada, no hacemos nada
-  if (waifusReclamadas[nombreWaifu]) {
-    m.reply(`La waifu ${nombreWaifu} ya ha sido reclamada.`);
-    return;
-  }
+// Función para reclamar la waifu
+function reclamarWaifu() {
+// Simulamos un roll de dados para determinar si ganamos la waifu
+const roll = Math.floor(Math.random() * 100) + 1
 
-  // Si no, la agregamos al objeto y mostramos un mensaje
-  waifusReclamadas[nombreWaifu] = true;
-  m.reply(`La waifu ${nombreWaifu} ha sido reclamada.`);
-}
+// Si el roll es mayor o igual a 50, ganamos la waifu
+if (roll >= 10) {
+m.reply("😊 ¡Felicidades! Has ganado la waifu 🌟")
+} else {
+m.reply("⭐️ Lo siento, no has ganado la waifu. ¡Inténtalo de nuevo!")}}
 
-// Función para contar la cantidad de waifus reclamadas
-function contarWaifusReclamadas() {
-  // Usamos Object.keys() para obtener un arreglo con los nombres de las waifus reclamadas
-  let nombresWaifus = Object.keys(waifusReclamadas);
-  // Retornamos la longitud del arreglo, que es la cantidad de waifus reclamadas
-  return nombresWaifus.length;
-}
-
-// Ejemplo de uso:
-//reclamarWaifu("Mikasa");
-//reclamarWaifu("Asuna");
-//reclamarWaifu("Mikasa"); // No se reclama de nuevo
-
-m.reply(`Cantidad de waifus reclamadas: ${contarWaifusReclamadas()}`)}
+// Llamamos a la función para reclamar la waifu
+reclamarWaifu()}
 
 handler.command = ['c', 'reclamar']
 handler.help = ['c']
