@@ -7,37 +7,33 @@
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
+//rollwaifus
 const waifus = [
-  { name: 'Hestia', image: 'https://example.com/hestia.jpg' },
-  { name: 'Rem', image: 'https://example.com/rem.jpg' },
-  { name: 'Asuna', image: 'https://example.com/asuna.jpg' },
-  // Add more waifus to the array
-];
+{ nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin', precio: '10' },
+{ nombre: 'Asuna Yuuki', anime: 'Sword Art Online', precio: '50' },
+{ nombre: 'Hestia', anime: 'DanMachi', precio: '100' },
+{ nombre: 'Rias Gremory', anime: 'High School DxD', precio: '200' },
+{ nombre: 'Saber', anime: 'Fate/stay night', precio: '300' },
+{ nombre: 'Mini Yaemori', anime: 'Rent-A-Girlfriend', precio: '400' },
+{ nombre: 'Sumi Sakurasawa', anime: 'Rent-A-Girlfriend', precio: '450' },
+{ nombre: 'Ai Hoshino', anime: 'Oshi no Ko', precio: '500' },
+{ nombre: 'Kana Arima', anime: 'Oshi no Ko', precio: '550' },
+{ nombre: 'Akane Kurokawa', anime: 'Oshi no Ko', precio: '600' },
+// Agrega más waifus aquí...
+]
 
-const claimedWaifus = {};
+// Función para obtener una waifu aleatoria
+function obtenerWaifuAleatoria() {
+const indiceAleatorio = Math.floor(Math.random() * waifus.length)
+return waifus[indiceAleatorio]}
 
-function rollWaifu() {
-  const randomIndex = Math.floor(Math.random() * waifus.length);
-  const rolledWaifu = waifus[randomIndex];
-  return rolledWaifu;
-}
+// Función para mostrar la waifu obtenida
+function mostrarWaifu(waifu) {
+conn.reply(m.chat, `🚩 Nombre: ${waifu.nombre}\n✨️ Base: ${waifu.anime}\n💰 Valor: ${waifu.precio}`, m, rcanal)}
 
-function claimWaifu(waifuName, userId) {
-  if (claimedWaifus[waifuName]) {
-    return `Sorry, ${waifuName} is already claimed by ${claimedWaifus[waifuName]}`;
-  } else {
-    claimedWaifus[waifuName] = userId;
-    return `Congratulations, you have claimed ${waifuName}!`;
-  }
-}
-
-// Example usage:
-const rolledWaifu = rollWaifu();
-m.reply(`You rolled: ${rolledWaifu.name}!`);
-
-const userId = 'YL'; // Replace with the user's ID
-const claimResult = claimWaifu(rolledWaifu.name, userId);
-console.log(claimResult)}
+// Ejecuta la función para obtener y mostrar una waifu aleatoria
+const waifuAleatoria = obtenerWaifuAleatoria();
+mostrarWaifu(waifuAleatoria)}
 
 handler.command = ['rw', 'rollwaifu']
 handler.help = ['rw']
