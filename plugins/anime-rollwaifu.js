@@ -1,6 +1,7 @@
 /*
 💥 Codigo Realizado Por : 
 • OfcDiego (https://github.com/OfcDiego)
+• DarkesJs (https://githib.com/WOTCHITA)
 ✨️ Creado Para : 
 • Ai Yaemori - MD
 */
