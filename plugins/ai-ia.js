@@ -25,7 +25,7 @@ await conn.reply(m.chat, '🚩 Error al analizar la imagen.', m, fake)}
 if (!text) { return conn.reply(m.chat, `🍟 *Ingrese su petición*\n🚩 *Ejemplo de uso:* ${usedPrefix + command} Como hacer un avión de papel`, m, rcanal)}
 await m.react('💬')
 try {
-const query = text;
+const query = text
 const prompt = `${basePrompt}. Responde lo siguiente: ${query}`
 const response = await luminsesi(query, username, prompt)
 await conn.reply(m.chat, response, m, fake)
