@@ -16,12 +16,12 @@ comprarWaifu(nombre, dinero) {
 const waifu = this.waifus.find((w) => w.nombre === nombre);
 if (waifu) {
 if (dinero >= waifu.precio) {
-m.reply(`Has comprado a ${waifu.nombre} por ${waifu.precio} monedas.`);
+conn.reply(m.chat, `😊 Waifu: {waifu.nombre}\n🌟 Precio: ${waifu.precio} monedas.\n💥 Reclamada Por: ${nombre}`, m, rcanal);
 return waifu;
 } else {
-m.reply(`No tienes suficiente dinero para comprar a ${waifu.nombre}.`)}
+conn.reply(m.chat, `😊 No tienes suficiente dinero para comprar a ${waifu.nombre}.`, m, rcanal)}
 } else {
-m.reply(`No se encuentra a ${nombre} en la tienda.`)}}}
+conn.reply(m.chat, `✨️ No se encuentra a ${nombre} en la tienda.`, m, fake)}}}
 // Crear tienda y agregar waifus
 const tienda = new Tienda()
 tienda.agregarWaifu(new Waifu("Mikasa", 100))
