@@ -1,14 +1,5 @@
-/*
-
-       • ⚠ PROHIBIDO EDITAR ⚠ •
-
-El codigo de este archivo fue realizado por:
-• OfcDiego
-• 🔗 Url: https://github.com/OfcDiego
-
-       • ⚠ PROHIBIDO EDITAR ⚠ •
-
-*/
+// 💥 Codigo Realizado Por : OfcDiego (https://github.com/OfcDiego)
+// ✨️ Creado Para: Ai Yaemori - MD
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
