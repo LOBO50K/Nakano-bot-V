@@ -1,4 +1,4 @@
-const conn = new WAConnection();
+// const conn = new WAConnection();
 
 const waifus = [
   { nombre: 'Asuna', reclamada: false },
