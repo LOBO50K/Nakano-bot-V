@@ -38,5 +38,4 @@ mostrarWaifu(waifuAleatoria)}
 handler.command = ['rw', 'rollwaifu']
 handler.help = ['rw']
 handler.tags = ['anime']
-handler.premium = false
 export default handler
