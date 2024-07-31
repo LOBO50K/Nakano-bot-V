@@ -1,6 +1,3 @@
-
-const { WAConnection } = require('@whiskeysockets/baileys');
-
 const conn = new WAConnection();
 
 const waifus = [
