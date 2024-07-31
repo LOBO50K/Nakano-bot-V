@@ -52,7 +52,6 @@ handler.register = true;
 handler.estrellas = 5;
 handler.command = ['ia', 'chatgpt'];
 
-export default handler;
 
 // Añadimos la función `before` para interceptar mensajes
 handler.before = async (m, { conn }) => {
