@@ -39,6 +39,7 @@ export default handler*/
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
+
 // Clase Rollwaifu para representar a la rollwaifu
 class Rollwaifu {
   constructor(nombre, edad, personalidad) {
@@ -46,14 +47,16 @@ class Rollwaifu {
     this.edad = edad;
     this.personalidad = personalidad;
     this.reclamada = false;
+    this.dueno = null;
   }
 
-  reclamar() {
+  reclamar(dueno) {
     if (!this.reclamada) {
       this.reclamada = true;
-      return `¡Felicitaciones, has reclamado a ${this.nombre}!`;
+      this.dueno = dueno;
+      return `¡Felicitaciones, ${dueno}! Has reclamado a ${this.nombre}.`;
     } else {
-      return `Lo siento, ${this.nombre} ya ha sido reclamada por alguien más.`;
+      return `Lo siento, ${this.nombre} ya ha sido reclamada por ${this.dueno}.`;
     }
   }
 }
@@ -62,13 +65,13 @@ class Rollwaifu {
 const rollwaifu = new Rollwaifu("Ai", 20, "amable y divertida");
 
 // Función para reclamar la rollwaifu
-function reclamarRollwaifu() {
-  const respuesta = rollwaifu.reclamar();
+function reclamarRollwaifu(dueno) {
+  const respuesta = rollwaifu.reclamar(dueno);
   m.reply(respuesta);
 }
 
 // Llamamos a la función para reclamar la rollwaifu
-reclamarRollwaifu()}
+reclamarRollwaifu("YL")}
 
 handler.command = ['c', 'reclamar', 'comprar']
 handler.help = ['c']
