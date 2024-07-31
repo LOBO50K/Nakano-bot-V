@@ -15,7 +15,7 @@ function reclamarWaifu() {
   const roll = Math.floor(Math.random() * 100) + 1;
   
   // Si el roll es mayor o igual a 50, ganamos la waifu
-  if (roll >= 50) {
+  if (roll >= 200) {
     m.reply("¡Felicidades! Has ganado la waifu del #rollwaifu");
   } else {
     m.reply("Lo siento, no has ganado la waifu del #rollwaifu. ¡Inténtalo de nuevo!");
