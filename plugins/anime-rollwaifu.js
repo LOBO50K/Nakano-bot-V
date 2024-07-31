@@ -27,4 +27,4 @@ const rollWaifu = (from, to) => {
 };
 
 // Ejemplo de uso:
-rollWaifu('+1234567890', '+9876543210');
+// rollWaifu('+1234567890', '+9876543210');
