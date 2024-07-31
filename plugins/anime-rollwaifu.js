@@ -33,7 +33,7 @@ function claimWaifu(waifuName, userId) {
 
 // Example usage:
 const rolledWaifu = rollWaifu();
-console.log(`You rolled: ${rolledWaifu.name}!`);
+m.reply(`You rolled: ${rolledWaifu.name}!`);
 
 const userId = 'YL'; // Replace with the user's ID
 const claimResult = claimWaifu(rolledWaifu.name, userId);
