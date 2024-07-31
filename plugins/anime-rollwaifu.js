@@ -10,6 +10,7 @@ var handler = async (m, { text,  usedPrefix, command }) => {
 
 //rollwaifus
 const waifus = [
+{ nombre: 'Ruby Hoshino', anime: 'Oshi no Ko', precio: '5' },
 { nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin', precio: '10' },
 { nombre: 'Asuna Yuuki', anime: 'Sword Art Online', precio: '50' },
 { nombre: 'Rem', anime: 'Re:Zero', precio: '80' },
