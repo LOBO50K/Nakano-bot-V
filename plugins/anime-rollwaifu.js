@@ -1,23 +1,34 @@
-// const Discord = require('discord.js');
+// RollWaifu.js
 
-module.exports = {
-  name: 'rollwaifu',
-  description: 'Roll a random waifu!',
-  execute(message, args) {
-    const waifus = [
-      'Asuna (Sword Art Online)',
-      'Rias Gremory (High School DxD)',
-      'Hestia (Is It Wrong to Try to Pick Up Girls in a Dungeon?)',
-      'Maka Albarn (Soul Eater)',
-      'Yuno Gasai (Future Diary)',
-      // Agrega más waifus a la lista!
-    ];
+// Array de waifus
+const waifus = [
+  { nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin' },
+  { nombre: 'Asuna Yuuki', anime: 'Sword Art Online' },
+  { nombre: 'Hestia', anime: 'DanMachi' },
+  { nombre: 'Rias Gremory', anime: 'High School DxD' },
+  { nombre: 'Saber', anime: 'Fate/stay night' },
+  // Agrega más waifus aquí...
+];
 
-    const randomWaifu = waifus[Math.floor(Math.random() * waifus.length)];
-    message.channel.send(`You rolled: **${randomWaifu}**!`);
-  },
-};
+// Función para obtener una waifu aleatoria
+function obtenerWaifuAleatoria() {
+  const indiceAleatorio = Math.floor(Math.random() * waifus.length);
+  return waifus[indiceAleatorio];
+}
 
-// Este código utiliza la biblioteca discord.js para interactuar con el bot de Discord. El comando rollwaifu selecciona aleatoriamente una waifu de la lista y la envía al canal de texto.
+// Función para mostrar la waifu obtenida
+function mostrarWaifu(waifu) {
+  console.log(`Tu waifu es: ${waifu.nombre} de ${waifu.anime}`);
+}
 
-// **¿Quieres agregar más waifus a la lista?** 🤔
+// Ejecuta la función para obtener y mostrar una waifu aleatoria
+const waifuAleatoria = obtenerWaifuAleatoria();
+mostrarWaifu(waifuAleatoria);
+
+/*};
+handler.help = ['rollwaifu'];
+handler.tags = ['anime'];
+handler.command = ['rw', 'rollwaifu'];
+handler.register = true;
+
+export default handler;*/
