@@ -9,37 +9,21 @@
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
-// Clase Waifu
-class Waifu {
-constructor(nombre, precio) {
-this.nombre = nombre
-this.precio = precio 
-}}
-// Clase Tienda
-class Tienda {
-constructor() {
-this.waifus = []}
-agregarWaifu(waifu) {
-this.waifus.push(waifu)}
-comprarWaifu(nombre, dinero) {
-const waifu = this.waifus.find((w) => w.nombre === nombre);
-if (waifu) {
-if (dinero >= waifu.precio) {
-conn.reply(m.chat, `😊 Waifu: ${waifu.nombre}\n🌟 Precio: ${waifu.precio} monedas.\n💥 Reclamada Por: ${nombre}`, m, rcanal);
-return waifu;
-} else {
-conn.reply(m.chat, `😊 No tienes suficiente dinero para comprar a ${waifu.nombre}.`, m, rcanal)}
-} else {
-conn.reply(m.chat, `✨️ No se encuentra a ${nombre} en la tienda.`, m, fake)}}}
-// Crear tienda y agregar waifus
-const tienda = new Tienda()
-tienda.agregarWaifu(new Waifu("Mikasa", 100))
-tienda.agregarWaifu(new Waifu("Asuna", 200))
-tienda.agregarWaifu(new Waifu("Rias", 300))
-tienda.agregarWaifu(new Waifu("Yaemori", 400))
-// Comprar waifu
-const dinero = 250;
-const waifuComprada = tienda.comprarWaifu("Yaemori", dinero)}
+// Función para reclamar la waifu
+function reclamarWaifu() {
+  // Simulamos un roll de dados para determinar si ganamos la waifu
+  const roll = Math.floor(Math.random() * 100) + 1;
+  
+  // Si el roll es mayor o igual a 50, ganamos la waifu
+  if (roll >= 50) {
+    m.reply("¡Felicidades! Has ganado la waifu del #rollwaifu");
+  } else {
+    m.reply("Lo siento, no has ganado la waifu del #rollwaifu. ¡Inténtalo de nuevo!");
+  }
+}
+
+// Llamamos a la función para reclamar la waifu
+reclamarWaifu()}
 
 handler.command = ['c', 'reclamar']
 handler.help = ['c']
