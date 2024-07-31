@@ -7,20 +7,34 @@
 
 //aun no funciona correctamente.
 
-var handler = async (m, { text,  usedPrefix, command }) => {
+// Creamos un objeto para almacenar las waifus disponibles
+let waifusDisponibles = [
+  { nombre: "Mikasa Ackerman", serie: "Ataque a los Titanes" },
+  { nombre: "Asuna Yuuki", serie: "Sword Art Online" },
+  { nombre: "Rias Gremory", serie: "High School DxD" },
+  { nombre: "Hestia", serie: "Is It Wrong to Try to Pick Up Girls in a Dungeon?" },
+  { nombre: "Rem", serie: "Re:Zero" }
+];
 
-// Función para reclamar la waifu
+// Creamos un objeto para almacenar las waifus reclamadas
+let waifusReclamadas = {};
+
+// Función para reclamar una waifu aleatoria
 function reclamarWaifu() {
-// Simulamos un roll de dados para determinar si ganamos la waifu
-const roll = Math.floor(Math.random() * 100) + 1
+  // Seleccionamos una waifu aleatoria del arreglo de waifus disponibles
+  let waifuAleatoria = waifusDisponibles[Math.floor(Math.random() * waifusDisponibles.length)];
 
-// Si el roll es mayor o igual a 50, ganamos la waifu
-if (roll >= 10) {
-m.reply("😊 ¡Felicidades! Has ganado la waifu 🌟")
-} else {
-m.reply("⭐️ Lo siento, no has ganado la waifu. ¡Inténtalo de nuevo!")}}
+  // Verificamos si la waifu ya ha sido reclamada
+  if (waifusReclamadas[waifuAleatoria.nombre]) {
+    m.reply(`La waifu ${waifuAleatoria.nombre} ya ha sido reclamada.`);
+  } else {
+    // Agregamos la waifu a la lista de waifus reclamadas
+    waifusReclamadas[waifuAleatoria.nombre] = waifuAleatoria.serie;
+    m.reply(`Has reclamado a ${waifuAleatoria.nombre} de ${waifuAleatoria.serie}.`);
+  }
+}
 
-// Llamamos a la función para reclamar la waifu
+// Llamamos a la función para reclamar una waifu
 reclamarWaifu()}
 
 handler.command = ['c', 'reclamar']
