@@ -20,7 +20,7 @@ return waifus[indiceAleatorio]}
 
 // Función para mostrar la waifu obtenida
 function mostrarWaifu(waifu) {
-await conn.sendMini(m.chat, packname, wm, txt, waifu.img, waifu.img, redes, fkontak)
+await conn.sendMini(m.chat, packname, wm, txt, `${waifu.img}`, `${waifu.img}`, redes, fkontak)
 let txt = `🚩 Nombre: ${waifu.nombre}\n✨️ Base: ${waifu.anime}\n💰 Valor: ${waifu.precio}` // m, rcanal)
 }
 
