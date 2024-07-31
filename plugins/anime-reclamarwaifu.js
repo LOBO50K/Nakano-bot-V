@@ -36,7 +36,7 @@ reclamarWaifu("Mikasa");
 reclamarWaifu("Asuna");
 reclamarWaifu("Mikasa"); // No se reclama de nuevo
 
-console.log(`Cantidad de waifus reclamadas: ${contarWaifusReclamadas()}`);
+m.reply(`Cantidad de waifus reclamadas: ${contarWaifusReclamadas()}`);
 }
 
 handler.command = ['c', 'reclamar']
