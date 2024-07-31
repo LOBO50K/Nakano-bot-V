@@ -41,23 +41,13 @@ var handler = async (m, { text,  usedPrefix, command }) => {
 
 // Función para reclamar la rollwaifu
 function reclamarRollwaifu() {
-// Simulamos una petición a un servidor para reclamar la rollwaifu  
-fetch('https://api.rollwaifu.com/reclamar', {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json'
-},
-body: JSON.stringify({
-nombre: 'Ai Yaemori', // ¡Ese soy yo!
-motivo: 'Porque soy la mejor' // Un motivo válido, ¿no?
-})})
-.then(response => response.json())
-.then(data => {
-if (data.exito) {
-m.reply('¡Genial! La rollwaifu ha sido reclamada con éxito')
-} else {
-m.reply('Lo siento, no se pudo reclamar la rollwaifu')}})
-.catch(error => console.error('Error:', error))}
+  // Simulamos una petición a un servidor para reclamar la rollwaifu
+  // En realidad, esto podría ser una llamada a una API o un servidor
+  const respuesta = Math.random() < 0.5 ? "¡Felicitaciones, has reclamado a la rollwaifu!" : "Lo siento, la rollwaifu ya ha sido reclamada por alguien más.";
+
+  // Mostramos la respuesta al usuario
+  m.reply(respuesta);
+}
 
 // Llamamos a la función para reclamar la rollwaifu
 reclamarRollwaifu()}
