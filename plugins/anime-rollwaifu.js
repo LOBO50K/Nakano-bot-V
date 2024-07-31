@@ -9,7 +9,7 @@ const waifus = [
   // Agrega más waifus a la lista!
 ];
 
-handler.command = ['c']
+handler.command = ['c'] {
 //conn.reply('message', async message => {
   //if (message.type === 'chat' && message.body.startsWith('!c ')) {
     const waifuNombre = message.body.substring(3).trim();
