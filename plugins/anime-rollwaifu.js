@@ -25,7 +25,7 @@ function mostrarWaifu(waifu) {
 const waifuAleatoria = obtenerWaifuAleatoria();
 mostrarWaifu(waifuAleatoria);
 
-};
+//};
 handler.help = ['rollwaifu'];
 handler.tags = ['anime'];
 handler.command = ['rw', 'rollwaifu'];
