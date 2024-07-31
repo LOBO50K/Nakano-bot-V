@@ -19,21 +19,16 @@ function obtenerWaifuAleatoria() {
 // Función para mostrar la waifu obtenida
 function mostrarWaifu(waifu) {
   console.log(`Tu waifu es: ${waifu.nombre} de ${waifu.anime}`);
-
-handler.help = ['rollwaifu'];
-handler.tags = ['anime'];
-handler.command = ['rw', 'rollwaifu'];
-handler.register = true;
 }
 
 // Ejecuta la función para obtener y mostrar una waifu aleatoria
 const waifuAleatoria = obtenerWaifuAleatoria();
 mostrarWaifu(waifuAleatoria);
 
-//};
-//handler.help = ['rollwaifu'];
-//handler.tags = ['anime'];
-//handler.command = ['rw', 'rollwaifu'];
-//handler.register = true;
+/*};
+handler.help = ['rollwaifu'];
+handler.tags = ['anime'];
+handler.command = ['rw', 'rollwaifu'];
+handler.register = true;
 
-//export default handler;
+export default handler;*/
