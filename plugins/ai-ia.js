@@ -17,7 +17,7 @@ const imageAnalysis = await fetchImageBuffer(content, img)
 const query = 'Descríbeme la imagen y detalla por qué actúan así. También dime quién eres'
 const prompt = `${basePrompt}. La imagen que se analiza es: ${imageAnalysis.result}`
 const description = await luminsesi(query, username, prompt);
-await conn.reply(m.chat, description, fake)
+await conn.reply(m.chat, description, m, fake)
 } catch (error) {
 console.error('Error al analizar la imagen:', error)
 await conn.reply(m.chat, 'Error al analizar la imagen.', m, fake)}
@@ -28,7 +28,7 @@ try {
 const query = text;
 const prompt = `${basePrompt}. Responde lo siguiente: ${query}`
 const response = await luminsesi(query, username, prompt)
-await conn.reply(m.chat, response, m, rcanal)
+await conn.reply(m.chat, response, m, fake)
 } catch (error) {
 console.error('Error al obtener la respuesta:', error)
 await conn.reply(m.chat, 'Error: intenta más tarde.', m, fake)}}}
