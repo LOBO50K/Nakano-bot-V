@@ -23,7 +23,7 @@ return waifus[indiceAleatorio]}
 // Función para mostrar la waifu obtenida
 function mostrarWaifu(waifu) {
 // conn.reply(m.chat, `🚩 Nombre: ${waifu.nombre}\n✨️ Base: ${waifu.anime}\n💰 Valor: no c`, m, rcanal)
-  conn.sendFile(m.chat, img, 'error.jpg', `🚩 Nombre: ${waifu.nombre}\n✨️ Base: ${waifu.anime}\n💰 Valor: ${waifu.precio}`, m, null, rcanal);}
+  conn.sendFile(m.chat, waifu.img, 'error.jpg', `🚩 Nombre: ${waifu.nombre}\n✨️ Base: ${waifu.anime}\n💰 Valor: ${waifu.precio}`, m, null, rcanal);}
 
 // Ejecuta la función para obtener y mostrar una waifu aleatoria
 const waifuAleatoria = obtenerWaifuAleatoria();
