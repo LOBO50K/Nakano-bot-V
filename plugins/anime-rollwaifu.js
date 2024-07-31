@@ -27,5 +27,3 @@ conn.on('message', async message => {
 });
 
 conn.connect();
-```
-//command: !rollwaifu
