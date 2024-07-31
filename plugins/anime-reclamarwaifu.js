@@ -7,24 +7,50 @@
 
 //aun no funciona correctamente.
 
-var handler = async (m, { text,  usedPrefix, command }) => {
 
-// Función para reclamar la waifu
-function reclamarWaifu() {
-// Simulamos un roll de dados para determinar si ganamos la waifu
-const roll = Math.floor(Math.random() * 100) + 1
+// Creamos un arreglo de Pokémon disponibles
+let pokemonsDisponibles = [
+  { nombre: "Pikachu", tipo: "Eléctrico" },
+  { nombre: "Charizard", tipo: "Fuego/Volador" },
+  { nombre: "Blastoise", tipo: "Agua" },
+  { nombre: "Venusaur", tipo: "Planta/Veneno" },
+  { nombre: "Dragonite", tipo: "Dragón/Volador" }
+];
 
-// Si el roll es mayor o igual a 50, ganamos la waifu
-if (roll >= 10) {
-m.reply("😊 ¡Felicidades! Has ganado la waifu 🌟")
-} else {
-m.reply("⭐️ Lo siento, no has ganado la waifu. ¡Inténtalo de nuevo!")}}
+// Creamos un objeto para almacenar los Pokémon reclamados
+let pokemonsReclamados = {};
 
-// Llamamos a la función para reclamar la waifu
-reclamarWaifu()}
+// Función para reclamar un Pokémon aleatorio
+function reclamarPokemon() {
+  // Seleccionamos un Pokémon aleatorio del arreglo de Pokémon disponibles
+  let pokemonAleatorio = pokemonsDisponibles[Math.floor(Math.random() * pokemonsDisponibles.length)];
 
-handler.command = ['c', 'reclamar']
-handler.help = ['c']
+  // Verificamos si el Pokémon ya ha sido reclamado
+  if (pokemonsReclamados[pokemonAleatorio.nombre]) {
+    m.reply(`El Pokémon ${pokemonAleatorio.nombre} ya ha sido reclamado.`);
+  } else {
+    // Agregamos el Pokémon a la lista de Pokémon reclamados
+    pokemonsReclamados[pokemonAleatorio.nombre] = pokemonAleatorio.tipo;
+    m.reply(`Has reclamado a ${pokemonAleatorio.nombre} de tipo ${pokemonAleatorio.tipo}.`);
+  }
+}
+
+// Llamamos a la función para reclamar un Pokémon
+reclamarPokemon();
+
+// Función para mostrar los Pokémon reclamados
+function mostrarPokemonsReclamados() {
+  m.reply("Pokémon reclamados:");
+  for (let pokemon in pokemonsReclamados) {
+    m.reply(`${pokemon} - ${pokemonsReclamados[pokemon]}`);
+  }
+}
+
+// Llamamos a la función para mostrar los Pokémon reclamados
+mostrarPokemonsReclamados()}
+
+handler.command = ['rollpokemon', 'rp']
+handler.help = ['rp']
 handler.tags = ['anime']
 handler.premium = false
 export default handler
