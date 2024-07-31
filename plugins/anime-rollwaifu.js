@@ -14,6 +14,7 @@ const waifus = [
 { nombre: 'Hestia', anime: 'DanMachi', precio: '100' },
 { nombre: 'Rias Gremory', anime: 'High School DxD', precio: '200' },
 { nombre: 'Saber', anime: 'Fate/stay night', precio: '300' },
+{ nombre: 'Mini Yaemori', anime: 'Rent-A-Girlfriend', precio: '400' },
 // Agrega más waifus aquí...
 ]
 
