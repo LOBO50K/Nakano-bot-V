@@ -27,7 +27,7 @@ const waifus = [
 { nombre: 'Yotsuba Nakano', anime: 'Las Quintillizas', precio: '700' },
 { nombre: 'Nino Nakano', anime: 'Las Quintillizas', precio: '750' },
 { nombre: 'Miku Nakano', anime: 'Las Quintillizas', precio: '800' },
-{ nombre: 'Itsuki Nakano	', anime: 'Las Quintillizas', precio: '850' },
+{ nombre: 'Itsuki Nakano', anime: 'Las Quintillizas', precio: '850' },
 // Agrega más waifus aquí...
 ]
 
