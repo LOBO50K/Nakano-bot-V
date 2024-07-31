@@ -1,7 +1,5 @@
 var handler = async (m, { text,  usedPrefix, command }) => {
 
-global.anime = `${waifu.nombre}`
-
 //rollwaifus
 const waifus = [
 { nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin' },
