@@ -9,7 +9,9 @@
 
 var handler = async (m, { text,  usedPrefix, command }) => {
 
-if (!text) { throw `😊 *Responde al mensaje de la waifu enviada.*`; }
+if (!text) conn.reply(m.chat, '😊 *Responde al mensaje de la waifu enviada.*', m, fake)
+
+try {
 
 // Función para reclamar la waifu
 function reclamarWaifu() {
