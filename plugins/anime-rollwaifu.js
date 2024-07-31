@@ -1,29 +1,35 @@
-const { WAConnection } = require('@adiwajshing/baileys');
+// RollWaifu.js
 
-const conn = new WAConnection();
+// Array de waifus
+const waifus = [
+  { nombre: 'Mikasa Ackerman', anime: 'Shingeki no Kyojin' },
+  { nombre: 'Asuna Yuuki', anime: 'Sword Art Online' },
+  { nombre: 'Hestia', anime: 'DanMachi' },
+  { nombre: 'Rias Gremory', anime: 'High School DxD' },
+  { nombre: 'Saber', anime: 'Fate/stay night' },
+  // Agrega más waifus aquí...
+];
 
-conn.on('qr', qr => {
-  console.log(`Scan the QR code: ${qr}`);
-});
+// Función para obtener una waifu aleatoria
+function obtenerWaifuAleatoria() {
+  const indiceAleatorio = Math.floor(Math.random() * waifus.length);
+  return waifus[indiceAleatorio];
+}
 
-conn.on('ready', () => {
-  console.log('WhatsApp client is ready!');
-});
+// Función para mostrar la waifu obtenida
+function mostrarWaifu(waifu) {
+  console.log(`Tu waifu es: ${waifu.nombre} de ${waifu.anime}`);
+}
 
-conn.on('message', async message => {
-  if (message.type === 'chat' && message.body === '!rollwaifu') {
-    const waifus = [
-      'Asuna (Sword Art Online)',
-      'Rias Gremory (High School DxD)',
-      'Hestia (Is It Wrong to Try to Pick Up Girls in a Dungeon?)',
-      'Maka Albarn (Soul Eater)',
-      'Yuno Gasai (Future Diary)',
-      // Agrega más waifus a la lista!
-    ];
+// Ejecuta la función para obtener y mostrar una waifu aleatoria
+const waifuAleatoria = obtenerWaifuAleatoria();
+mostrarWaifu(waifuAleatoria);
 
-    const randomWaifu = waifus[Math.floor(Math.random() * waifus.length)];
-    await conn.sendMessage(message.from, `You rolled: **${randomWaifu}**!`);
-  }
-});
+};
+handler.help = ['rollwaifu'];
+handler.tags = ['anime'];
+handler.command = ['rw', 'rollwaifu'];
+handler.register = true;
 
 conn.connect();
+//export default handler;*/
