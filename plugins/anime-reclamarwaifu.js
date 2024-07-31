@@ -36,7 +36,7 @@ function reclamarWaifu(waifuId, usuarioId) {
 }
 
 // Ejemplo de uso
-const waifuId = 'ID_DE_LA_WAIFU';
+const waifuId = 'Ai Hoshino';
 const usuarioId = 'ID_DEL_USUARIO';
 reclamarWaifu(waifuId, usuarioId)}
 
