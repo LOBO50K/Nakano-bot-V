@@ -3,7 +3,7 @@
 • OfcDiego (https://github.com/OfcDiego)
 • DarkesJs (https://githib.com/WOTCHITA)
 ✨️ Creado Para : 
-• Ai Yaemori - MD
+• Luffy Bot - MD
 */
 
 var handler = async (m, { text,  usedPrefix, command }) => {
@@ -26,6 +26,7 @@ const waifus = [
 { nombre: 'Mem-cho', anime: 'Oshi no Ko', precio: '650' },
 { nombre: 'Yotsuba Nakano', anime: 'Las Quintillizas', precio: '700' },
 { nombre: 'Nino Nakano', anime: 'Las Quintillizas', precio: '750' },
+{ nombre: 'Monkey D. Luffy', anime: 'One Piece', precio: '790' },
 { nombre: 'Miku Nakano', anime: 'Las Quintillizas', precio: '800' },
 { nombre: 'Itsuki Nakano', anime: 'Las Quintillizas', precio: '850' },
 { nombre: 'Daddy Dearest (3)', anime: 'Friday Night Funkin', precio: '855' },
