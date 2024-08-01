@@ -28,6 +28,7 @@ const waifus = [
 { nombre: 'Nino Nakano', anime: 'Las Quintillizas', precio: '750' },
 { nombre: 'Miku Nakano', anime: 'Las Quintillizas', precio: '800' },
 { nombre: 'Itsuki Nakano', anime: 'Las Quintillizas', precio: '850' },
+{ nombre: 'Daddy Dearest (3)', anime: 'Friday Night Funkin', precio: '855' },
 // Agrega más waifus aquí...
 ]
 
@@ -38,7 +39,7 @@ return waifus[indiceAleatorio]}
 
 // Función para mostrar la waifu obtenida
 function mostrarWaifu(waifu) {
-conn.reply(m.chat, `🚩 Nombre: ${waifu.nombre}\n✨️ Base: ${waifu.anime}\n💰 Valor: ${waifu.precio}`, m, rcanal)}
+conn.reply(m.chat, `🚩 Nombre: ${waifu.nombre}\n✨️ Fuente: ${waifu.anime}\n💰 Valor: ${waifu.precio}`, m, rcanal)}
 
 // Ejecuta la función para obtener y mostrar una waifu aleatoria
 const waifuAleatoria = obtenerWaifuAleatoria();
