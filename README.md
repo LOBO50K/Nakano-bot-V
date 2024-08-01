@@ -1,15 +1,15 @@
-> 🚩 Versión Actual: 2.0.2
+> 🚩 Versión Actual: 2.0.3
 
-## 🍟 **`Ai Yaemori - MD`**
+## 🍟 **`Ai Luffy - MD`**
 
 ![Yaemori](https://telegra.ph/file/731e8ba1d2a4a506903cf.jpg)
 
 ---
 
-> **`AVISO`**: Ai - Yaemori no funciona en la terminal (termux).
+> **`AVISO`**: Ai - Luffy no funciona en la terminal (termux).
 > Estaremos arreglando el error de la bot para que se pueda instalar en la terminal (termux).
 
-> **`Ai Yaemori - MD`** es un super bot de WhatsApp con multi funciones.
+> **`Ai Luffy - MD`** es un super bot de WhatsApp con multi funciones.
 ---
 
 ### <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="Prueba La Bot Aqui" width="42" height="42"> Prueba La Bot Aqui
@@ -31,7 +31,7 @@ termux-setup-storage
 apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 ```bash
-git clone https://github.com/OfcDiego/YaemoriBot-MD && cd YaemoriBot-MD
+git clone https://github.com/OfcDiego/LuffyBot-MD && cd LuffyBot-MD
 ```
 ```bash
 yarn install && npm install
@@ -44,29 +44,29 @@ npm start
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
-> cd YaemoriBot-MD
+> cd LuffyBot-MD
 > npm start
 ```
 
 🚩 **`OBTENER OTRO CODIGO QR`**
 ```bash
 > ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd YaemoriBot-MD
+> cd LuffyBot-MD
 > rm -rf MiniSession
 > npm start
 ```
 
-🍟 **`YAEMORI 24/7 (TERMUX)`**
+🍟 **`LUFFY 24/7 (TERMUX)`**
 ```bash
 > termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
 ```
 
-🚩 **`ACTUALIZAR YAEMORI`**
-> Note Comandos para actualizar Ai Yaemori  de forma automática
+🚩 **`ACTUALIZAR LUFFY`**
+> Note Comandos para actualizar Ai Luffy de forma automática
 ```bash
-grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/OfcDiego/YaemoriBot-MD/master/update.sh | bash
+grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/OfcDiego/LuffyBot-MD/master/update.sh | bash
 ```
-Para que no pierda su progreso en Yaemori, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
+Para que no pierda su progreso en Luffy, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
 
 > Warning Estos comandos solo funcionan para TERMUX, REPLIT, LINUX
 
@@ -95,13 +95,13 @@ Para que no pierda su progreso en Yaemori, estos comandos realizarán un respald
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - Ai-Yaemori**</summary><img src="https://telegra.ph/file/530fc69bd5c105e96642e.jpg"></details>
 
 #### 🟢 ACTIVAR EN CODES SPACES 
-[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=OfcDiego/YaemoriBot-MD&ref=main&geo=UsEast)
+[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=OfcDiego/LuffyBot-MD&ref=main&geo=UsEast)
 
 #### ⚡ ACRIVAR EN REPLIT
-[![`CREAR SERVIDOR REPLIT`](https://repl.it/badge/github/OfcDiego/YaemoriBot-MD)](https://repl.it/github/OfcDiego/YaemoriBot-MD)
+[![`CREAR SERVIDOR REPLIT`](https://repl.it/badge/github/OfcDigo/LuffyBot-MD)](https://repl.it/github/OfcDiego/LuffyBot-MD)
 
 #### 🤍 ACTIVAR EN RENDER
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2OfcDiego%YaemoriBot-MD) 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2OfcDiego%LuffyBot-MD) 
 
 ## <img src="https://static.wikia.nocookie.net/nyancat/images/d/d3/Nyan-cat.gif/revision/latest/scale-to-width-down/400?cb=20131231222500&path-prefix=es" alt="Grupo" width="45" height="43"> Bot Oficial ☄️
 
@@ -133,8 +133,8 @@ Para que no pierda su progreso en Yaemori, estos comandos realizarán un respald
 --- 
 
 ### `🚩 DESARROLLADORES`
-<a href="https://github.com/OfcDiego/YaemoriBot-MD/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=OfcDiego/YaemoriBot-MD" /> 
+<a href="https://github.com/OfcDiego/LuffyBot-MD/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=OfcDiego/LuffyBot-MD" /> 
 </a>
 
 ### `✨️ AGRADECIMIENTOS`
