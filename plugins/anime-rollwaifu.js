@@ -3,7 +3,7 @@
 • OfcDiego (https://github.com/OfcDiego)
 • DarkesJs (https://githib.com/WOTCHITA)
 ✨️ Creado Para : 
-• Luffy Bot - MD
+• Ai Yaemori - MD
 */
 
 var handler = async (m, { text,  usedPrefix, command }) => {
