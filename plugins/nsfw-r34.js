@@ -9,7 +9,8 @@ const {
   getDevice
 } = (await import("@whiskeysockets/baileys")).default;
 
-const dbFilePath = path.resolve('./sentUrls.json');
+const dbFilePath = await response.json();
+//const dbFilePath = path.resolve('./sentUrls.json');
 
 const readDb = async () => {
   try {
