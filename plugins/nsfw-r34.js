@@ -45,7 +45,7 @@ const cleanDb = async () => {
   await writeDb(db);
 };
 
-const handler = async (m, { conn, text }) => {
+const handler = async (m, { conn, args, text }) => {
   if (!text) {
     throw 'Por favor, proporciona un texto';
   }
