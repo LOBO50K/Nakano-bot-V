@@ -68,7 +68,7 @@ const handler = async (m, { conn, text }) => {
 
     await cleanDb();
     conn.sendPresenceUpdate('composing', m.chat);
-    const apiUrl = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&tags=${encodeURIComponent(text)}&json=1`;
+   const apiUrl = `https://rule34.xxx/index.php?page=dapi&s=post&q=index&json=1&tags=${use}`;
     const response = await fetch(apiUrl);
     
     if (!response.ok) {
@@ -93,7 +93,10 @@ const handler = async (m, { conn, text }) => {
       if (!imageResponse.ok) {
         throw new Error('🚩 Error al descargar la imagen');
       }
-      const imageBuffer = await imageResponse.buffer();
+    //  const imageBuffer = await imageResponse.buffer();
+      const randomIndex = Math.floor(Math.random() * data.length);
+const randomImage = data[randomIndex];
+const imageBuffer = randomImage.file_url;
       db[post.file_url] = Date.now();
 
       const mediaMessage = await prepareWAMessageMedia({ image: imageBuffer }, { upload: conn.waUploadToServer });
