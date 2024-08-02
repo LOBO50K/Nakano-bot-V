@@ -68,6 +68,7 @@ const handler = async (m, { conn, text }) => {
 
     await cleanDb();
     conn.sendPresenceUpdate('composing', m.chat);
+   const use = args[0];
    const apiUrl = `https://rule34.xxx/index.php?page=dapi&s=post&q=index&json=1&tags=${use}`;
     const response = await fetch(apiUrl);
     
