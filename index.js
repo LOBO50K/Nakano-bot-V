@@ -45,8 +45,8 @@ console.log(chalk.white.bold(`
 
 displayHeader()
 console.clear()
-//app.get('/', (req, res) => {
-res.setHeader('Content-Type', 'application/json')
+/*app.get('/', (req, res) => {
+res.setHeader('Content-Type', 'application/json')*/
 const data = {
 status: 'true',
 message: `Ai Yaemori ahora esta corriendo`,
