@@ -7,7 +7,7 @@ if ((usedPrefix = (match[0] || '')[0])) {
 let noPrefix = m.text.replace(usedPrefix, '')
 let args = noPrefix.trim().split` `.slice(1)
 let text = args.join` `
-let help = Object.values(plugins).filter(v => v.help && !v.disabled).map(v => v.help).flat(1)
+let menu = Object.values(plugins).filter(v => v.menu && !v.disabled).map(v => v.menu).flat(1)
 if (help.includes(noPrefix)) return
 let mean = didyoumean(noPrefix, help)
 let sim = similarity(noPrefix, mean)
