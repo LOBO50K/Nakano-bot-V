@@ -245,7 +245,10 @@ if (opcion == '1' || methodCodeQR) {
 console.log(chalk.bold.yellow(`\n✅ ESCANEA EL CÓDIGO QR EXPIRA EN 45 SEGUNDOS`))}
 }
 if (connection == 'open') {
-await conn.groupAcceptInvite('Em1J2VaglHc1fe26YtBDCS')
+console.log(color(` `,'magenta'))
+console.log(color(`\n✨️ USUARIOS CONECTADOS ` + JSON.stringify(sock.user, null, 2), 'yellow'))
+console.log(color('[SYS]', '#009FFF'),
+color(moment().format('DD/MM/YY HH:mm:ss'), '#A1FFCE'),
 console.log(chalk.bold.green('\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒\n│\n│ 🟢  Se ha conectado con WhatsApp exitosamente.\n│\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒'))}
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
@@ -523,3 +526,4 @@ unwatchFile(file)
 console.log(chalk.bold.greenBright("SE ACTUALIZÓ 'main.js' CON ÉXITO".trim()))
 import(`${file}?update=${Date.now()}`)
 })
+0
