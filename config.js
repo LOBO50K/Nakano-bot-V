@@ -26,12 +26,12 @@ global.prems = []
 
 //• ↳ ◜𝑴𝑨𝑹𝑪𝑨𝑺 𝑫𝑬 𝑨𝑮𝑼𝑨◞ • 💌
 global.packname = '⪛✰ 𝐀𝐢 𝐘𝐚𝐞𝐦𝐨𝐫𝐢 - 𝐌𝐃 ✰⪜'
-global.author = 'Oғᴄ.Dɪᴇɢᴏ 👑'
-global.wm = '✨◌*̥₊ Aɪ Yᴀᴇᴍᴏʀɪ - MD ◌❐⚡༉'
-global.titulowm = 'Ai Yaemori - MD 🍟'
-global.titulowm2 = 'Ofc.Diego'
-global.igfg = '𝙾𝙵𝙲.𝙳𝙸𝙴𝙶𝙾'
-global.botname = 'Aɪ Yᴀᴇᴍᴏʀɪ - MD 🚩'
+global.author = '𝖮𝖿𝖼.𝖣𝗂𝖾𝗀𝗈 👑'
+global.wm = '𝗬𝗮𝗲𝗺𝗼𝗿𝗶 𝗕𝗼𝘁 - 𝗠𝗗 🌻'
+global.titulowm = '𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶 - 𝗠𝗗 🍓'
+global.titulowm2 = '𝖠𝗂 𝖸𝖺𝖾𝗆𝗈𝗋𝗂 - 𝖬𝖣 ✨'
+global.igfg = '𝚈𝚊𝚎𝚖𝚘𝚛𝚒𝙱𝚘𝚝-𝙼𝙳 🌸'
+global.botname = 'Yᴀᴇᴍᴏʀɪ Bᴏᴛ - MD 🍟'
 global.dev = '🚩 Powered By あ S_ᴅɪᴇɢᴏ あ'
 global.textbot = '𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶 : 𝗢𝗳𝗰𝗗𝗶𝗲𝗴𝗼 🚩'
 global.vs = '2.0.3'
