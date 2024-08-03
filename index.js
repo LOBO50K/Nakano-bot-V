@@ -75,7 +75,7 @@ const p = spawn(process.argv[0], args, {
 stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
 })*/
 
-p.on('message', (data) => {
+/*p.on('message', (data) => {
 console.log(`[ Ai Yaemori ]${data}`);
 switch (data) {
 case 'reset':
@@ -87,10 +87,10 @@ case 'uptime':
 p.send(process.uptime())
 break
 }
-})
-p.on('exit', (code) => {
+})*/
+/*p.on('exit', (code) => {
 isRunning = false;
-console.error(`❌ El sistema del bot se detuvo con código: ${code}`)
+console.error(`❌ El sistema del bot se detuvo con código: ${code}`)*/
 
 if (code === 0) return
 
