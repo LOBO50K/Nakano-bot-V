@@ -20,14 +20,14 @@ import chalk from 'chalk'
 const port = 3009
 function displayHeader() {
 
-CFonts.say('Yaemori\Bot-MD', {
+say('Yaemori\Bot-MD', {
 font: 'simple',
 align: 'center',
 colors: ['green'],
 background: 'transparent',
 letterSpacing: '0'
 })
-CFonts.say('Developed By: OfcDiego', {
+say('Developed By: OfcDiego', {
 font: 'console',
 align: 'center',
 colors: ['white'],
