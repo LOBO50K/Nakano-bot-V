@@ -17,9 +17,6 @@ let grupos = `*Hola!, te invito a unirte a los grupos oficiales de del Bot para 
 1- ${colab1}
 *✰* ${gp3}
 
-2- ${colab2}
-*✰* ${gp4}
-
 4- ${namecomu}
 *✰* ${comunidad1}
 
