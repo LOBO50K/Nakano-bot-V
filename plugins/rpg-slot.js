@@ -1,4 +1,4 @@
-import db from '../lib/database.js'
+/*import db from '../lib/database.js'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     let fa = `🚩 *Cuanto Quieres Apostar?*\n\n💥 Ejemplo:
@@ -77,9 +77,9 @@ function msToTime(duration) {
     seconds = (seconds < 10) ? "0" + seconds : seconds
 
     return minutes + " m " + seconds + " s "
-}
+}*/
 
-/*let reg = 60
+let reg = 60
 
 var handler = async (m, { conn, args, usedPrefix, command }) => {
 
@@ -95,7 +95,7 @@ if (apuesta < 10) throw '🚩 Lo Mínimo Para Apostar Es 100 *XP*'
 if (users.exp < apuesta) {
 throw `🚩 No Tienes Sufuciente *XP*`
 }
-let emojis = ['✨️', '💖', '🤍', '☁️', '🐶']
+let emojis = ["🐋", "🐉", "🌟"]
 let a = Math.floor(Math.random() * emojis.length)
 let b = Math.floor(Math.random() * emojis.length)
 let c = Math.floor(Math.random() * emojis.length)
@@ -188,4 +188,4 @@ function generaArrayCasuale(array, ripetizioni) {
     risultato = risultato.concat(array);
   }
   return risultato;
-}*/
+}
