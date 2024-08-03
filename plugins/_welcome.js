@@ -35,7 +35,7 @@ this.sendMessage(m.chat, { audio: { url: vn },
 contextInfo: { forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363263466636910@newsletter', 
 serverMessageId: '', 
-newsletterName: '『✯ Team Channel Ai Yaemori ✯』' }, forwardingScore: 9999999, isForwarded: true, mentionedJid:[num], "externalAdReply": { 
+newsletterName: '『✯ Team Channel Ai Yaemori ✯』' }, forwardingScore: 9999999, isForwarded: true, mentionedJid:[nombre], "externalAdReply": { 
 "title": '乂 ＷＥＬＣＯＭＥ 乂', 
 "body": '⚡︎ ᥣіgһ𝗍ᥒіᥒց - 𝗍ᥱᥲm ⚡︎', 
 "previewType": "PHOTO", 
