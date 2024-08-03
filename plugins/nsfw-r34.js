@@ -45,10 +45,10 @@ const cleanDb = async () => {
   await writeDb(db);
 };
 
-const handler = async (m, { conn, text }) => {
+const handler = async (m, { conn, usedPrefix, command, text }) => {
 if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '🚩 *¡Estos comandos están desactivados!*';
   if (!text) {
-    throw 'Por favor, proporciona un texto';
+    throw `🚩 *Por favor, proporciona un texto*\n🍟 *Ejemplo:* ${usedPrefix + command} Alya`;
   }
   
   try {
