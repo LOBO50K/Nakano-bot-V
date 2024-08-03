@@ -70,10 +70,10 @@ function start(file) {
 if (isRunning) return
 isRunning = true
 
-const args = [path.join(__dirname, file), ...process.argv.slice(2)]
+/*const args = [path.join(__dirname, file), ...process.argv.slice(2)]
 const p = spawn(process.argv[0], args, {
 stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
-})
+})*/
 
 p.on('message', (data) => {
 console.log(`[ Ai Yaemori ]${data}`);
