@@ -57,7 +57,7 @@ const result = {
 response: data
 }
 res.send(JSON.stringify(result, null, 2))
-})
+)
 
 app.listen(port, () => {
 console.log(`El servidor se está ejecutando en el puerto ${port}`)
