@@ -45,7 +45,7 @@ console.log(chalk.white.bold(`
 
 displayHeader()
 console.clear()
-app.get('/', (req, res) => {
+//app.get('/', (req, res) => {
 res.setHeader('Content-Type', 'application/json')
 const data = {
 status: 'true',
