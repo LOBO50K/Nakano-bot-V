@@ -1,21 +1,19 @@
-import { join, dirname } from 'path'
-import { createRequire } from 'module'
-import { fileURLToPath } from 'url'
-import { setupMaster, fork } from 'cluster'
-import { watchFile, unwatchFile } from 'fs'
-import cfonts from 'cfonts'
-import os from 'os'
-import path from 'path'
-import { createInterface } from 'readline'
-import yargs from 'yargs'
-import chalk from 'chalk'
+import { join, dirname } from 'path';
+import { createRequire } from 'module';
+import { fileURLToPath } from 'url';
+import { setupMaster, fork } from 'cluster';
+import { watchFile, unwatchFile } from 'fs';
+import cfonts from 'cfonts';
+import { createInterface } from 'readline';
+import yargs from 'yargs';
+import chalk from 'chalk';
 console.log('\n✰ Iniciando Yaemori ✰');
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(__dirname);
 const { name, description, author, version } = require(join(__dirname, './package.json'));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
-say('Ai Yaemori', {
+say('YaemoriBot-MD', {
 font: 'block',
 align: 'center',
 colors: ['white']
@@ -30,13 +28,6 @@ font: 'console',
 align: 'center',
 colors: ['yellow']
 });
-console.log(chalk.white.bold(`
-- 📱 Plataforma: ${os.platform()}
-- 🏛️ Arquitectura: ${os.arch()}
-- 💻 Memoria total: ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB
-- 🚀 Memoria: ${(os.freemem() / 1024 / 1024).toFixed(2)} MB
-`))
-}
 var isRunning = false;
 function start(file) {
 if (isRunning) return;
