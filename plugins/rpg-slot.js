@@ -49,7 +49,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }
     users.lastslot = new Date * 1
     let name = await conn.getName(m.sender)
-    let fakemsg = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "17608914335-1625305606@g.us" } : {}) }, message: { "extendedTextMessage": { "text": `${name}`, "title": packname, 'jpegThumbnail': catalogo}}}
+    let fakemsg = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "17608914335-1625305606@g.us" } : {}) }, message: { "extendedTextMessage": { "text": '🌟 Ai Yaemori - MD', "title": '😊 Super Bot Channel', 'jpegThumbnail': catalogo}}}
     return await conn.reply(m.chat,
         `
   🎰 | *SLOTS* 
