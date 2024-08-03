@@ -137,8 +137,8 @@ creloadHandler(false);
 serbot();
 };
 handler.help = ['code'];
-handler.tags = ['jadibot'];
-handler.command = ['code'];
+handler.tags = ['serbot'];
+handler.command = ['code', 'getcode', 'botcode'];
 // handler.register = true;
 export default handler;
 function sleep(ms) {
