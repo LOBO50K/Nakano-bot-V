@@ -1,4 +1,4 @@
-/*import db from '../lib/database.js'
+import db from '../lib/database.js'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 let fa = `🚩 *Cuanto Quieres Apostar?*\n\n💥 Ejemplo:
