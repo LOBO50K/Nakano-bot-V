@@ -1,4 +1,4 @@
-import { igdl } from 'ruhend-scraper'
+//import { igdl } from 'ruhend-scraper'
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 if (!db.data.chats[m.chat].modohorny && m.isGroup) return conn.reply(m.chat, `🚩 El grupo no admite contenido *Nsfw.*`, m, rcanal)
 if (!text) return m.reply('🚩 Ingresa el nombre de la imágen que estas buscando.')
