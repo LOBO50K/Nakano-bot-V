@@ -1,10 +1,20 @@
 // const express = require('express')
-const os = require('os')
-const { spawn } = require('child_process')
+// const os = require('os')
+/*const { spawn } = require('child_process')
 const path = require('path')
 const fs = require('fs')
 const CFonts = require('cfonts')
-const chalk = require('chalk')
+const chalk = require('chalk')*/
+
+import { join, dirname } from 'path'
+import { createRequire } from 'module'
+import { fileURLToPath } from 'url'
+import { setupMaster, fork } from 'cluster'
+import { watchFile, unwatchFile } from 'fs'
+import cfonts from 'cfonts'
+import { createInterface } from 'readline'
+import yargs from 'yargs'
+import chalk from 'chalk'
 
 const app = express()
 const port = 3009
