@@ -1,5 +1,4 @@
 export async function before(z) {
-  if (!z.text || !global.prefix.test(z.text)) return;
 
 
 // Creamos una función que simula un comando inválido
