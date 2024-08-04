@@ -19,7 +19,7 @@ conn.reply(m.chat, personalidad, m, rcanal, )
 }
 handler.help = ['personalidad']
 handler.tags = ['fun']
-handler.command = /^personalidad/i
+handler.command = ['personalidad']
 
 handler.register = true
 
