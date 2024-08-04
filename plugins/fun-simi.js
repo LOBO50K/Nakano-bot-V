@@ -15,7 +15,7 @@ throw '🚩 *Ocurrió un error*';
 
 handler.help = ['simi', 'bot'];
 handler.tags = ['fun'];
-handler.command = /^((sim)?simi|bot|alexa|yaemori|ai)$/i;
+handler.command = ['simi', 'bot', 'alexa', 'yaemori', 'ai'];
 export default handler;
 
 async function simitalk(ask, apikeyyy = "iJ6FxuA9vxlvz5cKQCt3", language = "es") {
