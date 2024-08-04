@@ -1,4 +1,4 @@
-const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
+/*const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
 
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
@@ -403,4 +403,4 @@ conn.reply(m.chat, `🍟  *La Función ${type} Se Ha ${isEnable ? 'Activado' : '
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
 handler.tags = ['nable', 'owner'];
 handler.command = ['enable', 'disable', 'on', 'off'];
-export default handler;
+export default handler;*/
