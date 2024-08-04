@@ -269,6 +269,6 @@ break
 }}}
 handler.help = ['addprem [@user] <days>']
 handler.tags = ['rpg']
-handler.command = /^(comprar|prem1|prem2|prem3|prem4|prem5|prem6|prem7|prem8|premium|vip|prem|pass|pase)$/i
+handler.command = ['comprar', 'prem1', 'prem2', 'prem3', 'prem4', 'prem5', 'prem6', 'prem7', 'prem8', 'premium', 'vip', 'prem', 'pass', 'pase']
 
 export default handler
