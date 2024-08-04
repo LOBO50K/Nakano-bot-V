@@ -36,7 +36,7 @@ let handler = async (m, { args, usedPrefix, command }) => {
        txt += `✩  *Creador* : ${repoData.owner.login}\n`
        txt += `✩  *Descripción* : ${repoData.description || 'Sin descripción disponible'}\n`
        txt += `✩  *Url* : ${args[0]}\n\n`
-       txt += `⁖❤️꙰  *${textbot}*`
+       txt += `*${team}*`
 
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await conn.sendFile(m.chat, await zipResponse.buffer(), filename, null, m)
@@ -47,7 +47,7 @@ await m.react(error)
 }
 handler.help = ['gitclone *<url git>*']
 handler.tags = ['descargas']
-handler.command = /^(gitclone)$/i
+handler.command = ['gitclone']
 handler.register = true 
 //handler.star = 1
 export default handler
