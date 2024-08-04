@@ -36,10 +36,8 @@ global.creador = 'Wa.me/573012482597'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
 global.asistencia = 'Wa.me/51939041500'
 global.namechannel = '『✯ Team Channel Ai Yaemori ✯』'
-global.namechannel2 = '𝗟𝗶𝗴𝗵𝘁𝗻𝗶𝗻𝗴 - 𝗧𝗲𝗮𝗺'
 global.namegrupo = '𝗚𝗿𝗼𝘂𝗽 𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶'
 global.namecomu = '𝗖𝗼𝗺𝘂𝗻𝗶𝗱𝗮𝗱 𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶'
-global.namecomu2 = '𝗖𝗼𝗺𝘂𝗻𝗶𝗱𝗮𝗱 𝗟𝗶𝗴𝗵𝘁𝗻𝗶𝗻𝗴'
 global.colab1 = '𝗚𝗮𝘁𝗮𝗕𝗼𝘁 & 𝗬𝗮𝗲𝗺𝗼𝗿𝗶'
 global.colab3 = '𝗚𝗿𝗼𝘂𝗽 𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶'
 
