@@ -4,7 +4,7 @@ plugin actualizado por:
 - https://github.com/DanixlJs
 */
 
-export async function before(m) {
+/*export async function before(m) {
   if (!m.text || !global.prefix.test(m.text)) {
     return;
   }
@@ -34,4 +34,4 @@ export async function before(m) {
    const comando = m.text.trim().split(' ')[0];
    await m.reply(`⚡︎ El comando "${comando}" no es válido.\nUsa "!menu" para ver los comandos disponibles.`);
   }
-}
+}*/
