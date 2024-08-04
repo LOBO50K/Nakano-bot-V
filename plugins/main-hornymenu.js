@@ -70,7 +70,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 };
 handler.tags = ['main']
 handler.help = ['hornymenu']
-handler.command = /^(menuhorny|hornymenu)$/i;
+handler.command = ['menuhorny', 'hornymenu'];
 handler.exp = 50;
 handler.fail = null;
 export default handler;
