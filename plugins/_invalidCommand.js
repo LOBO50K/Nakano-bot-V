@@ -1,31 +1,32 @@
+
 export async function before(z) {
-  if (!z.text || !global.prefix.test(z.text)) {
-    return;
-  }
-  const a = global.prefix.exec(z.text)[0];
-  const b = z.text.slice(a.length).trim().split(' ')[0].toLowerCase();
-  const c = (d, e) => {
-    for (let f of Object.values(e)) {
-      if (f.command && (Array.isArray(f.command) ? f.command : [f.command]).includes(d)) {
+  if (!z.text || !global.prefix.test(z.text)) return;
+
+  const prefix = global.prefix.exec(z.text)[0];
+  const command = z.text.slice(prefix.length).trim().split(' ')[0].toLowerCase();
+
+  const isValidCommand = (command, plugins) => {
+    for (const plugin of Object.values(plugins)) {
+      if (plugin.command && (Array.isArray(plugin.command) ? plugin.command : [plugin.command]).includes(command)) {
         return true;
       }
     }
     return false;
   };
-  if (c(b, global.plugins)) {
-    let g = global.db.data.chats[z.chat];
-    let h = global.db.data.users[z.sender];
-    if (g.isBanned) {
-      return;
-    }
-    if (!h.commands) {
-      h.commands = 0;
-    }
-    h.commands += 1;
+
+  if (isValidCommand(command, global.plugins)) {
+    const chatData = global.db.data.chats[z.chat];
+    const userData = global.db.data.users[z.sender];
+
+    if (chatData.isBanned) return;
+
+    if (!userData.commands) userData.commands = 0;
+    userData.commands += 1;
+
     await conn.sendPresenceUpdate('composing', z.chat);
   } else {
-    const comando = z.text.trim().split(' ')[0];
-    await z.reply(`🚩 El comando *${comando}* no es válido.\nUsa */menu* para ver los comandos disponibles.`);
+    const invalidCommand = z.text.trim().split(' ')[0];
+    await z.reply(`🚩 El comando *${invalidCommand}* no es válido.\nUsa *#menu* para ver los comandos disponibles.`);
     await z.react(error);
   }
 }
