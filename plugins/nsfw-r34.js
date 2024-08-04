@@ -1,4 +1,6 @@
 import fetch from 'node-fetch';
+import fs from 'fs/promises';
+import path from 'path';
 const handler = async (m, { conn, args, usedPrefix }) => {
 if (!args[0]) {
 if (!db.data.chats[m.chat].modohorny && m.isGroup) return conn.reply(m.chat, `🚩 *¡Este comando está deshabilitado en este grupo!*`, m, rcanal)
