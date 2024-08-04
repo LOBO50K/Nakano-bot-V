@@ -1,3 +1,4 @@
+var handler = async (m, { text,  usedPrefix, command }) => {
 /**
  * Función para validar comandos
  * @param {string} comando - El comando a validar
@@ -17,7 +18,7 @@ if (validarComando(comando)) {
   m.reply(`😊 El comando "${comando}" no es válido.\nUsa *!menu* para ver los comandos disponibles.`);
 } else {
   m.reply(`😊 El comando "${comando}" no es válido.\nUsa *!menu* para ver los comandos disponibles.`);
-}
+}}
 
 /*import didyoumean from 'didyoumean'
 import similarity from 'similarity'
