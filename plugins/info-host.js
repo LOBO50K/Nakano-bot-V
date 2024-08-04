@@ -81,5 +81,5 @@ sourceUrl: 'https://www.flarex.cloud'}}},
 { quoted: fkontak})
 }}
 
-handler.command = /^(cafirexos|flarex|flarexcloud)$/i
+handler.command = ['cafirexos', 'flarex', 'flarexcloud']
 export default handler
