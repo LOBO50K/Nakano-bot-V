@@ -35,7 +35,7 @@ conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, fkontak, m)
 }
 handler.help = ['ytsearch']
 handler.tags = ['buscador']
-handler.command = ['playlist', 'ytbuscar', 'yt', 'ytsearch']
+handler.command = ['playlist', 'ytbuscar', 'yts', 'ytsearch']
 
 handler.register = true
 handler.estrellas = 1
