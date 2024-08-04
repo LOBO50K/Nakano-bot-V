@@ -6,6 +6,6 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
 };
 handler.help = ['prefix'].map((v) => v + ' [prefix]');
 handler.tags = ['owner'];
-handler.command = /^(prefix)$/i;
+handler.command = ['prefix'];
 handler.rowner = true;
 export default handler;
