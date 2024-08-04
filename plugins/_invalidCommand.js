@@ -1,31 +1,31 @@
-export async function before(z) {
-  if (!z.text || !global.prefix.test(z.text)) return;
+export async function before(m) {
+  if (!m.text || !global.prefix.test(m.text)) return;
 
-  const prefix = global.prefix.exec(z.text)[0];
-  const command = z.text.slice(prefix.length).trim().split(' ')[0].toLowerCase();
+  const prefix = global.prefix.exec(m.text)[0];
+  const command = m.text.slice(prefix.length).trim().split(' ')[0].toLowerCase();
 
   const isValidCommand = (command, plugins) => {
     for (const plugin of Object.values(plugins)) {
       if (plugin.command && (Array.isArray(plugin.command) ? plugin.command : [plugin.command]).includes(command)) {
-        return true;
+        return false;
       }
     }
     return false;
   };
 
   if (isValidCommand(command, global.plugins)) {
-    const chatData = global.db.data.chats[z.chat];
-    const userData = global.db.data.users[z.sender];
+    const chatData = global.db.data.chats[m.chat];
+    const userData = global.db.data.users[m.sender];
 
     if (chatData.isBanned) return;
 
     if (!userData.commands) userData.commands = 0;
     userData.commands += 0;
 
-    await conn.sendPresenceUpdate('composing', z.chat);
+    await conn.sendPresenceUpdate('composing', m.chat);
   } else {
-    const invalidCommand = z.text.trim().split(' ')[0];
-    await z.reply(`🌟 El comando *${invalidCommand}* no es válido.\n> Usa *#menu* para ver los comandos disponibles.`);
-    await z.react(error);
+    const invalidCommand = m.text.trim().split(' ')[0];
+    await m.reply(`🌟 El comando *${invalidCommand}* no es válido.\n> Usa *#menu* para ver los comandos disponibles.`);
+    await m.react(error);
   }
 }
