@@ -9,7 +9,6 @@ function comandoInvalido() {
 
 // Llamamos a la función para simular el comando inválido
 comandoInvalido();
-```
 
 
 // Creamos una función que simula un comando inválido con un error aleatorio
