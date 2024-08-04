@@ -29,6 +29,6 @@ conn.reply(m.chat, '🍟 *¡Ocurrio un error!*', m, rcanal);
 
 handler.help = ['abrazar'].map((v) => v + ' <@usuario>');
 handler.tags = ['fun'];
-handler.command = /^(abrazar)$/i;
+handler.command = ['abrazar'];
 handler.register = true;
 export default handler;
