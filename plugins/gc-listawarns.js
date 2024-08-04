@@ -14,6 +14,6 @@ await conn.reply(m.chat, caption, m, { mentions: await conn.parseMention(caption
 
 handler.help = ['listadv']
 handler.tags = ['grupo']
-handler.command = ['listaadv', 'listadv', 'adv', 'advlist', 'advlista']
+handler.command = ['listadv', 'listaadv', 'listadv', 'adv', 'advlist', 'advlista']
 
 export default handler
