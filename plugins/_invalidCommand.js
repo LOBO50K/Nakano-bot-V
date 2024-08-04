@@ -7,7 +7,7 @@ export async function before(m) {
   const isValidCommand = (command, plugins) => {
     for (const plugin of Object.values(plugins)) {
       if (plugin.command && (Array.isArray(plugin.command) ? plugin.command : [plugin.command]).includes(command)) {
-        return false;
+        return true;
       }
     }
     return false;
