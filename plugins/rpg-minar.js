@@ -2,8 +2,7 @@ let cooldowns = {}
 
 let handler = async (m, { conn }) => {
 let user = global.db.data.users[m.sender]
-let estrellas = `${pickRandom([20, 5, 7, 8, 88, 40, 50, 70, 90, 999, 300])}` * 1; let emerald = `${pickRandom([1, 5, 7, 8])}` * 1; let iron = `${pickRandom([5, 6, 7, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80])}` * 1; let gold = `${pickRandom([20, 5, 7, 8, 88, 40, 50])}` * 1; let coal = `${pickRandom([20, 5, 7, 8, 88, 40, 50, 80, 70, 60, 100, 120, 600, 700, 64])}` * 1; let stone = `${pickRandom([200, 500, 700, 800, 900, 4000, 300])}` * 1
-let tiempo = 5 * 60
+let estrellas = `${pickRandom([20, 5, 7, 8, 88, 40, 50, 70, 90, 999, 300])}` * 1; let emerald = `${pickRandom([1, 5, 7, 8])}` * 1; let iron = `${pickRandom([5, 6, 7, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80])}` * 1; let gold = `${pickRandom([20, 5, 7, 8, 88, 40, 50])}` * 1; let coal = `${pickRandom([20, 5, 7, 8, 88, 40, 50, 80, 70, 60, 100, 120, 600, 700, 64])}` * 1; let stone = `${pickRandom([200, 500, 700, 800, 900, 4000, 300])}` *1
 
 let hasil = Math.floor(Math.random() * 1000)
 let info = `⛏️ *Te has adentrando en lo profundo de las cuevas*
@@ -20,8 +19,8 @@ let info = `⛏️ *Te has adentrando en lo profundo de las cuevas*
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '😊 *Minando.. - YaemoriBot* 🚩', 'status@broadcast' )
 await m.react('⛏️')
-await conn.reply(m.chat, minar, m, rcanal)
-cooldowns[m.sender] = Date.now()
+
+//cooldowns[m.sender] = Date.now()
 
 let time = global.db.data.users[m.sender].lastmiming + 600000
 if (new Date - global.db.data.users[m.sender].lastmiming < 600000) return conn.reply(m.chat, `*⏰ Debes esperar ${msToTime(time - new Date())} para volver a minar*`, m, fake, )
