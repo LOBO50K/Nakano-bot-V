@@ -27,7 +27,7 @@ await conn.sendFile(m.chat, pp, 'yaemori.jpg', yaemori, fkontak, null, rcanal)
 }
 handler.help = ['status']
 handler.tags = ['info']
-handler.command = ['estado'  'status'  'estate', 'state', 'stado', 'stats']
+handler.command = ['estado', 'status'  'estate', 'state', 'stado', 'stats']
 handler.register = true
 export default handler
 
