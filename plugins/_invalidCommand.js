@@ -4,8 +4,8 @@ export async function before(m) {
   const prefix = global.prefix.exec(m.text)[0];
   const command = m.text.slice(prefix.length).trim().split(' ')[0].toLowerCase();
 
-  const isValidCommand = (plugins) => {
-    for (const plugin of Object.values(command)) {
+  const isValidCommand = (command) => {
+    for (const command of Object.values(command)) {
       if (command && (Array.isArray(command) ? command : [command]).includes(command)) {
         return true;
       }
