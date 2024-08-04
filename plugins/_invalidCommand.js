@@ -4,16 +4,16 @@ export async function before(m) {
   const prefix = global.prefix.exec(m.text)[0];
   const command = m.text.slice(prefix.length).trim().split(' ')[0].toLowerCase();
 
-  const isValidCommand = (command, plugins) => {
-    for (const plugin of Object.values(plugins)) {
-      if (plugin.command && (Array.isArray(plugin.command) ? plugin.command : [plugin.command]).includes(command)) {
+  const isValidCommand = (plugins) => {
+    for (const plugin of Object.values(command)) {
+      if (command && (Array.isArray(command) ? command : [command]).includes(command)) {
         return true;
       }
     }
     return false;
   };
 
-  if (isValidCommand(command, global.plugins)) {
+  if (isValidCommand(command)) {
     const chatData = global.db.data.chats[m.chat];
     const userData = global.db.data.users[m.sender];
 
