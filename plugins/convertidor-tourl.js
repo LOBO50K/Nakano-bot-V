@@ -32,7 +32,7 @@ await m.react(error)
 }}
 handler.help = ['tourl']
 handler.tags = ['transformador']
-handler.command = /^(tourl|upload)$/i
+handler.command = ['tourl', 'upload']
 export default handler
 
 function formatBytes(bytes) {
