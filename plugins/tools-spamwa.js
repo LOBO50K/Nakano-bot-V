@@ -14,7 +14,7 @@ const handler = async (m, {conn, text}) => {
 };
 handler.help = ['spamwa <number>|<mesage>|<no of messages>'];
 handler.tags = ['tools'];
-handler.command = /^spam(wa)?$/i;
+handler.command = ['spam', 'spamwa'];
 handler.group = false;
 handler.premium = true;
 // handler.private = true
