@@ -81,5 +81,7 @@ sourceUrl: 'https://www.flarex.cloud'}}},
 { quoted: fkontak})
 }}
 
+handler.help = ['cafirexos', 'flarexcloud']
+handler.tags = ['main']
 handler.command = ['cafirexos', 'flarex', 'flarexcloud']
 export default handler
