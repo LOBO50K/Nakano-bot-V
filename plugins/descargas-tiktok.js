@@ -57,7 +57,7 @@ m.react('🕒')
 };
 handler.tags = ['descargas'];
 handler.help = ['tiktok'];
-handler.command = ['tiktok', 'ttk'];
+handler.command = ['tiktok', 'ttk', 'tt'];
 handler.register = true;
 export default handler;
 
