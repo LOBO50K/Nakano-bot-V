@@ -7,11 +7,6 @@ function comandoInvalido() {
   console.log("Por favor, inténtalo de nuevo");
 }
 
-// Llamamos a la función para simular el comando inválido
-comandoInvalido();
-
-
-// Creamos una función que simula un comando inválido con un error aleatorio
 function comandoInvalido() {
   const errores = [
     "Error: Comando inválido",
@@ -22,9 +17,4 @@ function comandoInvalido() {
   const errorAleatorio = errores[Math.floor(Math.random() * errores.length)];
   console.log(errorAleatorio);
 }
-
-// Llamamos a la función para simular el comando inválido
-comandoInvalido();
-
-  }
 }
