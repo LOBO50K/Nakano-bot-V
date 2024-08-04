@@ -20,7 +20,7 @@ conn.reply(m.chat, `
 
 handler.help = ['animelink']
 handler.tags = ['anime']
-handler.command = /^animelink$/i
+handler.command = ['animelink']
 
 handler.eatrellas = 1
 handler.register = true
