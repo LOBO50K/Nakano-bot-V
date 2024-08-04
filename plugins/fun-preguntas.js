@@ -13,7 +13,7 @@ conn.reply(m.chat, `🚩 *Preguntas - LuffyBot*\n\n• *Pregunta:* ${text}\n• 
 }
 handler.help = ['pregunta']
 handler.tags = ['fun']
-handler.command = /^pregunta|preguntas|apakah$/i
+handler.command = ['pregunta']
 
 handler.register = true
 
