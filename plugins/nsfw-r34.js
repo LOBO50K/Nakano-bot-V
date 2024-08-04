@@ -151,6 +151,6 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '🚩 *¡Estos comandos
 
 handler.help = ['rule34'];
 handler.tags = ['nsfw'];
-handler.command = /^rule34|rule$/i;
+handler.command = ['rule34', 'rule'];
 
 export default handler;
