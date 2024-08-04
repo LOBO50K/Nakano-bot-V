@@ -7,5 +7,5 @@ conn.reply(m.chat, `🚩 *El Usuario ${conn.getName(m.sender)} Estará Inactivo*
 };
 handler.help = ['afk [alasan]'];
 handler.tags = ['main'];
-handler.command = /^afk$/i;
+handler.command = ['afk'];
 export default handler;
