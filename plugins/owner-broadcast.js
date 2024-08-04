@@ -47,7 +47,7 @@ const handler = async (m, {conn, command, participants, usedPrefix, text}) => {
 };
 handler.help = ['broadcast', 'bc'].map((v) => v + ' <teks>');
 handler.tags = ['owner'];
-handler.command = /^(bc|comunicado)$/i;
+handler.command = ['bc', 'comunicado'];
 
 handler.owner = true;
 
