@@ -59,5 +59,5 @@ handler.help = ['tiktoksearch <txt>']
 handler.estrellas = 1
 handler.register = true
 handler.tags = ['buscador']
-handler.command = ['tiktoksearch', 'tts', 'tiktoks']
+handler.command = ['tiktoksearch', 'tiktoks']
 export default handler
