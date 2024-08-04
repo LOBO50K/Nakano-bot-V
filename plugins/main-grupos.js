@@ -20,9 +20,6 @@ let grupos = `*Hola!, te invito a unirte a los grupos oficiales de del Bot para 
 4- ${namecomu}
 *✰* ${comunidad1}
 
-5- ${namecomu2}
-*✰* ${comunidad2}
-
 *─ׄ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ*
 
 ➠ Enlace anulado? entre aquí! 
