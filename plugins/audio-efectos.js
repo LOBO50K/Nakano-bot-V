@@ -39,7 +39,7 @@ const handler = async (m, {conn, args, __dirname, usedPrefix, command}) => {
 };
 handler.help = ['bass', 'blown', 'deep', 'earrape', 'fast', 'fat', 'nightcore', 'reverse', 'robot', 'slow', 'smooth', 'tupai'].map((v) => v + ' [vn]');
 handler.tags = ['audio'];
-handler.command = ['bass', 'blown', 'deep', 'earrape', 'nightcore', 'reverse', 'robot', 'slow', 'smooth', 'tupai', 'squirrel', 'chipmunk'];
+handler.command = ['bass', 'blown', 'deep', 'earrape', 'nightcore', 'reverse', 'robot', 'slow', 'smooth', 'fat', 'tupai', 'squirrel', 'chipmunk'];
 export default handler;
 
 const getRandom = (ext) => {
