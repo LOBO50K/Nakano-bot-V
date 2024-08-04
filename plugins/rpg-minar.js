@@ -45,12 +45,14 @@ handler.command = ['minar', 'miming', 'mine']
 handler.register = true 
 export default handler
 
-function segundosAHMS(segundos) {
-let horas = Math.floor(segundos / 3600)
-let minutos = Math.floor((segundos % 3600) / 60)
-let segundosRestantes = segundos % 60
-return `${minutos} minutos y ${segundosRestantes} segundos`
-}
+function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]}
+
+function msToTime(duration) {
+var milliseconds = parseInt((duration % 1000) / 100),
+seconds = Math.floor((duration / 1000) % 60),
+minutes = Math.floor((duration / (1000 * 60)) % 60),
+hours = Math.floor((duration / (1000 * 60 * 60)) % 24)}
 
 /*var handler = async (m, { conn, isPrems}) => {
 
