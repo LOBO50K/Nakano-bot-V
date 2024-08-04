@@ -22,6 +22,6 @@ conn.reply(m.chat, teks, m, rcanal)
 }
 handler.help = ['google <búsqueda>']
 handler.tags = ['buscador']
-handler.command = /^googlef?$/i
+handler.command = ['google']
 handler.register = true 
 export default handler
