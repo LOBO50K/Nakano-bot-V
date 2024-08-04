@@ -7,7 +7,7 @@ await conn.reply(m.chat, '🚩 *¡LA BOT YA FUÉ DESBANEADA EN ESTE CHAT!*', m, 
 }
 handler.help = ['unbanchat'];
 handler.tags = ['mods'];
-handler.command = /^unbanchat|desbanearchat|desbanchat$/i
+handler.command = ['unbanchat', 'desbanearchat', 'desbanchat']
 handler.mods = true 
 //handler.group = true
 
