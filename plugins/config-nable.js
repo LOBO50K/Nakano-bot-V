@@ -31,7 +31,7 @@ ${usedPrefix + command} pconly
 ${usedPrefix + command} gconly
 ${usedPrefix + command} antiprivado`
 
-const isEnable = ['on', 'true', 'enable'].test(command);
+const isEnable = ['true', 'enable', '(turn)?on|1'].test(command);
 const chat = global.db.data.chats[m.chat];
 const user = global.db.data.users[m.sender];
 const bot = global.db.data.settings[conn.user.jid] || {};
@@ -402,5 +402,5 @@ conn.reply(m.chat, `🍟  *La Función ${type} Se Ha ${isEnable ? 'Activado' : '
 }
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
 handler.tags = ['nable', 'owner'];
-handler.command = ['off', 'false', 'disable']
+handler.command = ['((en', 'dis)able', '(tru', 'fals)e', '(turn)?o(n', 'ff)', '[01]']
 export default handler;
