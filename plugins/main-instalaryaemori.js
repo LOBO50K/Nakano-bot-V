@@ -53,8 +53,7 @@ conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/c24470edcbe5e250
 }
 handler.help = ['instalaryaemori']
 handler.tags = ['main']
-handler.command = /^(instalarai|instalarbot|instalaryaemori)/i
-
+handler.command = ['instalarbot', 'instalarai', 'botinstalar', 'aiinstalar', 'instalaryaemori', 'yaemoriinstalar']
 export default handler
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
