@@ -36,7 +36,7 @@ conn.reply(m.chat, '`🍟 Veamos que numeros tienen!`\n\n'+ `➠ *LuffyBot* : ${
 
 handler.help = ['apostar *<cantidad>*']
 handler.tags = ['fun']
-handler.command = /^(apostar|casino)$/i
+handler.command = ['apostar', 'casino']
 handler.register = true
 handler.fail = null
 export default handler
