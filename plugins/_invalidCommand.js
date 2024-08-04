@@ -1,26 +1,4 @@
-var handler = async (m, { text,  usedPrefix, command }) => {
-/**
- * Función para validar comandos
- * @param {string} comando - El comando a validar
- * @returns {boolean} - True si el comando es válido, false en caso contrario
- */
-function validarComando(comando) {
-  // Lista de comandos válidos
-  const comandosValidos = ['crear', 'eliminar', 'editar', 'mostrar'];
-
-  // Verificar si el comando está en la lista de comandos válidos
-  return comandosValidos.includes(comando.toLowerCase());
-}
-
-// Ejemplo de uso
-const comando = 'crear';
-if (validarComando(comando)) {
-  m.reply(`😊 El comando "${comando}" no es válido.\nUsa *!menu* para ver los comandos disponibles.`);
-} else {
-  m.reply(`😊 El comando "${comando}" no es válido.\nUsa *!menu* para ver los comandos disponibles.`);
-}}
-
-/*import didyoumean from 'didyoumean'
+import didyoumean from 'didyoumean'
 import similarity from 'similarity'
 
 export async function before(m, { conn, match, usedPrefix, command }) {
@@ -41,4 +19,4 @@ let caption = `😊 El comando no es válido.
 if (mean) conn.reply(m.chat, caption, m, { mentions: [who]})
 }
 
-}*/
+}
