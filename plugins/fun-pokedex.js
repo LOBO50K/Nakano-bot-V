@@ -21,5 +21,5 @@ await m.react(done) }
 
 handler.help = ['pokedex *<pokemon>*']
 handler.tags = ['fun']
-handler.command = /^pokedex/i
+handler.command = ['pokedex']
 export default handler
