@@ -15,11 +15,11 @@ let yt_play = await search(args.join(" "))
 let img = await (await fetch(`${yt_play[0].image}`)).buffer()
 
 let txt = `*乂  Y O U T U B E  -  P L A Y  乂*\n\n`
-       txt += `✩ *𝐓𝐢𝐭𝐮𝐥𝐨:*\n${yt_play[0].title}\n\n`
-       txt += `✩ *𝐃𝐮𝐫𝐚𝐜𝐢𝐨𝐧:*\n${secondString(yt_play[0].duration.seconds)}\n\n`
-       txt += `✩ *𝐏𝐮𝐛𝐥𝐢𝐜𝐚𝐝𝐨 𝐄𝐧:*\n${yt_play[0].ago}\n\n`
-       txt += `✩ *𝐄𝐧𝐥𝐚𝐜𝐞:*\n${'https://youtu.be/' + yt_play[0].videoId}\n\n`
-       txt += `✨️ *Nota:* Para descargar responde a este mensaje con *1* o *2*.\n\n`
+       txt += `🍟 *Titulo:*\n${yt_play[0].title}\n\n`
+       txt += `⏱️ *Duración:*\n${secondString(yt_play[0].duration.seconds)}\n\n`
+       txt += `✨️ *Publicado en:*\n${yt_play[0].ago}\n\n`
+       txt += `🔗 *Enlace:*\n${'https://youtu.be/' + yt_play[0].videoId}\n\n`
+       txt += `🍭 *Nota:* Para descargar responde a este mensaje con *1* o *2*.\n\n`
        txt += `*1:* Video\n*2:* Audio`
 
 /* let txt = `・₊✧★。..・✫・🎸🎧°⋆♡₊˚ 🔮
@@ -59,13 +59,11 @@ renderLargerThumbnail: true
 }}}, { quoted: fkontak})
 await m.react(done)
 } catch {
-await m.react(error)
 await m.reply(`✘ Ocurrío un error`)}}
 
 handler.help = ['play *<búsqueda>*', 'play2 *<busqueda>*']
 handler.tags = ['descargas', 'youtube']
 handler.command = ['play', 'play2']
-handler.register = true
 export default handler
 
 async function search(query, options = {}) {
