@@ -24,12 +24,13 @@ const handler = async (m, {args, usedPrefix, command}) => {
    await m.react(done)
   } catch {
     try {
-    conn.reply(m.chat, wait, m, {
+    await m.react(rwait)
+   /* conn.reply(m.chat, wait, m, {
     contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
     title: packname,
     body: wm,
     previewType: 0, thumbnail: icons,
-    sourceUrl: redes }}})
+    sourceUrl: redes }}}) */
       const lol = await fetch(`https://api.lolhuman.xyz/api/translate/auto/${lang}?apikey=${lolkeysapi}&text=${text}`);
       const loll = await lol.json();
       const result2 = loll.result.translated;
@@ -41,5 +42,8 @@ const handler = async (m, {args, usedPrefix, command}) => {
     }
   }
 };
+handler.help = ['trad']
+handler.tags = ['herramientas']
 handler.command = ['translate', 'traducir', 'trad'];
+handler.register = true
 export default handler;
