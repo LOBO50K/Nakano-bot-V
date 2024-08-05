@@ -59,11 +59,13 @@ renderLargerThumbnail: true
 }}}, { quoted: fkontak})
 await m.react(done)
 } catch {
+await m.react(error)
 await m.reply(`✘ Ocurrío un error`)}}
 
 handler.help = ['play *<búsqueda>*', 'play2 *<busqueda>*']
 handler.tags = ['descargas', 'youtube']
 handler.command = ['play', 'play2']
+handler.register = true
 export default handler
 
 async function search(query, options = {}) {
