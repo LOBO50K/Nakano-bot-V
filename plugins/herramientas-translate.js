@@ -20,7 +20,8 @@ const handler = async (m, {args, usedPrefix, command}) => {
     previewType: 0, thumbnail: icons,
     sourceUrl: redes }}}) */
     const result = await translate(`${text}`, {to: lang, autoCorrect: true});
-    await m.reply('*Traducción:* ' + result.text);
+   await conn.reply(m.chat, '*Traducción:* ' + result.text, m, fake);
+   await m.react(done)
   } catch {
     try {
     conn.reply(m.chat, wait, m, {
