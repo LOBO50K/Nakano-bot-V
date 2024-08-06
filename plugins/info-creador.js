@@ -1,6 +1,6 @@
 var handler = async (m, { conn }) => {
 const p = nomorown
-let pp = await conn.profilePictureUrl(`${p}@s.whatsapp.net`, 'image').catch((_) => thumb)
+let pp = await conn.profilePictureUrl(`${p}@s.whatsapp.net`, 'image').catch((_) => icons)
 let owner = `wa.me/${p}`
 let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:WhatsApp; BANG SYAII\nZam\nORG: ${nameowner}\nTITLE:soft\nitem1.TEL;waid=${nomorown}:${nomorown}\nitem1.X-ABLabel:Contactar al propietario\nitem2.URL:https://github.com/OfcDiego\nitem2.X-ABLabel:💬 Más\nitem3.EMAIL;type=INTERNET: theyaemoribot@gmail.com\nitem3.X-ABLabel:Email\nitem4.ADR:;;🇲🇽 México;;;;\nitem4.X-ABADR:💬 Más\nitem4.X-ABLabel:Ubicación\nEND:VCARD`
 
