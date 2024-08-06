@@ -1,7 +1,7 @@
 {
 "name": "YaemoriBot-MD",
 "version": "2.0.4", 
-"description": "Super Bot De WhatsApp",
+"description": "WhatsApp Bot - NodeJs",
 "main": "index.js",
 "type": "module",
 
