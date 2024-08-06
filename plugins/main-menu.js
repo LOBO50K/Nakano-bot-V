@@ -52,11 +52,15 @@ const defaultMenu = {
 ┬│✯ ⚓ *Rango:* %role
 │╰────────────────···
 ╰────────═┅═─────────
+%readmore
+*─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
+
+\t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-  header: null,
-  body: null,
-  footer: null,
-  after: null,
+      header: '╭───═[ %category ]═────⋆\n│╭───────────────···',
+  body: '││ %cmd\n',
+  footer: '│╰────────────────···\n╰────────═┅═─────────\n',
+  after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
@@ -163,12 +167,12 @@ await m.react('⭐️')
 
 //await conn.sendFile(m.chat, imagen1, 'yaemori.jpg', text.trim(), fkontak, null, rcanal)
 
-//conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: team, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen1, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m});
+conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: team, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen1, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m});
 
-await conn.sendButton(m.chat, text, null, icons, [
-['Instalar Ai 🌸', '#instalarbot'],
-['Status De Ai ⭐️', '#status'],
-['Grupos De Ai ✨️', '#gruposai']], null, null, fkontak)
+/*await conn.sendButton(m.chat, text, team, imagen1, [
+['𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗥 𝗕𝗢𝗧 🤖', '.instalarbot'],
+['𝗘𝗦𝗧𝗔𝗗𝗢 🪐', '#status'],
+['𝗚𝗥𝗨𝗣𝗢𝗦 👥', '#gruposai']], null, null, fkontak)*/
 
   } catch (e) {
     conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
