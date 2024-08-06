@@ -1,8 +1,4 @@
-/*
-plugin actualizado por:
-- DanixlJs
-- https://github.com/DanixlJs
-*/
+// By: @DanixlJs
 
 export async function before(m) {
   if (!m.text || !global.prefix.test(m.text)) {
