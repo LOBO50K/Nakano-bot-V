@@ -180,7 +180,7 @@ await m.react('⭐️')
 
 //await conn.sendFile(m.chat, imagen1, 'yaemori.jpg', text.trim(), fkontak, null, rcanal)
 
-await conn.sendMessage(
+/*await conn.sendMessage(
   m.chat,
   { video: { url: vid }, caption: text.trim(),
   contextInfo: {
@@ -203,7 +203,9 @@ await conn.sendMessage(
   },
 
   gifPlayback: true, gifAttribution: 0 },
-  { quoted: fkontak })
+  { quoted: fkontak })*/
+
+conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: team, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen1, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: fkontak});
 
   } catch (e) {
     conn.reply(m.chat, '🔵 Lo sentimos, el menú tiene un error', m, rcanal, )
