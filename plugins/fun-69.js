@@ -14,8 +14,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let user = global.db.data.users[who];
     let name = conn.getName(who);
     let name2 = conn.getName(m.sender);
-   // m.react('⏳');
-    await conn.sendMessage(m.chat, { react: { text: '🔥', key: m.key } })
+    await m.react('🔥');
     let str = `${name2} está haciendo un 69 con ${name}`.trim();
     if (m.isGroup){
 
@@ -33,12 +32,12 @@ let handler = async (m, { conn, usedPrefix }) => {
     conn.sendMessage(m.chat, { video: { url: video }, gifPlayback: true, caption:str, mentions: [m.sender] },{ quoted: estilo })
     };
    
-  //  m.react('🔥');
+   // await m.react('🔥');
 }
 
 handler.help = ['69 @tag'];
-handler.tags = ['reaccion'];
-handler.command = /^(sixnine|69)$/i;
+handler.tags = ['fun'];
+handler.command = ['sixnine', '69'];
 handler.group = true;
 
 export default handler;
