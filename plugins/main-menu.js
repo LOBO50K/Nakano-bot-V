@@ -53,10 +53,10 @@ const defaultMenu = {
 │╰────────────────···
 ╰────────═┅═─────────
 `.trimStart(),
-  header: '',
-  body: '',
-  footer: '',
-  after: '',
+  header: wm,
+  body: dev,
+  footer: author,
+  after: team,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
