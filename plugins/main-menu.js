@@ -53,11 +53,11 @@ const defaultMenu = {
 │╰────────────────···
 ╰────────═┅═─────────
 `.trimStart(),
-      header: '',
+/*      header: '',
   body: '',
   footer: '',
-  after: ``,
-}
+  after: '',
+}*/
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
@@ -166,7 +166,7 @@ await m.react('⭐️')
 //conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: team, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen1, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m});
 
 await conn.sendButton(m.chat, text, team, imagen1, [
-['Isntalar Ai 🌸', '#instalarbot'],
+['Instalar Ai 🌸', '#instalarbot'],
 ['Status De Ai ⭐️', '#status'],
 ['Grupos De Ai ✨️', '#gruposai']], null, null, fkontak)
 
