@@ -1,8 +1,7 @@
-import fetch from 'node-fetch'
-import yts from 'yt-search'
-import ytdl from 'ytdl-core'
-import axios from 'axios'
+import fg from 'api-dylux'
 import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
+import yts from 'yt-search'
+import fetch from 'node-fetch' 
 
 var handler = async (m, { conn, command, args, text, usedPrefix }) => {
 
