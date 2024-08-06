@@ -39,9 +39,9 @@ let handler = async (m, { conn }) => {
 };
 
 handler.help = ['bienvenidos'];
+handler.tags = ['grupo'];
+handler.command = ['bienvenidos', 'nuevos'];
 handler.group = true;
 handler.admin = true;
-handler.tags = ['grupo'];
-handler.command = /^(bienvenidos|nuevos)$/i;
 
 export default handler;
