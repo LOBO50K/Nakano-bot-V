@@ -1,8 +1,6 @@
 /*
-💥 Codigo Realizado Por : 
+🍧 Codigo Realizado Por : 
 • OfcDiego (https://github.com/OfcDiego)
-✨️ Creado Para : 
-• Ai Yaemori - MD
 */
 
 //aun no funciona correctamente.
