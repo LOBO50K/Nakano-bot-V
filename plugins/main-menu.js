@@ -18,7 +18,6 @@ let tags = {
   'grupo': 'GRUPOS 👥',
   'nable': 'ON / OFF 📴', 
   'descargas': 'DESCARGAS 📥',
-  'youtube': 'YOUTUBE PLAY 📥',
   'tools': 'HERRAMIENTAS 🔧',
   'info': 'INFORMACIÓN 🐢',
   'nsfw': 'NSFW 🔞', 
