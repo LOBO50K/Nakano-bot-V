@@ -12,8 +12,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let user = global.db.data.users[who];
     let name = conn.getName(who);
     let name2 = conn.getName(m.sender);
-   // m.react('⏳');
-    await conn.sendMessage(m.chat, { react: { text: '🥵', key: m.key } })
+    await m.react('🥵');
     let str = `${name2} se la metio en el ano a ${name}! >.<`.trim();
     if (m.isGroup){
     
@@ -26,12 +25,12 @@ let handler = async (m, { conn, usedPrefix }) => {
     conn.sendMessage(m.chat, { video: { url: video }, gifPlayback: true, caption:str, mentions: [m.sender] },{ quoted: estilo })
     };
    
-   // m.react('🔥');
+ //  await m.react('🔥');
 }
 
 handler.help = ['anal @tag'];
 handler.tags = ['fun'];
-handler.command = /^(anal|culiar)$/i;
+handler.command = ['anal', 'culiar'];
 handler.register = true;
 handler.group = true;
 
