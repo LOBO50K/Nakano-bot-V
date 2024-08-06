@@ -36,7 +36,7 @@ global.botname = 'Yᴀᴇᴍᴏʀɪ Bᴏᴛ - MD 🍟'
 global.team = '⚡︎ ᥣіgһ𝗍ᥒіᥒց - 𝗍ᥱᥲm ⚡︎'
 global.dev = '🚩 Powered By あ S_ᴅɪᴇɢᴏ あ'
 global.textbot = '𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶 : 𝗢𝗳𝗰𝗗𝗶𝗲𝗴𝗼 🚩'
-global.vs = '2.0.3'
+global.vs = '2.0.4'
 
 
 //• ↳ ◜𝑰𝑴𝑨́𝑮𝑬𝑵𝑬𝑺◞ • 🌇
