@@ -172,7 +172,7 @@ await m.react('⭐️')
 await conn.sendButton(m.chat, text, team, imagen1, [
 ['𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗥 𝗕𝗢𝗧 🤖', '.instalarbot'],
 ['𝗘𝗦𝗧𝗔𝗗𝗢 🪐', '#status'],
-['𝗚𝗥𝗨𝗣𝗢𝗦 👥', '#gruposai']], null, null, fkontak)}
+['𝗚𝗥𝗨𝗣𝗢𝗦 👥', '#gruposai']], null, null, fkontak)
 
   } catch (e) {
     conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
