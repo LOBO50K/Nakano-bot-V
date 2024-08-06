@@ -74,4 +74,4 @@ handler.tags = ['descargas']
 handler.command = ['play']
 handler.register = true
 
-module.exports = handler
+export default handler
