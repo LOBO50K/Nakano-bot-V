@@ -10,10 +10,10 @@ const handler = async (m, {conn, isAdmin, groupMetadata }) => {
     m.reply('🚩 Ocurrio un error.');
   }
 };
-handler.tags = ['mods'];
+handler.tags = ['owner'];
 handler.help = ['autoadmin'];
 handler.command = ['autoadmin'];
-handler.mods = true;
+handler.rowner = true;
 handler.group = true;
 handler.botAdmin = true;
 export default handler;
