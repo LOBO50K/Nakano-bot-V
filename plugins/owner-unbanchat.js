@@ -6,9 +6,9 @@ chat.isBanned = false
 await conn.reply(m.chat, '🚩 *¡LA BOT YA FUÉ DESBANEADA EN ESTE CHAT!*', m, fake)
 }
 handler.help = ['unbanchat'];
-handler.tags = ['mods'];
+handler.tags = ['owner'];
 handler.command = ['unbanchat', 'desbanearchat', 'desbanchat']
-handler.mods = true 
+handler.rowner = true 
 //handler.group = true
 
 export default handler
