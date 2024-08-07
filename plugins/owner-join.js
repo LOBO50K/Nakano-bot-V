@@ -9,8 +9,8 @@ let res = await conn.groupAcceptInvite(code)
 m.reply(`🚩 Me uní correctamente al Grupo`)
 }
 handler.help = ['join <link>']
-handler.tags = ['mods']
+handler.tags = ['owner']
 handler.command = ['join', 'entrar'] 
-handler.mods = true
+handler.rowner = true
 
 export default handler
