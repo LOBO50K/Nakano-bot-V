@@ -1,7 +1,3 @@
-// Código gracias a SoIz1 
-// Github: https://github.com/SoIz1
-//Adaptado por KatashiFukushima. Github: https://github.com/KatashiFukushima
-
 import axios from 'axios'
 
 let handler = async (m, { conn, text }) => {
@@ -40,7 +36,7 @@ conn.reply(m.chat, ipsearch, m, rcanal, )
 }
 
 handler.help = ['ip <alamat ip>']
-handler.tags = ['mods']
+handler.tags = ['owner']
 handler.command = ['ip']
-handler.mods = true
+handler.rowner = true
 export default handler
