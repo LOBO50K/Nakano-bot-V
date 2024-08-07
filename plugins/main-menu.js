@@ -22,7 +22,6 @@ let tags = {
   'info': 'INFORMACIÓN 🐢',
   'nsfw': 'NSFW 🔞', 
   'owner': 'CREADOR 👑', 
-  'mods': 'STAFF YAEMORI 🍟',
   'audio': 'AUDIOS 🔉', 
   'ai': 'AI 🌹',
   'transformador': 'CONVERTIDORES 🚩',
