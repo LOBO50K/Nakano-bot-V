@@ -18,8 +18,8 @@ await m.react(error)
 conn.reply(m.chat, `❮❌️❯ » *Ocurrió un error.*`, m, fake)}}
 
 handler.help = ['copia']
-handler.tags = ['mods']
+handler.tags = ['owner']
 handler.command = ['backup', 'respaldo', 'copia']
-handler.mods = true
+handler.rowner = true
 
 export default handler
