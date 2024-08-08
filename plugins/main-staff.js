@@ -12,11 +12,6 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 
 🌸  *Colaboradores:*
 
-• David Chian 
-🍟 *Rol:* Developer
-🚩 *Número:* Wa.me/5351524614
-✨️ *GitHub:* https://github.com/David-Chian`
-
 • ArizzVal
 🍟 *Rol:* Developer
 🚩 *Número:* Wa.me/5215610314499
@@ -40,7 +35,12 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 • DarkesJs
 🍟 *Rol:* Developer
 🚩 *Número:* Wa.me/573218138672
-✨️ *GitHub:* https://github.com/WOTCHITA`
+✨️ *GitHub:* https://github.com/WOTCHITA
+
+• David Chian 
+🍟 *Rol:* Developer
+🚩 *Número:* Wa.me/5351524614
+✨️ *GitHub:* https://github.com/David-Chian`
 await conn.sendFile(m.chat, icons, 'yaemori.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
 'forwardingScore': 200,
