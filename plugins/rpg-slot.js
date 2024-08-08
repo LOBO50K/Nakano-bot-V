@@ -9,7 +9,6 @@ if (isNaN(args[0])) throw fa
 let apuesta = parseInt(args[0])
 let users = global.db.data.users[m.sender]
 let time = users.lastslot + 10000
-if (new Date - users.lastslot < 10000) throw `⏱️ *Espere ${msToTime(time - new Date())} para jugar de nuevo*`
 if (apuesta < 30) throw '🧃 *Lo minimo de apostar es 30 XP*'
 if (users.exp < apuesta) {
 throw `🧃 *No Tienes Suficiente XP*`
