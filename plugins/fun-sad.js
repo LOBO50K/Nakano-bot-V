@@ -32,7 +32,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 }
 
 handler.help = ['triste @tag'];
-handler.tags = ['reaccion'];
+handler.tags = ['fun'];
 handler.command = ['sad','triste'];
 handler.group = true;
 
