@@ -15,7 +15,7 @@ if (users.exp < apuesta) {
 throw `🧃 *No Tienes Suficiente XP*`
 }
 
-let emojis = ['🐋', '🐉', '🌟']
+let emojis = ["🐋", "🐉", "🌟"]
 let a = Math.floor(Math.random() * emojis.length)
 let b = Math.floor(Math.random() * emojis.length)
 let c = Math.floor(Math.random() * emojis.length)
@@ -70,11 +70,11 @@ const array = [...arrayCasuale, ];
 let { key } = await conn.sendMessage(m.chat, { text: `*A cruzar los dedos*` }, { quoted: fkontak });
 
 for (let i = 1; i <= maxIterations; i++) {
-await conn.sendMessage(m.chat, { text: `🎰 | *RANURAS* | 🎰\n────────\n` + `${array[i]}` + `\n ────────\n🎰 |   *SLOTS*   | 🎰`, edit: key }, { quoted: fkontak });
+await conn.sendMessage(m.chat, { text: `🎰 | *R A N U R A S* | 🎰\n────────\n` + `${array[i]}` + `\n ────────\n🎰 |   *S L O T S*   | 🎰`, edit: key }, { quoted: fkontak });
 await new Promise((resolve) => setTimeout(resolve, 50))}
 
 return await conn.sendMessage(m.chat, {text: `
-🎰 ┃ *SLOTS* 
+🎰 ┃ *S L O T S* 
 ───────────
 ${x[0]} : ${y[0]} : ${z[0]}
 ${x[1]} : ${y[1]} : ${z[1]}
@@ -83,7 +83,7 @@ ${x[2]} : ${y[2]} : ${z[2]}
 🎰┃🎰┃ 🎰\n\n${end}`, edit: key}, {quoted: fkontak})
 }
 handler.help = ['slot']
-handler.tags = ['juegos']
+handler.tags = ['fun']
 handler.command = ['slot']
 handler.register = true
 
