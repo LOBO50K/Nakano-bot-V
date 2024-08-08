@@ -12,6 +12,11 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 
 🌸  *Colaboradores:*
 
+• David Chian 
+🍟 *Rol:* Developer
+🚩 *Número:* Wa.me/5351524614
+✨️ *GitHub:* https://github.com/David-Chian`
+
 • ArizzVal
 🍟 *Rol:* Developer
 🚩 *Número:* Wa.me/5215610314499
