@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let who;
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
     else who = m.chat;
-    if (!who) conn.reply(m.chat, '❕️ Etiqueta o menciona a alguien', m, rcanal);
+    if (!who) await conn.reply(m.chat, '❕️ Etiqueta o menciona a alguien', m, rcanal);
 
     let user = global.db.data.users[who];
     let name = conn.getName(m.sender);
@@ -36,7 +36,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 handler.help = ['enamorada @tag'];
 handler.tags = ['fun'];
-handler.command = ['love2', 'enamorada', 'enamorado']:
+handler.command = ['love2', 'enamorada', 'enamorado'];
 handler.group = true;
 
 export default handler;
