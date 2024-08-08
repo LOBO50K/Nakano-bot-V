@@ -7,13 +7,13 @@ let handler = async (m, { conn, usedPrefix }) => {
     let who;
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
     else who = m.chat;
-    if (!who) throw 'Etiqueta o menciona a alguien';
+    if (!who) await conn.reply(m.chat, '❕️ Etiqueta o menciona a alguien', m, rcanal);
 
     let user = global.db.data.users[who];
-    let name = conn.getName(who);
-    let name2 = conn.getName(m.sender);
-    m.react('😍');
-    let str = `${name2} está enamorad﹫ de  ${name}`.trim();
+    let name = conn.getName(m.sender);
+    let name2 = conn.getName(who);
+    await m.react('🤡');
+    let str = `${name} está enamorad﹫ de  ${name2}`;
     if (m.isGroup){
     
     let pp = 'https://telegra.ph/file/5fbd60c40ab190ecc8e1c.mp4'
@@ -28,7 +28,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let pp10 = 'https://telegra.ph/file/63222faf293e9d086f607.mp4'
     const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10];
     const video = videos[Math.floor(Math.random() * videos.length)];
-    conn.sendMessage(m.chat, { video: { url: video }, gifPlayback: true, caption:str, mentions: [m.sender] },{ quoted: estilo })
+    conn.sendMessage(m.chat, { video: { url: video }, gifPlayback: true, caption: str, mentions: [m.sender] },{ quoted: fkontak })
     };
    
   
@@ -36,7 +36,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 handler.help = ['enamorada @tag'];
 handler.tags = ['fun'];
-handler.command = /^(love2|enamorado_de|enamorada_de)$/i;
+handler.command = ['love2', 'enamorada', 'enamorado']:
 handler.group = true;
 
 export default handler;
