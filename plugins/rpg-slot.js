@@ -48,7 +48,7 @@ users.estrellas -= apuesta
 cooldowns[m.sender] = Date.now()
 return await conn.reply(m.chat,
         `
-  🎰 | *S L O T S* 
+  🎰 \`S L O T S*`\
 ──────────
 ${x[0]} : ${y[0]} : ${z[0]}
 ${x[1]} : ${y[1]} : ${z[1]}
