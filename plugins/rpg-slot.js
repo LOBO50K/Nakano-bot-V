@@ -65,6 +65,6 @@ handler.group = false
 export default handler
 
 function segundosAHMS(segundos) {
-  let segundosRestantes = segundos % 60
-  return `${segundosRestantes} segundos`
+let segundosRestantes = segundos % 60
+return `${segundosRestantes} segundos`
 }
