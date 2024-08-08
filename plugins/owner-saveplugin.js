@@ -1,16 +1,15 @@
 import fs from 'fs'
 let handler = async (m, { text, usedPrefix, command }) => {
 
-    if (!text) throw `*🚩 Ingrese el nombre del plugin*`
-    if (!m.quoted.text) throw `*🚩 Responde al mensaje*`
+    if (!text) await conn.reply(m.chat, '*🚩 Ingrese el nombre del plugin*', m, rcanal)
+    if (!m.quoted.text) await conn.reply(m.chat, '*🚩 Responde al mensaje*', m, fake)
     let ruta = `plugins/${text}.js`
     await fs.writeFileSync(ruta, m.quoted.text)
-    m.reply(`*✨️ Guardado en ${ruta}*`)
+    await conn.reply(m.chat, `🧃 *Guardado en ${ruta}*`, m, fake)
 }
-handler.help = ['saveplugin'].map(v => v + ' nombre')
+handler.help = ['saveplugin']
 handler.tags = ['owner']
-handler.command = ["saveplugin"]
-handler.owner = true
+handler.command = ['saveplugin']
 handler.owner = true
 
 export default handler
