@@ -3,7 +3,7 @@
 • OfcDiego (https://github.com/OfcDiego)
 */
 
-var handler = async (m, { text,  usedPrefix, command }) => {
+/*var handler = async (m, { text,  usedPrefix, command }) => {
 
 //rollwaifus
 const waifus = [
@@ -46,4 +46,4 @@ mostrarWaifu(waifuAleatoria)}
 handler.command = ['rw', 'rollwaifu']
 handler.help = ['rw']
 handler.tags = ['anime']
-export default handler
+export default handler*/
