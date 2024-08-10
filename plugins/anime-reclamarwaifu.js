@@ -5,7 +5,7 @@
 
 //aun no funciona correctamente.
 
-var handler = async (m, { text,  usedPrefix, command }) => {
+/*var handler = async (m, { text,  usedPrefix, command }) => {
 
 // Función para reclamar la waifu
 function reclamarWaifu() {
@@ -25,4 +25,4 @@ handler.command = ['c', 'reclamar']
 handler.help = ['c']
 handler.tags = ['anime']
 handler.premium = false
-export default handler
+export default handler*/
