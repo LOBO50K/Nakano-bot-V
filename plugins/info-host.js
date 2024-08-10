@@ -27,24 +27,24 @@ contacto@cafirexos.com
 🧑‍💻 *Contacto (Diego Flores)*
 https://wa.me/50497150165`
 
-let txt = `🚩 *F L A R E X - C L O U D* 
+let txt = `🚩 *O L Y M P U S - H O S T* 
 
 *¿Quieres un Host de calidad y con bajos precios?*
-Pues te presento a *FlarexCloud*, un hosting de calidad con servidores dedicados y precios por debajo de 1USD, estos servidores están destinados a ofrecerte un Uptime 24/7 para que puedas alojar tus proyectos y qué estos funcionen de manera eficaz.
+Pues te presento a *OlympusHost*, un hosting de calidad con servidores dedicados y precios por debajo de 1USD, estos servidores están destinados a ofrecerte un Uptime 24/7 para que puedas alojar tus proyectos y qué estos funcionen de manera eficaz.
 
 🟢 \`\`\`Información del Host\`\`\`
 
-💫 *Página:* 
-• https://www.flarex.cloud
+🔮 *Dashboard:* 
+• https://kingsvhost.asifofc.xyz
 
-💙 *Game Panel:* 
-• https://gamepanel.flarex.cloud
+🧃 *Panel:*
+• https://host.asifofc.xyz
 
-☁️ *Discord:*
-• https://discord.flarex.cloud
+💥 *Canal:*
+• https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J
 
-🤍 *Grupo:*
-• https://whatsapp.flarex.cloud
+⚜️ *Contacto (Mateo)*
+https://wa.me/593979133620
 
 > *Únete a está comunidad y disfruta de un servicio de calidad :D*` 
 
@@ -65,7 +65,7 @@ thumbnailUrl: 'https://grxcwmcwbxwj.objectstorage.sa-saopaulo-1.oci.customer-oci
 }, { mentions: m.sender })
 }
 
-if (command == 'flarex' || command == 'flarexcloud') {
+if (command == 'olympus' || command == 'olympushost') {
  await conn.sendMessage(m.chat, { text: txt,
 contextInfo:{
 forwardingScore: 9999999,
@@ -73,15 +73,15 @@ isForwarded: false,
 "externalAdReply": {
 "showAdAttribution": true,
 "containsAutoReply": true,
-title: `🔵 *F L A R E X - C L O U D* 🔵`,
+title: `🔵 *O L Y M P U S - H O S T* 🔵`,
 body: `✅ Hosting de Calidad`,
 "previewType": "PHOTO",
-thumbnailUrl: 'https://qu.ax/EQTd.jpg', 
-sourceUrl: 'https://www.flarex.cloud'}}},
+thumbnailUrl: 'https://qu.ax/waCu.jpg', 
+sourceUrl: 'https://host.asifofc.xyz'}}},
 { quoted: fkontak})
 }}
 
-handler.help = ['cafirexos', 'flarexcloud']
+handler.help = ['cafirexos', 'olympus']
 handler.tags = ['main']
-handler.command = ['cafirexos', 'flarex', 'flarexcloud']
+handler.command = ['cafirexos', 'olympus', 'olympushost']
 export default handler
