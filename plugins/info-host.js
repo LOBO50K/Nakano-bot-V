@@ -26,7 +26,7 @@ isForwarded: false,
 "externalAdReply": {
 "showAdAttribution": true,
 "containsAutoReply": true,
-title: `🔮 O L Y M P U S 🔮`,
+title: `🥏 O L Y M P U S - H O S T 🥏`,
 body: `✅ Hosting de Calidad`,
 "previewType": "PHOTO",
 thumbnailUrl: 'https://qu.ax/waCu.jpg', 
