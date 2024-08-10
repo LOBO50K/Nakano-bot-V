@@ -79,13 +79,6 @@ global.db.chain = chain(global.db.data);
 };
 loadDatabase();
 
-// Inicialización de conexiones globales
-/*if (global.conns instanceof Array) {
-console.log('🚩 Conexiones ya inicializadas...');
-} else {
-global.conns = [];
-}*/
-
 /* ------------------------------------------------*/
 
 global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')));
@@ -273,48 +266,6 @@ console.log(chalk.bold.redBright(`\n⚠️❗ RAZON DE DESCONEXIÓN DESCONOCIDA:
 }}
 }
 process.on('uncaughtException', console.error)
-
-/* ------------------------------------------------*/
-/* Código reconexión de sub-bots fases beta */
-/* Echo por: https://github.com/elrebelde21 */
-
-/*async function connectSubBots() {
-const subBotDirectory = './MiniJadiBot';
-if (!existsSync(subBotDirectory)) {
-console.log('🚩 Ai Yaemori no tiene Sub-Bots vinculados.');
-return;
-}
-
-const subBotFolders = readdirSync(subBotDirectory).filter(file => 
-statSync(join(subBotDirectory, file)).isDirectory()
-);
-
-const botPromises = subBotFolders.map(async folder => {
-const authFile = join(subBotDirectory, folder);
-if (existsSync(join(authFile, 'creds.json'))) {
-return await connectionUpdate(authFile);
-}
-});
-
-const bots = await Promise.all(botPromises);
-global.conns = bots.filter(Boolean);
-console.log(chalk.bold.greenBright(`🍟 Todos los Sub-Bots se conectaron con éxito.`))
-}
-
-(async () => {
-global.conns = [];
-
-const mainBotAuthFile = 'MiniSession';
-try {
-const mainBot = await connectionUpdate(mainBotAuthFile);
-global.conns.push(mainBot);
-console.log(chalk.bold.greenBright(`🚩 Ai Yaemori conectado correctamente.`))
-
-await connectSubBots();
-} catch (error) {
-console.error(chalk.bold.cyanBright(`🍭 Error al iniciar Ai Yaemori: `, error))
-}
-})();*/
 
 /* ------------------------------------------------*/
 
