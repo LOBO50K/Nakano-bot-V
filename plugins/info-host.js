@@ -34,6 +34,6 @@ sourceUrl: 'https://kingsvhost.asifofc.xyz'}}},
 { quoted: fkontak})
 }
 handler.tags =['main'] 
-handler.help = ['olympus', 'host', 'hosting'] 
+handler.help = ['host', 'hosting'] 
 handler.command = ['host', 'olympus', 'olympushost', 'hosting']
 export default handler
