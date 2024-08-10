@@ -1,28 +1,96 @@
-/*
-🍧 Codigo Realizado Por : 
-• OfcDiego (https://github.com/OfcDiego)
-*/
+//Codígo creado por DAVID CHIAN!! PERRAS wa.me/5351524614
+import fs from 'fs';
+import dotenv from 'dotenv';
+dotenv.config();
 
-//aun no funciona correctamente.
+const SECRET_KEY = process.env.SECRET_KEY;
 
-/*var handler = async (m, { text,  usedPrefix, command }) => {
+const obtenerDatos = () => {
+    if (fs.existsSync('data.json')) {
+        return JSON.parse(fs.readFileSync('data.json', 'utf-8'));
+    } else {
+        return { usuarios: {}, personajesReservados: [] };
+    }
+};
 
-// Función para reclamar la waifu
-function reclamarWaifu() {
-// Simulamos un roll de dados para determinar si ganamos la waifu
-const roll = Math.floor(Math.random() * 100) + 1
+const guardarDatos = (data) => {
+    fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
+};
 
-// Si el roll es mayor o igual a 50, ganamos la waifu
-if (roll >= 10) {
-m.reply("😊 ¡Felicidades! Has ganado la waifu 🌟")
-} else {
-m.reply("⭐️ Lo siento, no has ganado la waifu. ¡Inténtalo de nuevo!")}}
+let handler = async (m, { conn }) => {
+    if (!m.quoted) return;
 
-// Llamamos a la función para reclamar la waifu
-reclamarWaifu()}
+    let userId = m.sender;
+    let userName = await conn.getName(userId);
+    let characterId = m.quoted.text.match(/<id:(.*)>/)?.[1];
+    console.log("User ID:", userId);
+    console.log("Character ID:", characterId);
+    console.log("User Name:", userName);
+    let data = obtenerDatos();
 
-handler.command = ['c', 'reclamar']
-handler.help = ['c']
-handler.tags = ['anime']
-handler.premium = false
-export default handler*/
+    if (!characterId) {
+        return;
+    }
+
+    let reservedCharacter = data.personajesReservados.find(p => p.id === characterId);
+    if (!reservedCharacter) {
+        conn.reply(m.chat, `¡Lo siento, este personaje no está disponible en este momento!`, m, { mentions: [userId] });
+        return;
+    }
+const verifi = () => {
+    try {
+        const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
+        if (packageJson.name !== 'YaemoriBot-MD') return false;
+        if (packageJson.repository.url !== 'git+https://github.com/OfcDiego/YaemoriBot-MD.git') return false;
+        if (SECRET_KEY !== '38firllSk43U4k') return false;
+        return true;       
+    } catch (error) {
+        console.error('Error al leer package.json:', error);
+        return false;
+    }
+};
+if (!verifi()) {
+        await conn.reply(m.chat, '🚩 Este comando solo está disponible para AI Yaemori.\n 🌟 https://github.com/OfcDiego/YaemoriBot-MD', m, rcanal)
+        return
+    }
+    let characterReservedByOthers = data.usuarios[reservedCharacter.userId] && data.usuarios[reservedCharacter.userId].characters.includes(reservedCharacter.name);
+    if (characterReservedByOthers) {
+        let otherUserId = reservedCharacter.userId;
+        let otherUserName = await conn.getName(otherUserId);
+        conn.reply(m.chat, `¡Oh no! Tu personaje ${reservedCharacter.name} ha sido robado por @${otherUserName}`, m, { mentions: [userId, otherUserId] });
+        conn.sendMessage(otherUserId, { image: { url: reservedCharacter.url }, caption: `Felicitaciones, este personaje ${reservedCharacter.name} es tuyo` }, { quoted: m });
+        return;
+    }
+
+    if (!data.usuarios[userId]) {
+        data.usuarios[userId] = {
+            characterCount: 0,
+            totalRwcoins: 0,
+            lastUsedTime: 0,
+            characters: []
+        };
+    }
+
+    let userData = data.usuarios[userId];
+    userData.characters.push(reservedCharacter.name);
+    userData.characterCount++;
+    userData.totalRwcoins += reservedCharacter.value;
+    data.usuarios[userId] = userData;
+
+    data.personajesReservados = data.personajesReservados.filter(p => p.id !== characterId);
+    guardarDatos(data);
+
+    if (reservedCharacter.userId === userId) {
+        conn.reply(m.chat, `¡Felicidades @${userName}, obtuviste a ${reservedCharacter.name}!`, m, { mentions: [userId] });
+    } else {
+        let reservedUserName = await conn.getName(reservedCharacter.userId);
+        conn.reply(m.chat, `¡Felicidades @${userName}, has robado a ${reservedCharacter.name} de @${reservedUserName}!`, m, { mentions: [userId, reservedCharacter.userId] });
+    }
+};
+
+handler.help = ['confirmar'];
+handler.tags = ['fun'];
+handler.command = ['c','confirmar'];
+handler.register = true;
+
+export default handler;
