@@ -91,7 +91,7 @@ Para que no pierda su progreso en Yaemori, estos comandos realizarán un respald
 - **Dashboard:** [`Aquí`](https://dash.olympus-host.xyz)
 - **Panel:** [`Aquí`](https://panel.olympus-host.xyz)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J)
-- **Correo:** [`Aquí`](olympussupport@gmail.com.com)
+- **Correo:** [`Aquí`](olympushost2@gmail.com.com)
 
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - YaemoriBot**</summary><img src="https://telegra.ph/file/607fd0c0ae1ef3cb0703f.jpg"></details>
 
