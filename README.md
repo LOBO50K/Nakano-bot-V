@@ -85,13 +85,13 @@ Para que no pierda su progreso en Yaemori, estos comandos realizarán un respald
 | **IMAGEMAGICK** | [click](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
 
 ### ☆ OLYMPUS-HOST ☆
-<a href="https://kingsvhost.asifofc.xyz"><img src="https://qu.ax/waCu.jpg" height="125px"></a>
+<a href="https://dash.olympus-host.xyz"><img src="https://qu.ax/waCu.jpg" height="125px"></a>
 ### INFORMACION:
 
-- DASHBOARD: [`CLICK AQUI`](https://dash.olympus-host.xyz)
-- PANEL: [`CLICK AQUI`](https://panel.olympus-host.xyz)
-- ACTUALIZACIONES: [`CLICK AQUI`](https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J)
-- SOPORTE: [`CONTACTAR`](olympushost2@gmail.com.com)
+- **DASHBOARD:** [`CLICK AQUI`](https://dash.olympus-host.xyz)
+- **PANEL:** [`CLICK AQUI`](https://panel.olympus-host.xyz)
+- **ACTUALIZACIONES:** [`CLICK AQUI`](https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J)
+- **SOPORTE:** [`CONTACTAR`](olympushost2@gmail.com.com)
 
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - YaemoriBot**</summary><img src="https://telegra.ph/file/607fd0c0ae1ef3cb0703f.jpg"></details>
 
