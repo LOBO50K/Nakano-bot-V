@@ -88,8 +88,8 @@ Para que no pierda su progreso en Yaemori, estos comandos realizarán un respald
 <a href="https://kingsvhost.asifofc.xyz"><img src="https://qu.ax/waCu.jpg" height="125px"></a>
 ### Información del Host
 
-- **Dashboard:** [`Aquí`](https://kingsvhost.asifofc.xyz)
-- **Panel:** [`Aquí`](https://host.asifofc.xyz)
+- **Dashboard:** [`Aquí`](https://dash.olympus-host.xyz/)
+- **Panel:** [`Aquí`]()
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J)
 - **Correo:** [`Aquí`](olympussupport@gmail.com.com)
 
