@@ -10,7 +10,7 @@ Pues te presento a *OlympusHost*, un hosting de calidad con servidores dedicados
 • https://dash.olympus-host.xyz
 
 🧃 *Panel:*
-• 
+• https://panel.olympus-host.xyz
 
 💥 *Canal:*
 • https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J
