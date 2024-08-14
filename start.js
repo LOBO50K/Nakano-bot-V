@@ -394,4 +394,6 @@ setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return
   await purgeOldFiles()
 }, 1000 * 60 * 60);
-_quickTest().catch(console.error)
+_quickTest()
+.then()
+.catch(console.error)
