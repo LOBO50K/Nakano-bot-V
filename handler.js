@@ -111,10 +111,12 @@ export async function handler(chatUpdate) {
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!('self' in settings)) settings.self = false
+                if (!('antiprivado' in settings)) settings.antiprivado = false
                 if (!('autoread' in settings)) settings.autoread = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: false,
+                antiprivado: false,
                 status: 0
             }
         } catch (e) {
