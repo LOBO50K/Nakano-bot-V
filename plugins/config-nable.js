@@ -33,7 +33,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('admin', m, conn)
         throw false
       }
-      settings.antiPrivate = isEnable
+      user.antiPrivate = isEnable
       break
 
   case 'autoread':
@@ -48,7 +48,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('admin', m, conn)
         throw false
       }
-      settings.autoread = isEnable
+      user.autoread = isEnable
       break
 
   case 'antiver':
@@ -93,7 +93,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('admin', m, conn)
         throw false
       }
-      settings.antiSpam = isEnable
+      user.antiSpam = isEnable
       break
 
   case 'delete':
@@ -123,7 +123,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('admin', m, conn)
         throw false
       }
-      settings.autobio = isEnable
+      user.autobio = isEnable
       break
 
   case 'jadibotmd':
@@ -138,7 +138,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('admin', m, conn)
         throw false
       }
-      settings.jadibotmd = isEnable
+      user.jadibotmd = isEnable
       break
 
   case 'detect':
