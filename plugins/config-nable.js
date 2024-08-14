@@ -96,6 +96,21 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.detect = isEnable
       break
 
+  case 'simi':
+    case 'autosimi':
+    case 'simsimi':
+      if (!m.isGroup) {
+        if (!isOwner) {
+          global.dfail('group', m, conn)
+          throw false
+        }
+      } else if (!isAdmin) {
+        global.dfail('admin', m, conn)
+        throw false
+      }
+      chat.simi = isEnable
+      break
+
     case 'document':
     case 'documento':
     isUser = true
@@ -136,6 +151,10 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Tipo:* subbots
 *Descripción:* No permiten ser subbot
 *Ejemplo:* ${usedPrefix + command} subbots
+
+*Tipo:* simi
+*Descripción:* El bot te responde con mensajes random
+*Ejemplo:* ${usedPrefix + command} simi
 
 *Tipo:* audios
 *Descripción:* El Bot envia audios
