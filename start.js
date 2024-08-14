@@ -78,7 +78,7 @@ global.loadDatabase = async function loadDatabase() {
 }
 loadDatabase()
 
-global.authFile = `sessions`
+global.authFile = `MiniSession`
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -144,17 +144,17 @@ let numeroTelefono
 if (!!phoneNumber) {
 numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
 if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-console.log(chalk.bgBlack(chalk.bold.redBright("Comience con el código de país de su número de WhatsApp.\nEjemplo: 5218261275256\n")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Comience con el código de país de su número de WhatsApp.\nEjemplo: 573218138672\n")))
 process.exit(0)
 }} else {
 while (true) {
-numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('Por favor, escriba su número de WhatsApp.\nEjemplo: 51955918117\n')))
+numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('Por favor, escriba su número de WhatsApp.\nEjemplo: 573218138672\n')))
 numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
 
 if (numeroTelefono.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
 break 
 } else {
-console.log(chalk.bgBlack(chalk.bold.redBright("Por favor, escriba su número de WhatsApp.\nEjemplo: 51955918117.\n")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Por favor, escriba su número de WhatsApp.\nEjemplo: 573218138672.\n")))
 }}
 rl.close()  
 } 
@@ -163,7 +163,7 @@ rl.close()
             let codigo = await conn.requestPairingCode(numeroTelefono)
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
             console.log(chalk.yellow('introduce el código de emparejamiento en WhatsApp.'));
-            console.log(chalk.black(chalk.bgGreen(`Su código de emparejamiento: `)), chalk.black(chalk.white(codigo)))
+            console.log(chalk.black(chalk.bgGreen(`👑 CÓDIGO DE VINCULACIÓN 👑`)), chalk.black(chalk.white(codigo)))
         }, 3000)
 }}
 }
@@ -195,28 +195,28 @@ function clearTmp() {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./sessions")
+let directorio = readdirSync("./MiniSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-')
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./sessions/${files}`)
+unlinkSync(`./MiniSession/${files}`)
 })
 } 
 
 function purgeSessionSB() {
 try {
-let listaDirectorios = readdirSync('./serbot/');
+let listaDirectorios = readdirSync('./MiniJadiBot/');
 let SBprekey = []
 listaDirectorios.forEach(directorio => {
-if (statSync(`./serbot/${directorio}`).isDirectory()) {
-let DSBPreKeys = readdirSync(`./serbot/${directorio}`).filter(fileInDir => {
+if (statSync(`./MiniJadiBot/${directorio}`).isDirectory()) {
+let DSBPreKeys = readdirSync(`./MiniJadiBot/${directorio}`).filter(fileInDir => {
 return fileInDir.startsWith('pre-key-')
 })
 SBprekey = [...SBprekey, ...DSBPreKeys]
 DSBPreKeys.forEach(fileInDir => {
-unlinkSync(`./serbot/${directorio}/${fileInDir}`)
+unlinkSync(`./MiniJadiBot/${directorio}/${fileInDir}`)
 })
 }
 })
@@ -226,7 +226,7 @@ console.log(chalk.bold.red(`Algo salio mal durante la eliminación, archivos no 
 }}
 
 function purgeOldFiles() {
-const directories = ['./sessions/', './serbot/']
+const directories = ['./MiniSession/', './MiniJadiBot/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -264,7 +264,7 @@ if (opcion == '1' || methodCodeQR) {
   }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
-await fs.unlinkSync("./sessions/" + "creds.json")
+await fs.unlinkSync("./MiniSession/" + "creds.json")
 console.log(chalk.bold.redBright(`Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
 process.send('reset')}
 if (connection === 'close') {
