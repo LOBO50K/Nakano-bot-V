@@ -260,7 +260,7 @@ export async function handler(chatUpdate) {
                 if (!isAccept) {
 continue
 }
-/*m.plugin = name
+m.plugin = name
 if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
 let chat = global.db.data.chats[m.chat]
 let user = global.db.data.users[m.sender]
@@ -279,8 +279,8 @@ if (user.antispam2 && isROwner) return
 let time = global.db.data.users[m.sender].spam + 3000
 if (new Date - global.db.data.users[m.sender].spam < 3000) return console.log(`[ SPAM ]`) 
 global.db.data.users[m.sender].spam = new Date * 1
-}*/
-                m.plugin = name
+}
+              //  m.plugin = name
                 if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
                     let chat = global.db.data.chats[m.chat]
                     let user = global.db.data.users[m.sender]
