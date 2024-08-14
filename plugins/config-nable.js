@@ -36,6 +36,21 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.antiPrivate = isEnable
       break
 
+  case 'autoread':
+    case 'autoleer':
+    case 'leermensajes':
+      if (!m.isGroup) {
+        if (!isOwner) {
+          global.dfail('group', m, conn)
+          throw false
+        }
+      } else if (!isAdmin) {
+        global.dfail('admin', m, conn)
+        throw false
+      }
+      chat.autoread = isEnable
+      break
+
   case 'audios':
     case 'audiosbot':
     case 'botaudios':
@@ -117,6 +132,18 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Tipo:* antiprivado
 *Descripción:* No permite que el bot le escriban al privado
 *Ejemplo:* ${usedPrefix + command} antiprivado
+
+*Tipo:* subbots
+*Descripción:* No permiten ser subbot
+*Ejemplo:* ${usedPrefix + command} subbots
+
+*Tipo:* audios
+*Descripción:* El Bot envia audios
+*Ejemplo:* ${usedPrefix + command} audios
+
+*Tipo:* autoread
+*Descripción:* El Bot lee el mensaje automaticamente
+*Ejemplo:* ${usedPrefix + command} autoread
 
 *Tipo:* detect 
 *Descripción:* Informacion de cualquira configuración del grupo
