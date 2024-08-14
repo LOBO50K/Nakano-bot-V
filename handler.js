@@ -97,6 +97,8 @@ export async function handler(chatUpdate) {
                     chat.onlyLatinos = false
                 if (!('nsfw' in chat))
                     chat.nsfw = false
+                if (!('reaction' in chat))
+                    chat.reaction = false
                 if (!('simi' in chat))
                     chat.simi = false
                 if (!('antiver' in chat))
@@ -117,6 +119,7 @@ export async function handler(chatUpdate) {
                     simi: false,
                     antiver: false,
                     nsfw: false, 
+                    reaction: false,
                     expired: 0, 
                 }
             var settings = global.db.data.settings[this.user.jid]
@@ -437,15 +440,19 @@ global.db.data.users[m.sender].spam = new Date * 1
         }
 
         try {
-      if (!opts['noprint']) await (await import(`./lib/print.js`)).default(m, this)
-    } catch (e) {
-      console.log(m, m.quoted, e)
-    }
-    const settingsREAD = global.db.data.settings[this.user.jid] || {}
-    if (opts['autoread']) await this.readMessages([m.key])
-    if (settingsREAD.autoread) await this.readMessages([m.key])
-  }
-}
+     if (!opts['noprint']) await (await import(`./lib/print.js`)).default(m, this)
+} catch (e) { 
+      console.log(m, m.quoted, e)}
+       let settingsREAD = global.db.data.settings[this.user.jid] || {}  
+      if (opts['autoread']) await this.readMessages([m.key])
+      if (settingsREAD.autoread2) await this.readMessages([m.key])  
+
+     if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|ai|yaemori|a|s)/gi)) {
+         let emot = pickRandom(["🚩", "🍟", "✨️", "🌸", "💥", "⭐️", "🌟", "🍂", "🫂", "🍁", "💖", "💞", "💕", "💋"])
+       if (!m.fromMe) return this.sendMessage(m.chat, { react: { text: emot, key: m.key }})
+       }
+     function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
+       }}
 
 export async function deleteUpdate(message) {
 try {
