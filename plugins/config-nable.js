@@ -232,6 +232,10 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Descripción:* Informacion de cualquira configuración del grupo
 *Ejemplo:* ${usedPrefix + command} detect
 
+*Tipo:* statua
+*Descripción:* Cambia la info del Bot cada 1 seg
+*Ejemplo:* ${usedPrefix + command} status
+
 *Tipo:* nsfw 
 *Descripción:* Permitir que los usuarios usen comandos +18
 *Ejemplo:* ${usedPrefix + command} nsfw
