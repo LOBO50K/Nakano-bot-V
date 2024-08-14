@@ -223,6 +223,10 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Descripción:* No permite que el bot le escriban al privado
 *Ejemplo:* ${usedPrefix + command} antiprivado
 
+*Tipo:* reaccion
+*Descripción:* El Bot reacciona con emojisba cualquier mensaje
+*Ejemplo:* ${usedPrefix + command} reaccion
+
 *Tipo:* subbots
 *Descripción:* No permiten ser subbot
 *Ejemplo:* ${usedPrefix + command} subbots
@@ -247,7 +251,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Descripción:* Informacion de cualquira configuración del grupo
 *Ejemplo:* ${usedPrefix + command} detect
 
-*Tipo:* statua
+*Tipo:* status
 *Descripción:* Cambia la info del Bot cada 1 seg
 *Ejemplo:* ${usedPrefix + command} status
 
