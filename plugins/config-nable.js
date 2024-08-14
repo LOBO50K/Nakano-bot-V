@@ -74,15 +74,15 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Ejemplo:* ${usedPrefix + command} detect
 
 *Tipo:* nsfw 
-*Descripción:* Comandos *NSFW* para Grupos
+*Descripción:* Permitir que los usuarios usen comandos +18
 *Ejemplo:* ${usedPrefix + command} nsfw
 
 *Tipo:* antilink 
-*Descripción:* No permite *LINK* en los grupos
+*Descripción:* Elimina al usuario que envie un link de algun grupo
 *Ejemplo:* ${usedPrefix + command} antilink
 
 *Tipo:* document 
-*Descripción:* Funcion *Descarga En Documentos* para el Usuario
+*Descripción:* Funcion Descarga En Documentos para el Usuario
 *Ejemplo:* ${usedPrefix + command} document`, m, rcanal)
       throw false
   }
