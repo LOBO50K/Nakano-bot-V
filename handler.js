@@ -128,10 +128,9 @@ export async function handler(chatUpdate) {
                 if (!('self' in settings)) settings.self = false
                 if (!('jadibotmd' in settings)) settings.jadibotmd = true
                if (!('autobio' in settings)) settings.autobio = false
-                if (!('antiPrivate' in settings)) settings.antiPrivate = false
+                if (!('antiPrivate' in settings)) settings.antiPrivate = false;
                 if (!('autoread' in settings)) settings.autoread = false
-                if (!('autoread2' in settings)) settings.autoread2 = false
-                if (!('antiCall' in settings)) settings.antiCall = true
+                if (!('autoread2' in settings)) settings.autoread2 = false;
                 if (!('antiSpam' in settings)) settings.antiSpam = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
@@ -140,7 +139,6 @@ export async function handler(chatUpdate) {
                 antiPrivate: false,
                 autoread: false,
                 autoread2: false,
-                antiCall: true,
                 antiSpam: true,
                 status: 0
             }
@@ -455,18 +453,6 @@ global.db.data.users[m.sender].spam = new Date * 1
        }
      function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
        }}
-
-export async function callUpdate(callUpdate) {
-let isAnticall = global.db.data.settings[this.user.jid].antiCall  
-if (!isAnticall) return
-for (let nk of callUpdate) { 
-if (nk.isGroup == false) {
-if (nk.status == "offer") {
-let callmsg = await this.reply(nk.from, `❮📣❯ 𝗛𝗼𝗹𝗮 *@${nk.from.split('@')[0]}*, 𝙡𝙖𝙨 ${nk.isVideo ? '𝗹𝗹𝗮𝗺𝗮𝗱𝗮𝘀' : '𝘃𝗶𝗱𝗲𝗼 𝗹𝗹𝗮𝗺𝗮𝗱𝗮𝘀'} 𝗻𝗼 𝗲𝘀𝘁𝗮𝗻 𝗽𝗲𝗿𝗺𝗶𝘁𝗶𝗱𝗮𝘀 𝗲𝗻 𝗲𝘀𝘁𝗲 𝗯𝗼𝘁.\n\n• 𝗘𝗻 𝗰𝗮𝘀𝗼 𝗱𝗲 𝘂𝗻 𝗲𝗿𝗿𝗼𝗿, 𝗰𝗼𝗻𝘁𝗮𝗰𝘁𝗮 𝗮𝗹 𝗽𝗿𝗼𝗽𝗶𝗲𝘁𝗮𝗿𝗶𝗼:\n• ${creador}`, false, { mentions: [nk.from] })
-//let data = global.owner.filter(([id, isCreator]) => id && isCreator)
-//await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-await this.updateBlockStatus(nk.from, 'block')
-}}}}
 
 export async function deleteUpdate(message) {
 try {
