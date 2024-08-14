@@ -47,11 +47,11 @@ global.timestamp = {start: new Date}
 const __dirname = global.__dirname(import.meta.url)
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-global.prefix = new RegExp('^[' + (opts['prefix'] || '‎z/#$%.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
+global.prefix = new RegExp('^[' + (opts['prefix'] || 'â€Žz/#$%.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
 // global.opts['db'] = process.env['db']
 
-global.db = new Low(/https?:\/\//.test(opts['db'] || '') ? new cloudDBAdapter(opts['db']) : new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`));
+global.db = new Low(/https?:\/\//.test(opts['db'] || '') ? new cloudDBAdapter(opts['db']) : new JSONFile(`storage/databases/database.json`));
 
 global.DATABASE = global.db 
 global.loadDatabase = async function loadDatabase() {
@@ -80,9 +80,9 @@ loadDatabase()
 
 global.authFile = `sessions`
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
-const msgRetryCounterMap = (MessageRetryMap) => { };
+const msgRetryCounterMap = (MessageRetryMap) => { }
 const msgRetryCounterCache = new NodeCache()
-const {version} = await fetchLatestBaileysVersion();
+const {version} = await fetchLatestBaileysVersion()
 let phoneNumber = global.botnumber
 
 const methodCodeQR = process.argv.includes("qr")
@@ -143,17 +143,17 @@ let numeroTelefono
 if (!!phoneNumber) {
 numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
 if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-console.log(chalk.bgBlack(chalk.bold.redBright("Comience con el código de país de su número de WhatsApp.\nEjemplo: 573218138672\n")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Comience con el código de país de su número de WhatsApp.\nEjemplo: 57×××××××\n")))
 process.exit(0)
 }} else {
 while (true) {
-numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('Por favor, escriba su número de WhatsApp.\nEjemplo: 573218139672\n')))
+numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('Por favor, escriba su número de WhatsApp.\nEjemplo: 57×××××××\n')))
 numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
 
 if (numeroTelefono.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
 break 
 } else {
-console.log(chalk.bgBlack(chalk.bold.redBright("Por favor, escriba su número de WhatsApp.\nEjemplo: 573218138672.\n")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Por favor, escriba su número de WhatsApp.\nEjemplo: 57×××××××.\n")))
 }}
 rl.close()  
 } 
@@ -161,36 +161,44 @@ rl.close()
         setTimeout(async () => {
             let codigo = await conn.requestPairingCode(numeroTelefono)
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
-            console.log(chalk.yellow('introduce el código de emparejamiento en WhatsApp.'));
-            console.log(chalk.black(chalk.bgGreen(`👑 CODIGO DE VINCULACIÓN 👑`)), chalk.black(chalk.white(codigo)))
+            console.log(chalk.yellow('introduce el código de emparejamiento en WhatsApp.'))
+            console.log(chalk.black(chalk.bgGreen(`👑 CÓDIGO DE VINCULACIÓN 👑`)), chalk.black(chalk.white(codigo)))
         }, 3000)
 }}
 }
 
-conn.isInit = false;
-conn.well = false;
+conn.isInit = false
+conn.well = false
 
 if (!opts['test']) {
   if (global.db) {
     setInterval(async () => {
-      if (global.db.data) await global.db.write();
-      if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', 'serbot'], tmp.forEach((filename) => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])));
-    }, 30 * 1000);
+      if (global.db.data) await global.db.write()
+      if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', 'serbot'], tmp.forEach((filename) => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))
+    }, 30 * 1000)
   }
 }
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT);
 
-function clearTmp() {
-  const tmp = [join(__dirname, './tmp')];
-  const filename = [];
-  tmp.forEach((dirname) => readdirSync(dirname).forEach((file) => filename.push(join(dirname, file))));
-  return filename.map((file) => {
-    const stats = statSync(file);
-    if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file); // 3 minutes
-    return false;
-  });
+
+async function clearTmp() {
+  const tmp = [tmpdir(), join(__dirname, './tmp')]
+  const filename = []
+  tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
+
+
+  return filename.map(file => {
+    const stats = statSync(file)
+    if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 1)) return unlinkSync(file)
+    return false
+  })
 }
+
+setInterval(async () => {
+        await clearTmp()
+        console.log(chalk.cyan(`Se limpio la carpeta tmp`))
+}, 60000)
 
 function purgeSession() {
 let prekey = []
@@ -221,7 +229,7 @@ unlinkSync(`./serbot/${directorio}/${fileInDir}`)
 })
 if (SBprekey.length === 0) return; console.log(chalk.cyanBright(`=> No hay archivos por eliminar.`))
 } catch (err) {
-console.log(chalk.bold.red(`Algo salio mal durante la eliminación, archivos no eliminados`))
+console.log(chalk.bold.red(`Algo salio mal durante la eliminaciÃ³n, archivos no eliminados`))
 }}
 
 function purgeOldFiles() {
@@ -237,7 +245,7 @@ if (err) throw err;
 if (stats.isFile() && stats.mtimeMs < oneHourAgo && file !== 'creds.json') { 
 unlinkSync(filePath, err => {  
 if (err) throw err
-console.log(chalk.bold.green(`Archivo ${file} borrado con éxito`))
+console.log(chalk.bold.green(`Archivo ${file} borrado con Ã©xito`))
 })
 } else {  
 console.log(chalk.bold.red(`Archivo ${file} no borrado` + err))
@@ -245,66 +253,36 @@ console.log(chalk.bold.red(`Archivo ${file} no borrado` + err))
 }
 
 async function connectionUpdate(update) {
-  const {connection, lastDisconnect, isNewLogin} = update;
-  global.stopped = connection;
-  if (isNewLogin) conn.isInit = true;
-  const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
+  const {connection, lastDisconnect, isNewLogin} = update
+  global.stopped = connection
+  if (isNewLogin) conn.isInit = true
+  const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
   if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
-    await global.reloadHandler(true).catch(console.error);
-    global.timestamp.connect = new Date;
+    await global.reloadHandler(true).catch(console.error)
   }
-  if (global.db.data == null) loadDatabase();
+  if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined || methodCodeQR) {
 if (opcion == '1' || methodCodeQR) {
-    console.log(chalk.yellow('Escanea el código QR.'));
+    console.log(chalk.cyan('Escanea el código QR.'))
  }}
   if (connection == 'open') {
-    console.log(chalk.yellow('Conectado correctamente.'));
+    console.log(chalk.cyan('Conectado correctamente.'))
   }
-let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
-if (reason == 405) {
-await fs.unlinkSync("./sessions/" + "creds.json")
-console.log(chalk.bold.redBright(`Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
-process.send('reset')}
-if (connection === 'close') {
-    if (reason === DisconnectReason.badSession) {
-        conn.logger.error(`Sesión incorrecta, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`)
-    } else if (reason === DisconnectReason.connectionClosed) {
-        conn.logger.warn(`Conexión cerrada, reconectando...`)
-        await global.reloadHandler(true).catch(console.error)
-    } else if (reason === DisconnectReason.connectionLost) {
-        conn.logger.warn(`Conexión perdida con el servidor, reconectando...`)
-        await global.reloadHandler(true).catch(console.error)
-    } else if (reason === DisconnectReason.connectionReplaced) {
-        conn.logger.error(`Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.`)
-    } else if (reason === DisconnectReason.loggedOut) {
-        conn.logger.error(`Conexion cerrada, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`)
-    } else if (reason === DisconnectReason.restartRequired) {
-        conn.logger.info(`Reinicio necesario, reinicie el servidor si presenta algún problema.`)
-        await global.reloadHandler(true).catch(console.error)
-    } else if (reason === DisconnectReason.timedOut) {
-        conn.logger.warn(`Tiempo de conexión agotado, reconectando...`)
-        await global.reloadHandler(true).catch(console.error)
-    } else {
-        conn.logger.warn(`Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`)
-        await global.reloadHandler(true).catch(console.error)
-    }
-}
 }
 
 process.on('uncaughtException', console.error)
 
-let isInit = true;
+let isInit = true
 let handler = await import('./handler.js')
 global.reloadHandler = async function(restatConn) {
   try {
-    const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error);
-    if (Object.keys(Handler || {}).length) handler = Handler
+    const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)
+    if (Object.keys(Handler || {}).length) handler = Handler;
   } catch (e) {
-    console.error(e);
+    console.error(e)
   }
   if (restatConn) {
-    const oldChats = global.conn.chats
+    const oldChats = global.conn.chats;
     try {
       global.conn.ws.close()
     } catch { }
@@ -322,20 +300,12 @@ global.reloadHandler = async function(restatConn) {
   conn.connectionUpdate = connectionUpdate.bind(global.conn)
   conn.credsUpdate = saveCreds.bind(global.conn, true)
 
-  const currentDateTime = new Date()
-  const messageDateTime = new Date(conn.ev)
-  if (currentDateTime >= messageDateTime) {
-    const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0])
-  } else {
-    const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0])
-  }
-
   conn.ev.on('messages.upsert', conn.handler)
   conn.ev.on('connection.update', conn.connectionUpdate)
   conn.ev.on('creds.update', conn.credsUpdate)
   isInit = false
   return true
-};
+}
 
 const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
 const pluginFilter = (filename) => /\.js$/.test(filename)
