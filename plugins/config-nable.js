@@ -51,6 +51,21 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       settings.autoread = isEnable
       break
 
+  case 'antiver':
+    case 'antiocultar':
+    case 'antiviewonce':
+      if (!m.isGroup) {
+        if (!isOwner) {
+          global.dfail('group', m, conn)
+          throw false
+        }
+      } else if (!isAdmin) {
+        global.dfail('admin', m, conn)
+        throw false
+      }
+      chat.antiver = isEnable
+      break
+
   case 'audios':
     case 'audiosbot':
     case 'botaudios':
@@ -163,6 +178,10 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Tipo:* autoread
 *Descripción:* El Bot lee el mensaje automaticamente
 *Ejemplo:* ${usedPrefix + command} autoread
+
+*Tipo:* antiver
+*Descripción:* No pueden ocultar imagen/audio que es ver de una sola vez
+*Ejemplo:* ${usedPrefix + command} antiver
 
 *Tipo:* detect 
 *Descripción:* Informacion de cualquira configuración del grupo
