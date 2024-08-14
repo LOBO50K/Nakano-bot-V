@@ -114,14 +114,14 @@ export async function handler(chatUpdate) {
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!('self' in settings)) settings.self = false
-                if (!('modoserbot' in settings)) settings.modoserbot = true
+                if (!('jadibotmd' in settings)) settings.jadibotmd = true
                 if (!('antiPrivate' in settings)) settings.antiPrivate = false;
                 if (!('autoread' in settings)) settings.autoread = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: false,
                 antiprivado: false,
-                modoserbot: true,
+                jadibotmd: true,
                 status: 0
             }
         } catch (e) {
