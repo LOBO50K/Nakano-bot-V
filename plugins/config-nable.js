@@ -21,6 +21,21 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.welcome = isEnable
       break
 
+  case 'antiprivado':
+    case 'antipv':
+    case 'antipriv':
+      if (!m.isGroup) {
+        if (!isOwner) {
+          global.dfail('group', m, conn)
+          throw false
+        }
+      } else if (!isAdmin) {
+        global.dfail('admin', m, conn)
+        throw false
+      }
+      chat.antiprivado = isEnable
+      break
+
   case 'detect':
     case 'configuraciones':
     case 'avisodegp':
@@ -68,6 +83,10 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Tipo:* welcome 
 *Descripción:* Envia un mensaje de bienvenida al usuario que es nuevo
 *Ejemplo:* ${usedPrefix + command} welcome
+
+*Tipo:* antiprivado
+*Descripción:* No permite que el bot le escriban al privado
+*Ejemplo:* ${usedPrefix + command} antiprivado
 
 *Tipo:* detect 
 *Descripción:* Informacion de cualquira configuración del grupo
