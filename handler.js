@@ -330,7 +330,7 @@ if (plugin.register == true && _user.registered == false) {
 fail('unreg', m, this)
 continue
 }
-m.isCommand = true
+/*m.isCommand = true
 let xp = 'exp' in plugin ? parseInt(plugin.exp) : 10
 if (xp > 2000)
 m.reply('Exp limit') 
@@ -349,7 +349,7 @@ continue
 
 if (plugin.level > _user.level) {
 conn.reply(m.chat, `❮📣❯ 𝗥𝗲𝗾𝘂𝗶𝗲𝗿𝗲 𝗲𝗹 𝗻𝗶𝘃𝗲𝗹: *${plugin.level}*\n\n• 𝗧𝘂 𝗻𝗶𝘃𝗲𝗹 𝗮𝗰𝘁𝘂𝗮𝗹 𝗲𝘀: *${_user.level}*\n\n• 𝗨𝘀𝗮 𝗲𝘀𝘁𝗲 𝗰𝗼𝗺𝗮𝗻𝗱𝗼 𝗽𝗮𝗿𝗮 𝘀𝘂𝗯𝗶𝗿 𝗱𝗲 𝗻𝗶𝘃𝗲𝗹:\n*${usedPrefix}levelup*`, m, rcanal)       
-continue
+continue*/
 
 if (!isPrems && plugin.estrellas && global.db.data.users[m.sender].estrellas < plugin.estrellas * 1) {
 conn.reply(m.chat, `Se agotaron tus *⭐️ Estrellas*`, m, fake)
