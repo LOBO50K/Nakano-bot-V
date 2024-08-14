@@ -7,7 +7,7 @@ let grupos = `*Hola!, te invito a unirte a los grupos oficiales de del Bot para 
 1- 【 ✰ Ai Yaemori - MD ✰ 】
 *✰* ${grupo}
 
-2 - ${namegrupo}
+2 - 【 ✰ Ai Yaemori - MD ✰ 】
 *✰* ${grupo2}
 
 *─ׄ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ*
