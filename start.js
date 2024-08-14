@@ -276,23 +276,23 @@ if (connection === 'close') {
         conn.logger.error(`Sesión incorrecta, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`)
     } else if (reason === DisconnectReason.connectionClosed) {
         conn.logger.warn(`Conexión cerrada, reconectando...`)
-        await global.reloadHandler(true).catch(console.error)
+       // await global.reloadHandler(true).catch(console.error)
     } else if (reason === DisconnectReason.connectionLost) {
         conn.logger.warn(`Conexión perdida con el servidor, reconectando...`)
-        await global.reloadHandler(true).catch(console.error)
+      //  await global.reloadHandler(true).catch(console.error)
     } else if (reason === DisconnectReason.connectionReplaced) {
         conn.logger.error(`Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.`)
     } else if (reason === DisconnectReason.loggedOut) {
         conn.logger.error(`Conexion cerrada, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`)
     } else if (reason === DisconnectReason.restartRequired) {
         conn.logger.info(`Reinicio necesario, reinicie el servidor si presenta algún problema.`)
-        await global.reloadHandler(true).catch(console.error)
+       // await global.reloadHandler(true).catch(console.error)
     } else if (reason === DisconnectReason.timedOut) {
         conn.logger.warn(`Tiempo de conexión agotado, reconectando...`)
-        await global.reloadHandler(true).catch(console.error)
+      //  await global.reloadHandler(true).catch(console.error)
     } else {
         conn.logger.warn(`Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`)
-        await global.reloadHandler(true).catch(console.error)
+       // await global.reloadHandler(true).catch(console.error)
     }
 }
 }
