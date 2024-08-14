@@ -62,30 +62,35 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     chat.nsfw = isEnable          
     break
     default:
-      if (!/[01]/.test(command)) return m.reply(`
+      if (!/[01]/.test(command)) return conn.reply(m.chat, `
 *🍟 Ingresa una opción para habilitar o deshabilitar*
 
 *Tipo:* welcome 
 *Descripción:* Envia un mensaje de bienvenida al usuario que es nuevo
+*Ejemplo:* ${usedPrefix + command} welcome
 
 *Tipo:* detect 
 *Descripción:* Informacion de cualquira configuración del grupo
+*Ejemplo:* ${usedPrefix + command} detect
 
 *Tipo:* nsfw 
 *Descripción:* Comandos *NSFW* para Grupos
+*Ejemplo:* ${usedPrefix + command} nsfw
 
 *Tipo:* antilink 
 *Descripción:* No permite *LINK* en los grupos
+*Ejemplo:* ${usedPrefix + command} antilink
 
 *Tipo:* document 
-*Descripción:* Funcion *Descarga En Documentos* para el Usuario`.trim())
+*Descripción:* Funcion *Descarga En Documentos* para el Usuario
+*Ejemplo:* ${usedPrefix + command} document`, m, rcanal)
       throw false
   }
-  m.reply(`🚩 La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para Yaemori' : isUser ? '' : 'para este chat'}`)
+  conn.reply(m.chat, `🚩 La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para Yaemori' : isUser ? '' : 'para este chat'}`, m, rcanal)
 }
 
 handler.help = ['enable', 'disable']
-handler.tags = ['nable']
+handler.tags = ['enable']
 handler.command = ['enable', 'disable', 'on', 'off', '1', '0']
 
 export default handler
