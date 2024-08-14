@@ -87,6 +87,8 @@ export async function handler(chatUpdate) {
                     chat.isBanned = false
                 if (!('welcome' in chat))
                     chat.welcome = true
+                if (!('audios' in chat))
+                    chat.audios = false
                 if (!('detect' in chat))
                     chat.detect = true 
                 if (!('antiLink' in chat))
@@ -101,6 +103,7 @@ export async function handler(chatUpdate) {
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
                     welcome: true,
+                    audios: false,
                     detect: true,
                     antiLink: false,
                     onlyLatinos: false,
@@ -111,12 +114,14 @@ export async function handler(chatUpdate) {
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!('self' in settings)) settings.self = false
-                if (!('antiprivado' in settings)) settings.antiprivado = false
+                if (!('modoserbot' in settings)) settings.modoserbot = true
+                if (!('antiPrivate' in settings)) settings.antiPrivate = false;
                 if (!('autoread' in settings)) settings.autoread = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: false,
                 antiprivado: false,
+                modoserbot: true,
                 status: 0
             }
         } catch (e) {
