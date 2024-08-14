@@ -108,7 +108,6 @@ console.log('Por favor, seleccione solo 1 o 2.\n')
 }} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
 }
 
-
 console.info = () => {} 
 console.debug = () => {} 
  
@@ -265,7 +264,7 @@ if (opcion == '1' || methodCodeQR) {
  }}
   if (connection == 'open') {
     await conn.groupAcceptInvite('Em1J2VaglHc1fe26YtBDCS')
-        console.log(chalk.yellow('Conectado correctamente.'));
+    console.log(chalk.bold.green('\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒\n│\n│ 🟢  Se ha conectado con WhatsApp exitosamente.\n│\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒'));
    }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
