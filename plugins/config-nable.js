@@ -48,7 +48,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('admin', m, conn)
         throw false
       }
-      bot.autoread2 = isEnable
+      bot.autoread = isEnable
       break
 
   case 'antiver':
