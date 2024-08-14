@@ -78,7 +78,7 @@ global.loadDatabase = async function loadDatabase() {
 }
 loadDatabase()
 
-global.authFile = `MiniSession`
+global.authFile = `sessions`
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -88,19 +88,18 @@ let phoneNumber = global.botnumber
 const methodCodeQR = process.argv.includes("qr")
 const methodCode = !!phoneNumber || process.argv.includes("code")
 const MethodMobile = process.argv.includes("mobile")
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
-const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
-
 const colores = chalk.bgMagenta.white
 const opcionQR = chalk.bold.green
 const opcionTexto = chalk.bold.cyan
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
+
 let opcion
 if (methodCodeQR) {
 opcion = '1'
 }
 if (!methodCodeQR && !methodCode && !fs.existsSync(`./${authFile}/creds.json`)) {
 do {
-let lineM = '⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ 》'
 opcion = await question(colores('Seleccione una opción:\n') + opcionQR('1. Con código QR\n') + opcionTexto('2. Con código de texto de 8 dígitos\n--> '))
 
 if (!/^[1-2]$/.test(opcion)) {
@@ -109,8 +108,6 @@ console.log('Por favor, seleccione solo 1 o 2.\n')
 }
 
 console.info = () => {} 
-console.debug = () => {} 
- 
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
@@ -150,13 +147,13 @@ console.log(chalk.bgBlack(chalk.bold.redBright("Comience con el código de país
 process.exit(0)
 }} else {
 while (true) {
-numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('Por favor, escriba su número de WhatsApp.\nEjemplo: 573218138672\n')))
+numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('Por favor, escriba su número de WhatsApp.\nEjemplo: 573218139672\n')))
 numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
 
 if (numeroTelefono.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
 break 
 } else {
-console.log(chalk.bgBlack(chalk.bold.redBright("Por favor, escriba su número de WhatsApp.\nEjemplo: 573218138671.\n")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Por favor, escriba su número de WhatsApp.\nEjemplo: 573218138672.\n")))
 }}
 rl.close()  
 } 
@@ -164,9 +161,8 @@ rl.close()
         setTimeout(async () => {
             let codigo = await conn.requestPairingCode(numeroTelefono)
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
-            //console.log(chalk.yellow('introduce el código de emparejamiento en WhatsApp.'));
-
-            console.log(chalk.black(chalk.bgGreen(`👑 CÓDIGO DE VINCULACIÓN 👑`)), chalk.black(chalk.white(codigo)))
+            console.log(chalk.yellow('introduce el código de emparejamiento en WhatsApp.'));
+            console.log(chalk.black(chalk.bgGreen(`👑 CODIGO DE VINCULACIÓN 👑`)), chalk.black(chalk.white(codigo)))
         }, 3000)
 }}
 }
@@ -198,28 +194,28 @@ function clearTmp() {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./MiniSession")
+let directorio = readdirSync("./sessions")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-')
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./MiniSession/${files}`)
+unlinkSync(`./sessions/${files}`)
 })
 } 
 
 function purgeSessionSB() {
 try {
-let listaDirectorios = readdirSync('./MiniJadiBot/');
+let listaDirectorios = readdirSync('./serbot/');
 let SBprekey = []
 listaDirectorios.forEach(directorio => {
-if (statSync(`./MiniJadiBot/${directorio}`).isDirectory()) {
-let DSBPreKeys = readdirSync(`./MiniJadiBot/${directorio}`).filter(fileInDir => {
+if (statSync(`./serbot/${directorio}`).isDirectory()) {
+let DSBPreKeys = readdirSync(`./serbot/${directorio}`).filter(fileInDir => {
 return fileInDir.startsWith('pre-key-')
 })
 SBprekey = [...SBprekey, ...DSBPreKeys]
 DSBPreKeys.forEach(fileInDir => {
-unlinkSync(`./MiniJadiBot/${directorio}/${fileInDir}`)
+unlinkSync(`./serbot/${directorio}/${fileInDir}`)
 })
 }
 })
@@ -229,7 +225,7 @@ console.log(chalk.bold.red(`Algo salio mal durante la eliminación, archivos no 
 }}
 
 function purgeOldFiles() {
-const directories = ['./MiniSession/', './MiniJadiBot/']
+const directories = ['./sessions/', './serbot/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -260,15 +256,14 @@ async function connectionUpdate(update) {
   if (global.db.data == null) loadDatabase();
 if (update.qr != 0 && update.qr != undefined || methodCodeQR) {
 if (opcion == '1' || methodCodeQR) {
-    console.log(chalk.bold.yellow(`\n✅ ESCANEA EL CÓDIGO QR EXPIRA EN 45 SEGUNDOS`));
+    console.log(chalk.yellow('Escanea el código QR.'));
  }}
   if (connection == 'open') {
-    await conn.groupAcceptInvite('Em1J2VaglHc1fe26YtBDCS')
-    console.log(chalk.bold.green('\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒\n│\n│ 🟢  Se ha conectado con WhatsApp exitosamente.\n│\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒'));
-   }
+    console.log(chalk.yellow('Conectado correctamente.'));
+  }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
-await fs.unlinkSync("./MiniSession/" + "creds.json")
+await fs.unlinkSync("./sessions/" + "creds.json")
 console.log(chalk.bold.redBright(`Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
 process.send('reset')}
 if (connection === 'close') {
@@ -276,23 +271,23 @@ if (connection === 'close') {
         conn.logger.error(`Sesión incorrecta, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`)
     } else if (reason === DisconnectReason.connectionClosed) {
         conn.logger.warn(`Conexión cerrada, reconectando...`)
-       // await global.reloadHandler(true).catch(console.error)
+        await global.reloadHandler(true).catch(console.error)
     } else if (reason === DisconnectReason.connectionLost) {
         conn.logger.warn(`Conexión perdida con el servidor, reconectando...`)
-      //  await global.reloadHandler(true).catch(console.error)
+        await global.reloadHandler(true).catch(console.error)
     } else if (reason === DisconnectReason.connectionReplaced) {
         conn.logger.error(`Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.`)
     } else if (reason === DisconnectReason.loggedOut) {
         conn.logger.error(`Conexion cerrada, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`)
     } else if (reason === DisconnectReason.restartRequired) {
         conn.logger.info(`Reinicio necesario, reinicie el servidor si presenta algún problema.`)
-       // await global.reloadHandler(true).catch(console.error)
+        await global.reloadHandler(true).catch(console.error)
     } else if (reason === DisconnectReason.timedOut) {
         conn.logger.warn(`Tiempo de conexión agotado, reconectando...`)
-      //  await global.reloadHandler(true).catch(console.error)
+        await global.reloadHandler(true).catch(console.error)
     } else {
         conn.logger.warn(`Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`)
-       // await global.reloadHandler(true).catch(console.error)
+        await global.reloadHandler(true).catch(console.error)
     }
 }
 }
