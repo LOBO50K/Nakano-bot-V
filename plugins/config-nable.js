@@ -96,21 +96,6 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.audios = isEnable
       break
 
-case 'antiCall':
-    case 'antillamadas':
-    case 'anticall':
-      if (!m.isGroup) {
-        if (!isOwner) {
-          global.dfail('group', m, conn)
-          throw false
-        }
-      } else if (!isAdmin) {
-        global.dfail('admin', m, conn)
-        throw false
-      }
-      bot.antiCall = isEnable
-      break
-
   case 'antiSpam':
     case 'antispam':
     case 'antispamosos':
