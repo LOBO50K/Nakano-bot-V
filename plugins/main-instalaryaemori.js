@@ -41,12 +41,12 @@ await delay(1000 * 1)
 m.reply('npm start')
 }
 
-if (/^cafirexos$/i.test(m.text) ) {
-conn.reply(m.chat, '✏️ *Instalación por Cafirexos*\n(nosotros no tenemos tutorial pero eso les puede ayudar)\n\n• Área de clientes:\nhttps://clientes.cafirexos.com\n\n• Panel:\nhttps://panel.cafirexos.com', m, rcanal)
+if (/^olympus$/i.test(m.text) ) {
+conn.reply(m.chat, '💠 *Instalación por Olympus*\n(nosotros no tenemos tutorial pero eso les puede ayudar)\n\n• Dashboard:\nhttps://dash.olympus-host.xyz\n\n• Panel:\nhttps://panel.olympus-host.xyz', m, rcanal)
 await delay(2000 * 1)
-conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/975c007a1f3f2757ee123.png'}, caption: ''}, {quoted: fkontak})
+conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/9532b7ff1fabc02d7e199.jpg'}, caption: ''}, {quoted: fkontak})
 await delay(1000 * 1)
-conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/c24470edcbe5e250b5089.png'}, caption: ''}, {quoted: fkontak})
+conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/26d87a519e24fe3ffbf82.jpg'}, caption: ''}, {quoted: fkontak})
 }
 }
 
