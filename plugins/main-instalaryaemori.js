@@ -21,7 +21,7 @@ npm start
 
 _Utilice "comandos" para enviarle los comandos uno por uno 🚩_
 
-_Utilice "cafirexos" para enviarle la instalación por el host *Cafirexos* 🚩_`
+_Utilice "cafirexos" para enviarle la instalación por el host *olympus* 🚩_`
 
 conn.reply(m.chat, texto, m, rcanal )
 
