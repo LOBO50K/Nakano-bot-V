@@ -33,7 +33,7 @@ thumbnailUrl: 'https://qu.ax/Eqii.jpg',
 sourceUrl: 'https://dash.olympus-host.xyz'}}},
 { quoted: fkontak})
 }
-handler.tags =['main'] 
+handler.tags = ['main'] 
 handler.help = ['host', 'hosting'] 
 handler.command = ['host', 'olympus', 'olympushost', 'hosting']
 export default handler
