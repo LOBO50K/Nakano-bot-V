@@ -12,7 +12,7 @@ let buttonMessage= {
 'forwardingScore': 200,
 'isForwarded': true,
 'externalAdReply': {
-'mediaUrl': script,
+'mediaUrl': md,
 'mediaType': 2,
 'previewType': 'pdf',
 'title': ``,
