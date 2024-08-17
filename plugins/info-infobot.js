@@ -1,104 +1,78 @@
-import db from '../lib/database.js'
-import { cpus as _cpus, totalmem, freemem, platform, hostname, version, release, arch } from 'os'
-import speed from 'performance-now'
+import { generateWAMessageFromContent } from "@whiskeysockets/baileys"
+import { cpus as _cpus, totalmem, freemem } from 'os'
+// import util from 'util'
 import { performance } from 'perf_hooks'
 import { sizeFormatter } from 'human-readable'
-
 let format = sizeFormatter({
-std: 'JEDEC',
-decimalPlaces: 2,
-keepTrailingZeroes: false,
-render: (literal, symbol) => `${literal} ${symbol}B`,
+  std: 'JEDEC', // 'SI' (default) | 'IEC' | 'JEDEC'
+  decimalPlaces: 2,
+  keepTrailingZeroes: false,
+  render: (literal, symbol) => `${literal} ${symbol}B`,
 })
-
-let handler = async (m, { conn, usedPrefix }) => {
-let bot = global.db.data.settings[conn.user.jid]
+let handler = async (m, { conn, usedPrefix, command }) => {
 let _uptime = process.uptime() * 1000
-let uptime = (_uptime).toTimeString()
+let uptime = clockString(_uptime) 
 let totalreg = Object.keys(global.db.data.users).length
-let totalbots = Object.keys(global.db.data.settings).length
-let totalStats = Object.values(global.db.data.stats).reduce((total, stat) => total + stat.total, 0)
-const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
-let totalchats = Object.keys(global.db.data.chats).length
-let totalf = Object.values(global.plugins).filter( (v) => v.help && v.tags ).length
-const groupsIn = chats.filter(([id]) => id.endsWith('@g.us')) //groups.filter(v => !v.read_only)
-const used = process.memoryUsage()
-const cpus = _cpus().map(cpu => {
-cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
-return cpu })
-const cpu = cpus.reduce((last, cpu, _, { length }) => {
-last.total += cpu.total
-last.speed += cpu.speed / length
-last.times.user += cpu.times.user
-last.times.nice += cpu.times.nice
-last.times.sys += cpu.times.sys
-last.times.idle += cpu.times.idle
-last.times.irq += cpu.times.irq
-return last
-}, {
-speed: 0,
-total: 0,
-times: {
-user: 0,
-nice: 0,
-sys: 0,
-idle: 0,
-irq: 0
-}})
-let _muptime
-if (process.send) {
-process.send('uptime')
-_muptime = await new Promise(resolve => {
-process.once('message', resolve)
-setTimeout(resolve, 1000)
-}) * 1000
-}
-let timestamp = speed()
-let latensi = speed() - timestamp
-let yaemori = `╭─⬣「 *Info De Ai Yaemori* 」⬣\n`
-yaemori += `│ 👑 *Creador* : @${owner[0][0].split('@s.whatsapp.net')[0]}\n`
-yaemori += `│ 🍭 *Prefijo* : [  ${usedPrefix}  ]\n`
-yaemori += `│ 📦 *Total Plugins* : ${totalf}\n`
-yaemori += `│ 💫 *Plataforma* : ${platform()}\n`
-yaemori += `│ 🧿 *Servidor* : ${hostname()}\n`
-yaemori += `│ 🚀 *RAM* : ${format(totalmem() - freemem())} / ${format(totalmem())}\n`
-yaemori += `│ 🌟 *FreeRAM* : ${format(freemem())}\n`
-yaemori += `│ ✨️ *Speed* : ${latensi.toFixed(4)} ms\n`
-yaemori += `│ 🕗 *Uptime* : ${uptime}\n`
-yaemori += `│ 🍟 *Modo* : ${bot.public ? 'Privado' : 'Publico'}\n`
-yaemori += `│ 🚩 *Comandos Ejecutados* : ${toNum(totalStats)} ( *${totalStats}* )\n`
-yaemori += `│ 🐢 *Grupos Registrados* : ${toNum(totalchats)} ( *${totalchats}* )\n`
-yaemori += `│ 🍧 *Registrados* : ${toNum(totalreg)} ( *${totalreg}* ) Usuarios\n`
-yaemori += `╰─⬣\n\n`
-yaemori += `╭─⬣「 *Chats De Ai Yaemori* 」⬣\n`
-yaemori += `│ 🧃 *${groupsIn.length}* Chats en Grupos\n`
-yaemori += `│ 🌸 *${groupsIn.length}* Grupos Unidos\n`
-yaemori += `│ 🍁 *${groupsIn.length - groupsIn.length}* Grupos Salidos\n`
-yaemori += `│ 💬 *${chats.length - groupsIn.length}* Chats Privados\n`
-yaemori += `│ 💭 *${chats.length}* Chats Totales\n`
-yaemori += `╰─⬣\n\n`
-yaemori += `╭─⬣「 *NodeJS Uso de memoria* 」⬣\n`
-yaemori += `${'```' + Object.keys(used).map((key, _, arr) => `│ ${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}\n`
-yaemori += `╰─⬣`
+  const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
+  const groupsIn = chats.filter(([id]) => id.endsWith('@g.us')) //groups.filter(v => !v.read_only)
+  const used = process.memoryUsage()
+  const cpus = _cpus().map(cpu => {
+    cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
+    return cpu
+  })
+  const cpu = cpus.reduce((last, cpu, _, { length }) => {
+    last.total += cpu.total
+    last.speed += cpu.speed / length
+    last.times.user += cpu.times.user
+    last.times.nice += cpu.times.nice
+    last.times.sys += cpu.times.sys
+    last.times.idle += cpu.times.idle
+    last.times.irq += cpu.times.irq
+    return last
+  }, {
+    speed: 0,
+    total: 0,
+    times: {
+      user: 0,
+      nice: 0,
+      sys: 0,
+      idle: 0,
+      irq: 0
+    }
+  })
 
-await conn.reply(m.chat, yaemori, fkontak, { contextInfo: { mentionedJid: [owner[0][0] + '@s.whatsapp.net'], externalAdReply: { mediaUrl: false, mediaType: 1, description: false, title: '↷✦╎Info - Bot╎🚩˖ ⸙',body: packname, previewType: 0, thumbnail: icons, sourceUrl: redes}}})
-// await conn.sendFile(m.chat, imagen1, 'luffy.jpg', luffy, fkontak, null, rcanal)
+  let old = performance.now()
+  let neww = performance.now()
+  let speed = neww - old
+  let infobt = `🍭 *I N F O - Y A E M O R I*
+  
+*_ESTADO_*
+🐢͜͡ޮ ⋄ Chats de grupo: *${groupsIn.length}*
+🌺͜͡ޮ ⋄ Grupos unidos: *${groupsIn.length}*
+🐢͜͡ޮ ⋄ Grupos abandonados: *${groupsIn.length - groupsIn.length}*
+🌺͜͡ޮ ⋄ Chats privados: *${chats.length - groupsIn.length}*
+🐢͜͡ޮ ⋄ Total Chats: *${chats.length}*
+🌺͜͡ޮ ⋄ Registrados: *${totalreg}*
+🐢͜͡ޮ ⋄ Tiempo Activo: *${uptime}*
+
+
+
+🚩 *NodeJS Uso de memoria*
+${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
+`
+const prep = generateWAMessageFromContent(m.chat, { "orderMessage": { "orderId":"6288215463787", "itemCount": 2022, "message": infobt, "orderTitle": wm, "footerText": "Yaemori Bot - MD", "token": "AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA==", "thumbnail": imgmenu, "surface": "CATALOG" } }, { quoted: fkontak })
+await conn.relayMessage(m.chat, prep.message,  { messageId: prep.key.id })
+
 }
-handler.help = ['infobot']
-handler.tags = ['main']
-handler.command = ['info', 'infobot']
+handler.help = ['info']
+handler.tags = ['info']
+handler.command = ['info', 'infobot', 'botinfo']
 
 export default handler
 
-function toNum(number) {
-if (number >= 1000 && number < 1000000) {
-return (number / 1000).toFixed(1) + 'k'
-} else if (number >= 1000000) {
-return (number / 1000000).toFixed(1) + 'M'
-} else if (number <= -1000 && number > -1000000) {
-return (number / 1000).toFixed(1) + 'k'
-} else if (number <= -1000000) {
-return (number / 1000000).toFixed(1) + 'M'
-} else {
-return number.toString()
-}}
+function clockString(ms) {
+let h = Math.floor(ms / 3600000)
+let m = Math.floor(ms / 60000) % 60
+let s = Math.floor(ms / 1000) % 60
+console.log({ms,h,m,s})
+return [h, m, s].map(v => v.toString().padStart(2, 0) ).join(':')}
