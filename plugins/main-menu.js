@@ -32,7 +32,7 @@ const defaultMenu = {
 
 “ Hola *%name* soy *Ai-Yaemori*, %greeting ”
 
-┏━「🚩⸽⃕ *Info Bot* 🍁⃨፝⃕✰」━⊜
+┏━━⊜ *INFO BOT 🚩* ━⊜
 ┃⋄ 🍟 *Bot:* Ai Yaemori - MD 
 ┃⋄ 🍂 *Modo* Público
 ┃⋄ ✨️ *Baileys:* Multi Device
@@ -40,21 +40,22 @@ const defaultMenu = {
 ┃⋄ 🫂 *Usuarios:* %totalreg
 ┗━━◘
 %readmore
-┏━「🐢⸽⃕ *Info User* 🍁⃨፝⃕✰」━⊜
+┏━━⊜ *INFO USER 💠* ━⊜
 ┃⋄ 🚩 *Cliente:* %name
 ┃⋄ 💠 *Exp:* %exp
 ┃⋄ 🌟 *Estrellas:* %estrellas
 ┃⋄ 🐢 *Nivel:* %level
 ┃⋄ ⚓ *Rango:* %role
+┃⋄ 🪪 *Premium*: ${prem ? '✅' : '❌'}
 ┗━━◘
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
 
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-  header: '┏━⊜「 *%category* 」',
-  body: '┃› %cmd\n',
-  footer: '┗━━━━━━⬣\n',
+    header: '*┏━⊜「 %category 」*',
+  body: '*┃›* %cmd',
+  footer: '*┗━⬣*\n',
   after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
