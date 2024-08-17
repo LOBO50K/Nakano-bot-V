@@ -1,33 +1,28 @@
-let handler = async (m, { conn, usedPrefix }) => {
-var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
-var document = doc[Math.floor(Math.random() * doc.length)]    
-let texto1 = `*https://github.com/OfcDiego*`
-let buttonMessage= {
-'document': { url: `https://github.com/OfcDiego` },
-'mimetype': `application/${document}`,
-'fileName': packname,
-'fileLength': 99999999999999,
-'pageCount': 200,
-'contextInfo': {
-'forwardingScore': 200,
-'isForwarded': true,
-'externalAdReply': {
-'mediaUrl': md,
-'mediaType': 2,
-'previewType': 'pdf',
-'title': ``,
-'body': author,
-'thumbnail': imagen1,
-'sourceUrl': `${yt}` }},
-'caption': texto1,
-'footer': '\nAmo mucho a mi bebé Saray⚘',
-'buttons':[
-{buttonId: `${usedPrefix}menu`, buttonText: {displayText: 'Menú 📒'}, type: 1}, 
-{buttonId: `${usedPrefix}infobot`, buttonText: {displayText: 'Info 📌'}, type: 1}],
-'headerType': 6 }
-conn.sendMessage(m.chat, buttonMessage, { quoted: m })}
-handler.tags =['main']
+import moment from 'moment-timezone'
+import fetch from 'node-fetch'
+
+let handler = async (m, { conn, args }) => {
+let res = await fetch('https://api.github.com/repos/OfcDiego/YaemoriBot-MD')
+let json = await res.json()
+try {
+let txt = `*乂  S C R I P T  -  M A I N  乂*\n\n`
+    txt += `✩  *Nombre* : ${json.name}\n`
+    txt += `✩  *Visitas* : ${json.watchers_count}\n`
+    txt += `✩  *Peso* : ${(json.size / 1024).toFixed(2)} MB\n`
+    txt += `✩  *Actualizado* : ${moment(json.updated_at).format('DD/MM/YY - HH:mm:ss')}\n`
+    txt += `✩  *Url* : ${json.html_url}\n`
+    txt += `✩  *Forks* : ${json.forks_count}\n`
+    txt += `✩  *Stars* : ${json.stargazers_count}\n\n`
+    txt += `> 🍟 *${packname}*`
+
+let img = imagen1
+
+await conn.sendMini(m.chat, packname, wm, txt, img, img, redes, fkontak)
+} catch {
+await m.react(error)
+}}
 handler.help = ['script']
-handler.command = ['sc', 'script']
-handler.register = true
+handler.tags = ['main']
+handler.command = ['script', 'sc']
+handler.register = true 
 export default handler
