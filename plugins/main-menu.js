@@ -155,7 +155,9 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
 
 await m.react('⭐️') 
 
-conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: team, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen1, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m});
+  await conn.sendButton(m.chat, text.trim(), `*${saludo}*`, imagen1, [['Iɴғᴏ📌', '.infobot'], ['Cʀᴇᴀᴅᴏʀ🐢', '.owner']], false, { quoted: m, contextInfo: { mentions: [who], externalAdReply: { showAdAttribution: true, mediaType: 'VIDEO', mediaUrl: '', title: packname, body: dev, thumbnail: miniurl, sourceUrl: channel }}})
+
+//conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: team, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen1, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m})
 
   } catch (e) {
     conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
