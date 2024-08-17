@@ -156,24 +156,10 @@ readmore: readMore
 }
 text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-
-const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/327f6ad853cb4f405aa80.jpg')
-
-const img = 'https://telegra.ph/file/3127f09a1ab655a0cfd2b.jpg'
-
-//await conn.reply(m.chat, '*✰ Cargando Menú. . .*', m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: packname, body: team, sourceUrl: channel, thumbnail: icons }}})
 
 await m.react('⭐️') 
 
-//await conn.sendFile(m.chat, imagen1, 'yaemori.jpg', text.trim(), fkontak, null, rcanal)
-
-conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: team, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m});
-
-/*await conn.sendButton(m.chat, text, team, imagen1, [
-['𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗥 𝗕𝗢𝗧 🤖', '.instalarbot'],
-['𝗘𝗦𝗧𝗔𝗗𝗢 🪐', '#status'],
-['𝗚𝗥𝗨𝗣𝗢𝗦 👥', '#gruposai']], null, null, fkontak)*/
+conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: team, "containsAutoReply": true, "mediaType": 1, "thumbnail": `https://qu.ax/gkn.jpg`, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m});
 
   } catch (e) {
     conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
