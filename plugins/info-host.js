@@ -1,22 +1,27 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
-let txt = `🔰 *CORIN PLUS - HOST* 🔰
+let txt = `🚩 *O L Y M P U S - H O S T* 
 
-  • *Servers de calidad*
-  • *Precios Accesibles (económicos)*
-  • *Soporte Eficiente* 24/7
-  • *Seguridad En Tus Proyectos*
-  • *Disponible Javascript y WhatsAppBots*
+*¿Quieres un Host de calidad y con bajos precios?*
+Pues te presento a *OlympusHost*, un hosting de calidad con servidores dedicados y precios por debajo de 1USD, estos servidores están destinados a ofrecerte un Uptime 24/7 para que puedas alojar tus proyectos y qué estos funcionen de manera eficaz.
 
-  🍭 *Dashboard:* 🍭
-  
-  • https://dash.corinplus.com
+🟢 \`\`\`Información del Host\`\`\`
 
-  ⭐️ *Panel:* ⭐️
-  
-  • https://panel.corinplus.com
+🔮 *Dashboard:* 
+• https://panel.olympus-host.xyz
 
-  🚩 *Contacto:* 
-  • https://wa.me/message/B3KTM5XN2JMRD1`
+🧃 *Panel:*
+• https://dash.olympus-host.xyz
+
+💥 *Canal:*
+• https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J
+
+🍭 *Grupo Oficial:*
+• https://chat.whatsapp.com/Jt0Z1ERzXCV5srN7XH7Qws
+
+⚜️ *Contacto (Mateo)*
+https://wa.me/593979133620
+
+> *Únete a está comunidad y disfruta de un servicio de calidad :D*` 
 await conn.sendMessage(m.chat, { text: txt,
 contextInfo:{
 forwardingScore: 9999999,
@@ -24,14 +29,14 @@ isForwarded: false,
 "externalAdReply": {
 "showAdAttribution": true,
 "containsAutoReply": true,
-title: `🔵 C O R I N - P L U S 🔵`,
+title: `🔵 O L Y M P U S - H O S T 🔵`,
 body: `⚜️ Super Hosting 24/7 ⚜️`,
 "previewType": "PHOTO",
-thumbnailUrl: 'https://qu.ax/ZycD.png', 
-sourceUrl: 'https://dash.corinplus.com'}}},
-{ quoted: fkontak})
+thumbnailUrl: 'https://qu.ax/Eqii.jpg', 
+sourceUrl: 'https://dash.olympus-host.xyz'}}},
+{ quoted: m})
 }
 handler.tags = ['main'] 
 handler.help = ['host', 'hosting'] 
-handler.command = ['host', 'corin', 'corinplus', 'hosting']
+handler.command = ['host', 'olympus', 'olympushost', 'hosting']
 export default handler
