@@ -35,6 +35,7 @@
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^4.2.4",
         "@bochilteam/scraper-sosmed": "^1.0.5",
+        "@SumiFX/Scraper": "github:BrunoSobrino/SumiFX-Scraper",
         "@xct007/frieren-scraper": "^0.0.2",
         "@ibaraki-douji/pixivts": "^2.4.1",
         "awesome-phonenumber": "^3.4.0",
