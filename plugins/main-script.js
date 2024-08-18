@@ -14,15 +14,16 @@ let txt = `*乂  S C R I P T  -  M A I N  乂*\n\n`
     txt += `✩  *Forks* : ${json.forks_count}\n`
     txt += `✩  *Stars* : ${json.stargazers_count}\n\n`
     txt += `> 🍟 *${packname}*`
+let text = '^mkj'
 
 let img = imagen1
 
 //await conn.sendMini(m.chat, packname, wm, txt, img, img, redes, fkontak)
-const prep = generateWAMessageFromContent(m.chat, { "orderMessage": { "orderId":"6288215463787", "itemCount": 2022, "message": txt, "orderTitle": botname, "footerText": "Yaemori Bot - MD", "token": "AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA==", "thumbnail": img, "surface": "CATALOG" } }, { quoted: fkontak })
-await conn.relayMessage(m.chat, prep.message,  { messageId: prep.key.id })}
-/*} catch {
+const prep = generateWAMessageFromContent(m.chat, { "orderMessage": { "orderId":"6288215463787", "itemCount": 2022, "message": text, "orderTitle": botname, "footerText": "Yaemori Bot - MD", "token": "AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA==", "thumbnail": img, "surface": "CATALOG" } }, { quoted: fkontak })
+await conn.relayMessage(m.chat, prep.message,  { messageId: prep.key.id })
+} catch {
 await m.react(error)
-}}*/
+}}
 handler.help = ['script']
 handler.tags = ['main']
 handler.command = ['script', 'sc']
