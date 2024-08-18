@@ -97,11 +97,6 @@ Para que no pierda su progreso en Yaemori, estos comandos realizarán un respald
 
 ---
 
-#### ⚡ ACRIVAR EN REPLIT
-[![`CREAR SERVIDOR REPLIT`](https://repl.it/badge/github/OfcDiego/YaemoriBot-MD)](https://repl.it/github/OfcDiego/YaemoriBot-MD)
-
----
-
 #### 🤍 ACTIVAR EN RENDER
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2OfcDiego%YaemoriBot-MD) 
 
