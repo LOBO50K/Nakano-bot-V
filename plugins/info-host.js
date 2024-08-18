@@ -34,7 +34,7 @@ body: `⚜️ Super Hosting 24/7 ⚜️`,
 "previewType": "PHOTO",
 thumbnailUrl: 'https://qu.ax/Eqii.jpg', 
 sourceUrl: 'https://dash.olympus-host.xyz'}}},
-{ quoted: m})
+{ quoted: fkontak})
 }
 handler.tags = ['main'] 
 handler.help = ['host', 'hosting'] 
