@@ -1,4 +1,4 @@
-import Scraper from '@SumiFX/Scraper'
+import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 if (!text) return conn.reply(m.chat, `🍭 Ingresa el título de un video o canción de YouTube.\n\nEjemplo: ${usedPrefix + command} Distancia - Kimberly Contreraxx`, m, rcanal)
