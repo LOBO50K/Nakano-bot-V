@@ -1,5 +1,5 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
-let txt = '🔰 *`CORIN PLUS - HOST`* 🔰
+let txt = `🔰 *CORIN PLUS - HOST* 🔰
 
   • *Servers de calidad*
   • *Precios Accesibles (económicos)*
@@ -7,16 +7,16 @@ let txt = '🔰 *`CORIN PLUS - HOST`* 🔰
   • *Seguridad En Tus Proyectos*
   • *Disponible Javascript y WhatsAppBots*
 
-  🍭 *`Dashboard`* 🍭
+  🍭 *Dashboard:* 🍭
   
   • https://dash.corinplus.com
 
-  ⭐️ *`Panel`* ⭐️
+  ⭐️ *Panel:* ⭐️
   
   • https://panel.corinplus.com
 
   🚩 *Contacto:* 
-  • https://wa.me/message/B3KTM5XN2JMRD1'
+  • https://wa.me/message/B3KTM5XN2JMRD1`
 await conn.sendMessage(m.chat, { text: txt,
 contextInfo:{
 forwardingScore: 9999999,
