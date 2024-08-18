@@ -78,28 +78,34 @@ Para que no pierda su progreso en Yaemori, estos comandos realizarán un respald
 | **FFMPEG** |[click](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
 | **IMAGEMAGICK** | [click](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
 
-### 🔵 OLYMPUS-HOST 
-<a href="https://dash.olympus-host.xyz"><img src="https://qu.ax/waCu.jpg" height="125px"></a>
-### Información del Host
+---
 
-• Dashboard: [`Aquí`](https://dash.olympus-host.xyz)
+### ☁️ CORINPLUS HOTS 
+<a href="https://dash.corinplus.com"><img src="https://qu.ax/ZycD.png" height="125px"></a>
+### Información sobre CorinPlus
 
-• Panel: [`Aquí`](https://panel.olympus-host.xyz)
+- **Dashboard:** [`Aquí`](https://dash.corinplus.com)
+- **Panel:** [`Aquí`](https://panel.corinplus.com)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
+- **Grupo - Soporte:** [`Aquí`](https://chat.whatsapp.com/K235lkvaGvlGRQKYm26xZP)
+- **Contacto:** [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1)
 
-• Canal de WhatsApp: [`Aquí`](https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J)
-
-• Correo: [`Aquí`](olympushost2@gmail.com.com)
-
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - YaemoriBot**</summary><img src="https://telegra.ph/file/607fd0c0ae1ef3cb0703f.jpg"></details>
+---
 
 #### 🟢 ACTIVAR EN CODES SPACES 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=OfcDiego/YaemoriBot-MD&ref=main&geo=UsEast)
 
+---
+
 #### ⚡ ACRIVAR EN REPLIT
 [![`CREAR SERVIDOR REPLIT`](https://repl.it/badge/github/OfcDiego/YaemoriBot-MD)](https://repl.it/github/OfcDiego/YaemoriBot-MD)
 
+---
+
 #### 🤍 ACTIVAR EN RENDER
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2OfcDiego%YaemoriBot-MD) 
+
+--
 
 ## <img src="https://static.wikia.nocookie.net/nyancat/images/d/d3/Nyan-cat.gif/revision/latest/scale-to-width-down/400?cb=20131231222500&path-prefix=es" alt="Grupo" width="45" height="43"> Bot Oficial ☄️
 
