@@ -8,7 +8,7 @@ let cuentas = `🍭 *C U E N T A S - O F I C I A L E S* 🍭
 ${creador}
 
 *\`\♡ Bot Principal:\`\*
-${botofc}
+${ofcbot}
 
 *\`\♡ Grupo Oficial:\`\*
 • ${grupo}
