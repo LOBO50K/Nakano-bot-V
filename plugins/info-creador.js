@@ -1,5 +1,4 @@
 var handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
-  const data = global.owner.filter(([id, isCreator]) => id && isCreator)
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }        
 
 const owner = `👑 *Propietario:*
@@ -20,6 +19,7 @@ ${asistencia}
 
 await conn.sendFile(m.chat, imagen1, 'yaemori.jpg', owner, fkontak)
 
+  const data = global.owner.filter(([id, isCreator]) => id && isCreator)
 this.sendContact(m.chat, data.map(([id, name]) => [id, name]), fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true }}})
 }
 handler.help = ['owner', 'creator']
