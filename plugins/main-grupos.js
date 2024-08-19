@@ -14,8 +14,11 @@ let grupos = `*Hola!, te invito a unirte a los grupos oficiales de del Bot para 
 
 ➠ Enlace anulado? entre aquí! 
 
-Canal :
-*✰* ${channel}
+♡ Canal :
+• ${channel}
+
+t`t♡ Asistencia : t`t
+• ${global.asistencia}
 
 > ${dev}`
 
