@@ -7,24 +7,6 @@ let str = `💖 𝙃𝙤𝙡𝙖!! 𝘼𝙜𝙧𝙖𝙙𝙚𝙯𝙘𝙤 𝙨𝙞
 😊 *Paypal - Donar*
 ${paypal}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈`
-/*await conn.sendMessage(m.chat, { 
-text: str, 
-contextInfo:{
-forwardingScore: 9999999,
-isForwarded: true, 
-mentionedJid:[m.sender],
-"externalAdReply": {
-"showAdAttribution": true,
-"renderLargerThumbnail": true,
-"thumbnail": icons, 
-"title": `${botname}`, 
-"containsAutoReply": true,
-"mediaType": 1, 
-"mediaUrl": paypal, 
-"sourceUrl": paypal, 
-}
-}
-}, { quoted: fkontak })*/
 await conn.sendMini(m.chat, packname, dev, str, imagen1, imagen1, paypal, fkontak)
 }
 handler.help = ['donar']
