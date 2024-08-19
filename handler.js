@@ -125,8 +125,8 @@ export async function handler(chatUpdate) {
             var settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
-                if (!('restrict' in settings)) settings.restrict = false
                if (!('self' in settings)) settings.self = false
+               if (!('restrict' in settings)) settings.restrict = false
                 if (!('jadibotmd' in settings)) settings.jadibotmd = true
                if (!('autobio' in settings)) settings.autobio = false
                 if (!('antiPrivate' in settings)) settings.antiPrivate = false
