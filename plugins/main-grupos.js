@@ -4,7 +4,7 @@ let handler  = async (m, { conn, usedPrefix, command }) => {
 
 let grupos = `🍭 *E N L A C E S :*
 
-*♡ Grupo Oficial :*
+\`*♡ Grupo Oficial :*`\
 • ${grupo}
 
 *♡ Grupo2 :*
