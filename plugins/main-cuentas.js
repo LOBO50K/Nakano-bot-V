@@ -2,13 +2,13 @@ import fetch from 'node-fetch'
 
 let handler  = async (m, { conn, usedPrefix, command }) => {
 
-let cuentas = `🍭 *C U E N T A S - O F I C I A L E S* 🍭
+let cuentas = `🍭 *C U E N T A S - O F C S* 🍭
 
 *\`\♡ Propietario:\`\*
-${creador}
+• ${creador}
 
 *\`\♡ Bot Principal:\`\*
-${ofcbot}
+• Wa.me/${ofcbot}
 
 *\`\♡ Grupo Oficial:\`\*
 • ${grupo}
