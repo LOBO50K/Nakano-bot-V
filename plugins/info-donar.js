@@ -25,7 +25,7 @@ mentionedJid:[m.sender],
 }
 }
 }, { quoted: fkontak })*/
-await conn.sendMini
+await conn.sendMini(m.chat, packname, dev, str, imagen1, imagen1, paypal, fkontak)
 }
 handler.help = ['donar']
 handler.tags = ['info']
