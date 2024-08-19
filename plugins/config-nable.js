@@ -268,7 +268,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Ejemplo:* ${usedPrefix + command} document`, m, rcanal)
       throw false
   }
-  conn.reply(m.chat, `🍭 La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* con éxito`, m, rcanal)
+  conn.reply(m.chat, `🚩 La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para Yaemori' : isUser ? '' : 'para este chat'}`, m, rcanal)
 }
 
 handler.help = ['enable', 'disable']
