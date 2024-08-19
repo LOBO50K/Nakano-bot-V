@@ -34,7 +34,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 //creador y otros
 global.creador = 'Wa.me/573012482597'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.asistencia = 'Wa.me/51939041500'
+global.asistencia = 'https://wa.me/message/O4QPPHZOFDOJI1'
 global.namechannel = '『✯ Team Channel Ai Yaemori ✯』'
 
 //Reacciones De Comandos.!
