@@ -2,21 +2,18 @@ import fetch from 'node-fetch'
 
 let handler  = async (m, { conn, usedPrefix, command }) => {
 
-let grupos = `🍭 *E N L A C E S :*
+let grupos = `🍭 *G R U P O S - O F I C I A L E S:*
 
-*\`\♡ Grupo Oficial:\`\*
+*♡ Grupo Oficial:*
 • ${grupo}
 
-*\`\♡ Grupo Oficial2:\`\*
+*♡ Grupo Oficial2:*
 • ${grupo2}
 
 ➠ Enlace anulado? entre aquí! 
 
-*\`\♡ Canal:\`\*
+*♡ Canal:*
 • ${channel}
-
-*\`\♡ Asistencia:\`\*
-• ${global.asistencia}
 
 > ${dev}`
 
