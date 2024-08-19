@@ -32,11 +32,6 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🚩 *Número:* Wa.me/573027866596
 ✨️ *GitHub:* https://github.com/WOTCHITO
 
-• DarkesJs
-🍟 *Rol:* Developer
-🚩 *Número:* Wa.me/573218138672
-✨️ *GitHub:* https://github.com/WOTCHITA
-
 • David Chian 
 🍟 *Rol:* Developer
 🚩 *Número:* Wa.me/5351524614
