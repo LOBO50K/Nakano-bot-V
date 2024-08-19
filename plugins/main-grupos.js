@@ -17,7 +17,7 @@ let grupos = `*Hola!, te invito a unirte a los grupos oficiales de del Bot para 
 ♡ Canal :
 • ${channel}
 
-`/♡ Asistencia : /`
+♡ Asistencia :
 • ${global.asistencia}
 
 > ${dev}`
