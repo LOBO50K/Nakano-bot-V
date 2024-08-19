@@ -7,7 +7,7 @@ let str = `💖 𝙃𝙤𝙡𝙖!! 𝘼𝙜𝙧𝙖𝙙𝙚𝙯𝙘𝙤 𝙨𝙞
 😊 *Paypal - Donar*
 ${paypal}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈`
-await conn.sendMessage(m.chat, { 
+/*await conn.sendMessage(m.chat, { 
 text: str, 
 contextInfo:{
 forwardingScore: 9999999,
@@ -24,7 +24,9 @@ mentionedJid:[m.sender],
 "sourceUrl": paypal, 
 }
 }
-}, { quoted: fkontak })}
+}, { quoted: fkontak })*/
+await conn.sendMini
+}
 handler.help = ['donar']
 handler.tags = ['info']
 handler.command = ['donar', 'apoyar']
