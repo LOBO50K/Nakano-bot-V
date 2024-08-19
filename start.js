@@ -107,8 +107,6 @@ console.log('Por favor, seleccione solo 1 o 2.\n')
 }} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
 }
 
-console.info = () => {} 
-console.debug = () => {} 
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
@@ -170,7 +168,7 @@ rl.close()
 
 conn.isInit = false;
 conn.well = false;
-conn.logger.info(`🔵  H E C H O\n`)
+conn.logger.info(`🍭  Y A E M O R I.....\n`)
 
 if (!opts['test']) {
   if (global.db) {
