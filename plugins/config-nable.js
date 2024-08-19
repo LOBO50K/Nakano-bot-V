@@ -24,6 +24,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
   case 'antiPrivate':
     case 'antiprivado':
     case 'antipriv':
+     isAll = true
       if (!m.isGroup) {
         if (!isOwner) {
           global.dfail('group', m, conn)
@@ -36,9 +37,25 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       bot.antiPrivate = isEnable
       break
 
+  case 'restrict':
+    case 'restringir':
+     isAll = true
+      if (!m.isGroup) {
+        if (!isOwner) {
+          global.dfail('group', m, conn)
+          throw false
+        }
+      } else if (!isAdmin) {
+        global.dfail('admin', m, conn)
+        throw false
+      }
+      bot.restrict = isEnable
+      break
+
   case 'autoread':
     case 'autoleer':
     case 'leermensajes':
+     isAll = true
       if (!m.isGroup) {
         if (!isOwner) {
           global.dfail('group', m, conn)
@@ -99,6 +116,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
   case 'antiSpam':
     case 'antispam':
     case 'antispamosos':
+     isAll = true
       if (!m.isGroup) {
         if (!isOwner) {
           global.dfail('group', m, conn)
@@ -129,6 +147,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
   case 'autobio':
     case 'status':
     case 'bio':
+     isAll = true
       if (!m.isGroup) {
         if (!isOwner) {
           global.dfail('group', m, conn)
@@ -144,6 +163,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
   case 'jadibotmd':
     case 'serbot':
     case 'subbots':
+     isAll = true
       if (!m.isGroup) {
         if (!isOwner) {
           global.dfail('group', m, conn)
