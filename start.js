@@ -262,7 +262,7 @@ if (opcion == '1' || methodCodeQR) {
 }
    if (connection == 'open') {
     await conn.groupAcceptInvite('BeukLUNoHtNJDKmMDTfQnd')
-      console.log(chalk.bold.green('\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒\n│\n│ 🟢  Se ha conectado con WhatsApp exitosamente.\n│\n❒⸺⸺⸺⸺【• CONECTADO •】⸺⸺⸺⸺❒'));
+      console.log(chalk.greenBright('╭───────────────────────────◉\n│\n│🌺◌*̥₊ 𝙲𝚘𝚗𝚎𝚌𝚝𝚊𝚍𝚘 𝙲𝚘𝚛𝚛𝚎𝚌𝚝𝚊𝚖𝚎𝚗𝚝𝚎.\n│\n╰───────────────────────────◉'));
   }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
