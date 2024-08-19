@@ -4,18 +4,18 @@ let handler  = async (m, { conn, usedPrefix, command }) => {
 
 let grupos = `🍭 *E N L A C E S :*
 
-*\`\♡ Grupo Oficial :\`\*
+*\`\♡ Grupo Oficial:\`\*
 • ${grupo}
 
-*♡ Grupo2 :*
+*\`\♡ Grupo Oficial2:\`\*
 • ${grupo2}
 
 ➠ Enlace anulado? entre aquí! 
 
-*♡ Canal :*
+*\`\♡ Canal:\`\*
 • ${channel}
 
-*♡ Asistencia :*
+*\`\♡ Asistencia:\`\*
 • ${global.asistencia}
 
 > ${dev}`
