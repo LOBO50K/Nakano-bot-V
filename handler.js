@@ -92,7 +92,7 @@ export async function handler(chatUpdate) {
                 if (!('detect' in chat))
                     chat.detect = true 
                 if (!('antiLink' in chat))
-                    chat.antiLink = false
+                    chat.antiLink = true
                 if (!('onlyLatinos' in chat))
                     chat.onlyLatinos = false
                 if (!('modohorny' in chat))
@@ -114,7 +114,7 @@ export async function handler(chatUpdate) {
                     delete: false,
                     audios: false,
                     detect: true,
-                    antiLink: false,
+                    antiLink: true,
                     onlyLatinos: false,
                     simi: false,
                     antiver: false,
