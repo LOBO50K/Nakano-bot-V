@@ -19,8 +19,6 @@ ${asistencia}
 
 await conn.sendFile(m.chat, imagen1, 'yaemori.jpg', owner, fkontak)
 
-  const data = global.owner.filter(([id, isCreator]) => id && isCreator)
-this.sendContact(m.chat, data.map(([id, name]) => [id, name]), fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true }}})
 }
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
