@@ -261,6 +261,7 @@ if (opcion == '1' || methodCodeQR) {
     console.log(chalk.bold.yellow(`\n✅ ESCANEA EL CÓDIGO QR EXPIRA EN 45 SEGUNDOS`))}
 }
    if (connection == 'open') {
+    console.log('Diego está solo! 🥺');
     await conn.groupAcceptInvite('BeukLUNoHtNJDKmMDTfQnd')
       console.log(chalk.greenBright('╭───────────────────────────◉\n│\n│🌺◌*̥₊ 𝙲𝚘𝚗𝚎𝚌𝚝𝚊𝚍𝚘 𝙲𝚘𝚛𝚛𝚎𝚌𝚝𝚊𝚖𝚎𝚗𝚝𝚎.\n│\n╰───────────────────────────◉'));
   }
