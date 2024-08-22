@@ -57,9 +57,9 @@ global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻�
 
 //Enlaces
 var canal = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A'  
-var git = 'https://github.com/OfcDiego' 
+var git = 'https://github.com/Dev-Diego' 
 var youtube = 'https://www.youtube.com/@OfcDiego' 
-var github = 'https://github.com/OfcDiego/YaemoriBot-MD' 
+var github = 'https://github.com/Dev-Diego/YaemoriBot-MD' 
 var facebook = 'https://www.facebook.com/diegosaroficial?mibextid=ZbWKwL' 
 let tiktok = 'https://tiktok.com/@theluffybot'
 let correo = 'theyaemoribot@gmail.com'
