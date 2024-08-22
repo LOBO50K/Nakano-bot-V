@@ -5,7 +5,7 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 
 👑 *Propietario:*
 
-• Dev Diego
+• DevDiego
 🍟 *Rol:* Propietario
 🚩 *Número:* ${creador}
 ✨️ *GitHub:* https://github.com/Dev-Diego
