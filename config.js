@@ -49,6 +49,7 @@ global.grupo = 'https://chat.whatsapp.com/BeukLUNoHtNJDKmMDTfQnd'
 global.grupo2 = 'https://chat.whatsapp.com/EVc2XJuZwjnKKdWUsRYmms'
 global.canal = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A'
 global.channel = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A'
+global.md = 'https://github.com/Dev-Diego/YaemoriBot-MD'
 global.yt = 'https://www.youtube.com/@OfcDiego' 
 global.correo = 'theyaemoribot@gmail.com'
 
