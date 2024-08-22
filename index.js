@@ -23,7 +23,7 @@ font: 'chrome',
 align: 'center',
 colors: ['red']
 });
-say(`Developed By • OfcDiego`, {
+say(`Developed By • Dev Diego`, {
 font: 'console',
 align: 'center',
 colors: ['yellow']
