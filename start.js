@@ -105,7 +105,7 @@ opcion = await question(colores('Seleccione una opción:\n') + opcionQR('1. Con 
 if (!/^[1-2]$/.test(opcion)) {
 console.log('Por favor, seleccione solo 1 o 2.\n')
 }} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
-}
+} 
 
 console.info = () => {} 
 console.debug = () => {} 
@@ -113,7 +113,7 @@ const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 mobile: MethodMobile, 
-browser: opcion == '1' ? ['Ai Yaemori', 'Safari', '2.0.0'] : methodCodeQR ? ['Ai Yaemori', 'Safari', '2.0.0'] : ['Ubuntu', 'Chrome', '110.0.5585.95'],
+browser: opcion == '1' ? ['YaemoriBot-MD', 'Edge', '20.0.04'] : methodCodeQR ? ['YaemoriBot-MD', 'Edge', '20.0.04'] : ['Ubuntu', 'Edge', '110.0.1587.56'], 
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
