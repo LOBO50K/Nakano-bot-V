@@ -13,7 +13,7 @@ apt-get update -y && apt-get upgrade -y
 
 pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 
-git clone https://github.com/OfcDiego/YaemoriBot-MD && cd YaemoriBot-MD && yarn install && npm install 
+git clone https://github.com/Dev-Diego/YaemoriBot-MD && cd YaemoriBot-MD && yarn install && npm install 
 
 ls
 
