@@ -28,7 +28,7 @@ termux-setup-storage
 apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 ```bash
-git clone https://github.com/OfcDiego/YaemoriBot-MD && cd YaemoriBot-MD
+git clone https://github.com/Dev-Diego/YaemoriBot-MD && cd YaemoriBot-MD
 ```
 ```bash
 yarn install && npm install
@@ -61,7 +61,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 🚩 **`ACTUALIZAR YAEMORI`**
 > Note Comandos para actualizar Ai Yaemori  de forma automática
 ```bash
-grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/OfcDiego/YaemoriBot-MD/master/update.sh | bash
+grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/Dev-Diego/YaemoriBot-MD/master/update.sh | bash
 ```
 Para que no pierda su progreso en Yaemori, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
 
@@ -70,7 +70,7 @@ Para que no pierda su progreso en Yaemori, estos comandos realizarán un respald
 ---
 
 #### ☂️ ACTIVA EN HEROKU ☂️
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/OfcDiego/YaemoriBot-MD)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Dev-Diego/YaemoriBot-MD)
 
 #### Heroku Buildpack
 | BuildPack | LINK |
@@ -81,12 +81,12 @@ Para que no pierda su progreso en Yaemori, estos comandos realizarán un respald
 ---
 
 #### 🟢 ACTIVAR EN CODES SPACES 
-[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=OfcDiego/YaemoriBot-MD&ref=main&geo=UsEast)
+[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=Dev-Diego/YaemoriBot-MD&ref=main&geo=UsEast)
 
 ---
 
 #### 🤍 ACTIVAR EN RENDER
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2OfcDiego%YaemoriBot-MD) 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2Dev-Diego%YaemoriBot-MD) 
 
 ---
 
@@ -120,8 +120,8 @@ Para que no pierda su progreso en Yaemori, estos comandos realizarán un respald
 --- 
 
 ### `🚩 DESARROLLADORES`
-<a href="https://github.com/OfcDiego/YaemoriBot-MD/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=OfcDiego/YaemoriBot-MD" /> 
+<a href="https://github.com/Dev-Diego/YaemoriBot-MD/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=Dev-Diego/YaemoriBot-MD" /> 
 </a>
 
 ### `✨️ AGRADECIMIENTOS`
@@ -130,8 +130,8 @@ href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino
 
 ### `🍟 CREADOR`
 <a
-href="https://github.com/OfcDiego"><img src="https://github.com/OfcDiego.png" width="130" height="130" alt="Diego"/></a>
+href="https://github.com/Dev-Diego"><img src="https://github.com/Dev-Diego.png" width="130" height="130" alt="Diego"/></a>
 
-> Copyright (c) 2024 **[OfcDiego](https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A)**.
+> Copyright (c) 2024 **[Dev Diego](https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A)**.
 
 **`¡GRACIAS POR PREFERIRNOS!` 🍟**
