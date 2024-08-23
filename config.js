@@ -45,14 +45,14 @@ global.miniurl = fs.readFileSync('./storage/img/miniurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.grupo = 'https://chat.whatsapp.com/BeukLUNoHtNJDKmMDTfQnd' //grupo oficial de yaemoribot
-global.grupo2 = 'https://chat.whatsapp.com/EVc2XJuZwjnKKdWUsRYmms' //grupo oficial2 de yaemoribot
-global.grupo3 = 'https://chat.whatsapp.com/Ksd32KH9zFoDmO1PJt44M7' //grupo de colaboración gatabot
-global.canal = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A' //cana oficial
-global.channel = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A' //canal oficial
-global.md = 'https://github.com/Dev-Diego/YaemoriBot-MD' //github oficial 
-global.yt = 'https://www.youtube.com/@OfcDiego' //youtube
-global.correo = 'theyaemoribot@gmail.com' //tiktok
+global.grupo = 'https://chat.whatsapp.com/BeukLUNoHtNJDKmMDTfQnd' //YaemoriBot
+global.grupo2 = 'https://chat.whatsapp.com/EVc2XJuZwjnKKdWUsRYmms' //YaemoriBot2
+global.grupo3 = 'https://chat.whatsapp.com/Ksd32KH9zFoDmO1PJt44M7' //GataBot & YaemoriBot
+global.canal = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A'
+global.channel = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A'
+global.md = 'https://github.com/Dev-Diego/YaemoriBot-MD' 
+global.yt = 'https://www.youtube.com/@OfcDiego'
+global.correo = 'theyaemoribot@gmail.com'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
