@@ -31,7 +31,7 @@ global.wm = '𝗬𝗮𝗲𝗺𝗼𝗿𝗶 𝗕𝗼𝘁 - 𝗠𝗗 ⭐️'
 global.author = '𝖮𝖿𝖼.𝖣𝗂𝖾𝗀𝗈 👑'
 global.dev = '🚩 Powered By あ S_ᴅɪᴇɢᴏ あ'
 global.textbot = '𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶 : 𝗢𝗳𝗰𝗗𝗶𝗲𝗴𝗼 🚩'
-global.vs = '1.0.7'
+global.vs = '2.0.5'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
