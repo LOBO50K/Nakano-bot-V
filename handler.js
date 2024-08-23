@@ -382,7 +382,7 @@ global.db.data.users[m.sender].spam = new Date * 1
                     if (e) {
                         let text = format(e)
                         for (let key of Object.values(global.APIKeys))
-                            text = text.replace(new RegExp(key, 'g'), '#HIDDEN#')
+                            text = text.replace(new RegExp(key, 'g'), 'Administrador')
                         m.reply(text)
                     }
                 } finally {
