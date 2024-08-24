@@ -61,7 +61,7 @@ var git = 'https://github.com/Dev-Diego'
 var youtube = 'https://www.youtube.com/@OfcDiego' 
 var github = 'https://github.com/Dev-Diego/YaemoriBot-MD' 
 var facebook = 'https://www.facebook.com/diegosaroficial?mibextid=ZbWKwL' 
-let tiktok = 'https://tiktok.com/@theluffybot'
+let tiktok = 'https://tiktok.com/@theyaemoribot'
 let correo = 'theyaemoribot@gmail.com'
 
 global.redes = [canal, git, youtube, github, facebook, tiktok, correo].getRandom()
