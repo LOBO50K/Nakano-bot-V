@@ -31,7 +31,7 @@ regbot += `「🎁」𝗥𝗲𝗰𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘀:\n`
 regbot += `• 15 Estrellas 🌟\n`
 regbot += `• 5 MiniCoins 🪙\n`
 regbot += `• 245 Experiencia 💸\n`
-regbot += `• 12 Tokens 💰`
+regbot += `• 12 Tokens 💰\n`
 regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
 regbot += `${packname}`
 await conn.sendMini(m.chat, '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰', textbot, regbot, imagen1, imagen1, channel, m)
