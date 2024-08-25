@@ -69,6 +69,23 @@
 
 ---
 
+### **`💣 Instalación por cloudshell`**
+
+<details>
+ <summary><b> 🦎 Comandos</b></summary>
+
+bash```
+> git clone https://github.com/Dev-Diego/YaemoriBot-MD
+```
+
+```bash
+> cd YaemoriBot-MD
+```
+
+</details>
+
+---
+
 #### **`🌌 ACTIVAR EN CODESPACE`**
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=Dev-Diego/YaemoriBot-MD&ref=main&geo=UsEast)
