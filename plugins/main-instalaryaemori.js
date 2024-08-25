@@ -22,11 +22,11 @@ conn.reply(m.chat, texto, m, rcanal )
 handler.before = async m => {
 
 if (/^comandos$/i.test(m.text) ) {
-m.reply('git clone https://github.com/Dev-Diego/YaemoriBot-MD && cd YaemoriBot-MD')
+conn.reply(m.chat, 'git clone https://github.com/Dev-Diego/YaemoriBot-MD && cd YaemoriBot-MD', m, rcanal)
 await delay(1000 * 1)
-m.reply('yarn install && npm install')
+conn.reply(m.chat, 'yarn install && npm install', m, rcanal)
 await delay(1000 * 1)
-m.reply('npm start')
+conn.reply(m.chat, 'npm start', m, rcanal)
 }
 
 if (/^corin$/i.test(m.text) ) {
