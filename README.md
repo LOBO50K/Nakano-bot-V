@@ -3,7 +3,7 @@
 ## **`Yaemori Bot - MD 🌱`**
 ![Yaemori](https://telegra.ph/file/731e8ba1d2a4a506903cf.jpg)
 
-# <h3 align="center">Yaemori Bot - MD 🌱</h3>
+# <h1 align="center">Yaemori Bot - MD 🌱</h1>
 
 ---
 
