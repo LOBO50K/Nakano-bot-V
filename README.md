@@ -4,7 +4,7 @@
 
 ---
 
- - Colaboradores](#COLABORADORES)
+ - [Colaboradores](### **`🌴 COLABORADORES`**)
 
 ### **`❕️ Información importante`**
 
