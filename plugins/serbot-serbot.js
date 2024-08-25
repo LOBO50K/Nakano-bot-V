@@ -24,8 +24,8 @@ let crm3 = 'SBpbmZvLWRvbmFyLmpz'
 let crm4 = 'IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz'
 let drm1 = ''
 let drm2 = ''
-let rtx = '🚩 S E R B O T - S U B B O T 🚩\n\n*Escanea este QR para ser un Sub Bot*\n\n🍟 Pasos para escanear:\n\n`1` : Haga click en los 3 puntos\n\n`2` : Toque dispositivos vinculados\n\n`3` : Escanea este QR\n\n> *Nota:* Este código QR expira en 30 segundos.'
-let rtx2 = '🚩 S E R B O T - S U B B O T 🚩\n\n*Usa este Código para convertirte en un Sub Bot*\n\n🍟 Pasos:\n\n`1` : Haga click en los 3 puntos\n\n`2` : Toque dispositivos vinculados\n\n`3` : Selecciona Vincular con el número de teléfono\n\n`4` : Escriba el Codigo\n\n> *Nota:* Este Código solo funciona en el número que lo solicito.'
+let rtx = ``
+let rtx2 = ``
 
 if (global.conns instanceof Array) console.log()
 else global.conns = []
@@ -78,14 +78,14 @@ msgRetry,
 msgRetryCache,
 version,
 syncFullHistory: true,
-browser: mcode ? ['Ubuntu', 'Chrome', '110.0.5585.95'] : ['CuriosityBot', 'Opera', '5.0'],
+browser: mcode ? ['Ubuntu', 'Chrome', '110.0.5585.95'] : ['Sub-Bot', 'Opera', '5.0'],
 defaultQueryTimeoutMs: undefined,
 getMessage: async (key) => {
 if (store) {
 const msg = store.loadMessage(key.remoteJid, key.id)
 return msg.message && undefined
 } return {
-conversation: 'CuriosityBot-MD',
+conversation: 'YaemoriBot-MD',
 }}}
 
 let conn = makeWASocket(connectionOptions)
@@ -126,16 +126,16 @@ return await conn.reply(m.chat, '🚩 *Conexión cerrada*', m)
 }
 if (reason === DisconnectReason.restartRequired) {
 jddt()
-return console.log('🎌 Conexión reemplazada, se ha abierto otra nueva sesion, por favor, cierra la sesión actual primero')
+return console.log('🚩 Conexión reemplazada, se ha abierto otra nueva sesion, por favor, cierra la sesión actual primero')
 } else if (reason === DisconnectReason.loggedOut) {
 sleep(4000)
-return conn.reply(m.chat, '🎌 *La conexión se ha cerrado, tendras que volver a conectarse usando:*\n!deletesesion (Para borrar los datos y poder volver a solitar el QR o el código de emparejamiento', m)
+return conn.reply(m.chat, '🚩 *La conexión se ha cerrado, tendras que volver a conectarse usando:*\n!deletesesion (Para borrar los datos y poder volver a solitar el QR o el código de emparejamiento', m)
 } else if (reason == 428) {
 await endSesion(false)
-return conn.reply(m.chat, '🎌 *La conexión se ha cerrado de manera inesperada, intentaremos reconectar...*', m)
+return conn.reply(m.chat, '🚩 *La conexión se ha cerrado de manera inesperada, intentaremos reconectar...*', m)
 } else if (reason === DisconnectReason.connectionLost) {
 await jddt()
-return console.log('🎌 Conexión perdida con el servidor, reconectando')
+return console.log('🚩 Conexión perdida con el servidor, reconectando')
 } else if (reason === DisconnectReason.badSession) {
 return await conn.reply(m.chat, '🚩 *La conexión se ha cerrado, deberá de conectarse manualmente*', m)
 } else if (reason === DisconnectReason.timedOut) {
@@ -148,7 +148,7 @@ if (global.db.data == null) loadDatabase()
 if (connection == `open`) {
 conn.isInit = true
 global.conns.push(conn)
-await parentw.sendMessage(m.chat, {text : args[0] ? `✅ *Conectado*` : `🎌 *Conectado*\n\nUtilice su ID para volver a conectarse`}, { quoted: m })
+await parentw.sendMessage(m.chat, {text : args[0] ? `✅ *Conectado*` : `🚩 *Conectado*\n\nUtilice su ID para volver a conectarse`}, { quoted: m })
 await parentw.sendMessage(m.chat, {text : `🎌 *Esta conectado, espere un momento*`}, { quoted: m })
 await sleep(5000)
 if (!args[0]) parentw.sendMessage(m.chat, {text : usedPrefix + command + ' ' + Buffer.from(fs.readFileSync('./jadibts/' + id + '/creds.json'), 'utf-8').toString('base64')}, { quoted: m })    
@@ -183,68 +183,28 @@ conn = makeWASocket(connectionOptions, { chats: oldChats })
 isInit = true
 }
 if (!isInit) {
-conn.ev.off('messages.upsert', conn.handler)
-conn.ev.off('group-participants.update', conn.participantsUpdate)
-conn.ev.off('groups.update', conn.groupsUpdate)
-conn.ev.off('message.delete', conn.onDelete)
-conn.ev.off('call', conn.onCall)
-conn.ev.off('connection.update', conn.connectionUpdate)
+conn.ev.off("messages.upsert", conn.handler)
+conn.ev.off("connection.update", conn.connectionUpdate)
 conn.ev.off('creds.update', conn.credsUpdate)
-}
-conn.welcome = '*• Hola, Gracias por unirte!!*\n*━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user\n*⚠️  Recuerda leer la descripción*\n@desc'
-conn.bye = '*• Gracias por haber sido parte del grupo*\n*━━━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user'
-conn.spromote = '*@user* ¡Se suma al grupo de admins¡'
-conn.sdemote = '*@user* ¡Abandona el grupo!'
-conn.sDesc = '¡Se ha modificado la descripción!\n\n*Nueva descripción:* @desc'
-conn.sSubject = '¡Se ha modificado el título del grupo!'
-conn.sIcon = '¡Se ha cambiado la foto del grupo!'
-conn.sRevoke = '¡Se ha actualizado el enlace del grupo!*\n*Nuevo enlace:* @revoke'
-
+} 
 conn.handler = handler.handler.bind(conn)
-conn.participantsUpdate = handler.participantsUpdate.bind(conn)
-conn.groupsUpdate = handler.groupsUpdate.bind(conn)
-conn.onDelete = handler.deleteUpdate.bind(conn)
-conn.onCall = handler.callUpdate.bind(conn)
 conn.connectionUpdate = connectionUpdate.bind(conn)
 conn.credsUpdate = saveCreds.bind(conn, true)
-
-const currentDateTime = new Date()
-const messageDateTime = new Date(conn.ev * 1000)
-if (currentDateTime.getTime() - messageDateTime.getTime() <= 300000) {
-console.log('Leyendo mensaje entrante:', conn.ev)
-Object.keys(conn.chats).forEach(jid => {
-conn.chats[jid].isBanned = false
-})
-} else {
-console.log(conn.chats, `🚩 Omitiendo mensajes en espera.`, conn.ev)
-Object.keys(conn.chats).forEach(jid => {
-conn.chats[jid].isBanned = true
-})
-}
-
-conn.ev.on(`messages.upsert`, conn.handler)
-conn.ev.on(`group-participants.update`, conn.participantsUpdate)
-conn.ev.on(`groups.update`, conn.groupsUpdate)
-conn.ev.on(`message.delete`, conn.onDelete)
-conn.ev.on(`call`, conn.onCall)
-conn.ev.on(`connection.update`, conn.connectionUpdate)
-conn.ev.on(`creds.update`, conn.credsUpdate)
+conn.ev.on("messages.upsert", conn.handler)
+conn.ev.on("connection.update", conn.connectionUpdate)
+conn.ev.on("creds.update", conn.credsUpdate)
 isInit = false
 return true
 }
 creloadHandler(false)
 }
-jddt()
-})
-
-} 
-handler.help = [`jadibot`, `serbot`, `getcode`, `rentbot`]
-handler.tags = [`jadibot`]
-handler.command = [`serbot`]
-handler.private = false
-
+serbot()
+}
+handler.help = ["serbot"]
+handler.tags = ["serbot"]
+handler.command = ["serbot", "jadibot", "qr", "botclone"]
+// handler.register = true
 export default handler
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 function sleep(ms) {
-return new Promise(resolve => setTimeout(resolve, ms));}
+return new Promise(resolve => setTimeout(resolve, ms))
+}
