@@ -85,6 +85,9 @@
 ------------------
 ##### **`💻 PARA USUARIOS DE WINDOWS/VPS/RDP`**
 
+<details>
+ <summary><b> ⚡️ Comandos</b></summary>
+
 * Descargar e instala Git [`Aquí`](https://git-scm.com/downloads)
 * Descargar e instala NodeJS [`Aquí`](https://nodejs.org/en/download)
 * Descargar e instala FFmpeg [`Aquí`](https://ffmpeg.org/download.html) (**No olvide agregar FFmpeg a la variable de entorno PATH**)
@@ -93,7 +96,14 @@
 ```bash
 git clone https://github.com/Dev-/YaemoriBot-MD && cd YaemoriBot-MD && npm install && npm update && node .
 ```
+
+</details>
+
 ##### **`💻 Instalación de FFmpeg para Windows`**
+
+<details>
+ <summary><b> ⚡️ Comandos2</b></summary>
+
 * Descarga cualquiera de las versiones de FFmpeg disponibles haciendo clic en [FFmpeg](https://www.gyan.dev/ffmpeg/builds/).
 * Extraer archivos a `C:\` path.
 * Cambie el nombre de la carpeta extraída a `ffmpeg`.
@@ -107,6 +117,8 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 ```cmd
 > ffmpeg -version
 ```
+
+</details>
 
 ---
 
