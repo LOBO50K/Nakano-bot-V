@@ -14,3 +14,9 @@
 | WhatsApp | Asistente | Español/Ingles | [¡Click aquí!](wa.me/573218138672) |
 
 </table>
+
+**`👑 Creador de la bot`**
+
+**`🌹 Creditos de la base`**
+
+**`🌴 Colaboradores de la bot`**
