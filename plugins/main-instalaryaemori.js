@@ -3,46 +3,34 @@ var handler  = async (m, { conn }) => {
 let texto = `🚩 *Instalación de Ai Yaemori*
 
 ⬡ Dudas: ${creador}
-⬡ Tutoríal: *¡Pronto!*
+⬡ Tutoríal: https://youtu.be/0JtOm_ie4CQ?si=kbL823AQmUhC3PmC
 
-*Comandos de instalación via Termux ✏️*
+*Comandos de instalación via cloudshell 🌱*
 
-termux-setup-storage
+git clone https://github.com/Dev-Diego/YaemoriBot-MD
 
-apt-get update -y && apt-get upgrade -y
-
-pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
-
-git clone https://github.com/Dev-Diego/YaemoriBot-MD && cd YaemoriBot-MD && yarn install && npm install 
-
-ls
+cd YaemoriBot-MD && yarn install && npm install 
 
 npm start
 
 _Utilice "comandos" para enviarle los comandos uno por uno 🚩_
 
-_Utilice "cafirexos" para enviarle la instalación por el host *olympus* 🚩_`
+_Utilice "corin" para enviarle la instalación por el host *corinplus* 🚩_`
 
 conn.reply(m.chat, texto, m, rcanal )
 
 handler.before = async m => {
 
 if (/^comandos$/i.test(m.text) ) {
-m.reply('termux-setup-storage')
+m.reply('git clone https://github.com/Dev-Diego/YaemoriBot-MD && cd YaemoriBot-MD')
 await delay(1000 * 1)
-m.reply('apt-get update -y && apt-get upgrade -y')
-await delay(1000 * 1)
-m.reply('pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn')
-await delay(1000 * 1)
-m.reply('git clone https://github.com/Dev-Diego/YaemoriBot-MD && cd YaemoriBot-MD && yarn install && npm install ')
-await delay(1000 * 1)
-m.reply('ls')
+m.reply('yarn install && npm install')
 await delay(1000 * 1)
 m.reply('npm start')
 }
 
-if (/^olympus$/i.test(m.text) ) {
-conn.reply(m.chat, '💠 *Instalación por Olympus*\n(nosotros no tenemos tutorial pero eso les puede ayudar)\n\n• Dashboard:\nhttps://dash.olympus-host.xyz\n\n• Panel:\nhttps://panel.olympus-host.xyz', m, rcanal)
+if (/^corin$/i.test(m.text) ) {
+conn.reply(m.chat, '💠 *Instalación por CorinPlus*\n(nosotros no tenemos tutorial pero eso les puede ayudar)\n\n• Dashboard:\nhttps://dash.corinplus.com\n\n• Panel:\nhttps://panel.corinplus.com', m, rcanal)
 await delay(2000 * 1)
 conn.sendMessage(m.chat, {image: {url: 'https://telegra.ph/file/9532b7ff1fabc02d7e199.jpg'}, caption: ''}, {quoted: fkontak})
 await delay(1000 * 1)
