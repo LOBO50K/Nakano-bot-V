@@ -15,8 +15,8 @@
 
 </table>
 
-## **`👑 Creador de la bot`**
+### **`👑 Creador de la bot`**
 
-## **`🌹 Creditos de la base`**
+### **`🌹 Creditos de la base`**
 
-## **`🌴 Colaboradores de la bot`**
+#### **`🌴 Colaboradores de la bot`**
