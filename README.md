@@ -4,7 +4,7 @@
 
 ---
 
- - [Colaboradores](#Enlaces-utiles)
+ - [Colaboradores](#**`🔗-Enlaces útiles`**)
 
 ### **`❕️ Información importante`**
 
