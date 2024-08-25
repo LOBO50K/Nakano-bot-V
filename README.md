@@ -75,7 +75,7 @@
 
 ----- 
 #### **`⏏️ ACTIVAR EN KOYEB`**
-[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Dev-Diego/YaemoriBot-MD&branch=master&name=yaemoeibot-md)
+[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Dev-Diego/YaemoriBot-MD&branch=master&name=yaemoribot-md)
 
 ------------------
 #### **`☁️ ACTIVAR EN RENDER`**
@@ -93,7 +93,7 @@
 * Descargar e instala ImageMagick [`Aquí`](https://imagemagick.org/script/download.php)
 * Descargar e instala Yarn [`Aquí`](https://classic.yarnpkg.com/en/docs/install#windows-stable)
 ```bash
-git clone https://github.com/Dev-/YaemoriBot-MD && cd YaemoriBot-MD && npm install && npm update && node .
+git clone https://github.com/Dev-Diego/YaemoriBot-MD && cd YaemoriBot-MD && npm install && npm update && node .
 ```
 
 </details>
