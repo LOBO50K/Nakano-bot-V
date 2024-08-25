@@ -1,5 +1,5 @@
 <h1 align="center">Yaemori Bot - MD 🌱</h1>
- <p align="center">🌴 WhatsApp Bot Node-Js.</p>
+ <p align="center">🚩 WhatsApp Bot Node-Js.</p>
 </p>
 
 ---
