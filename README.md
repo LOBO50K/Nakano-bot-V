@@ -79,7 +79,11 @@
 ```
 
 ```bash
-> cd YaemoriBot-MD
+> cd YaemoriBot-MD && yarn install
+```
+
+```bash
+> npm start
 ```
 
 </details>
