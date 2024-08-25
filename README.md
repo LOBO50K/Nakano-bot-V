@@ -83,7 +83,7 @@
 [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2FDev-Diego%2FYaemoriBot-MD)
 
 ------------------
-#### **`💻 PARA USUARIOS DE WINDOWS/VPS/RDP`**
+###### **`💻 PARA USUARIOS DE WINDOWS/VPS/RDP`**
 
 * Descargar e instala Git [`Aquí`](https://git-scm.com/downloads)
 * Descargar e instala NodeJS [`Aquí`](https://nodejs.org/en/download)
@@ -93,7 +93,7 @@
 ```bash
 git clone https://github.com/Dev-/YaemoriBot-MD && cd YaemoriBot-MD && npm install && npm update && node .
 ```
-## 💻 Instalación de FFmpeg para Windows 
+####### **`💻 Instalación de FFmpeg para Windows`**
 * Descarga cualquiera de las versiones de FFmpeg disponibles haciendo clic en [FFmpeg](https://www.gyan.dev/ffmpeg/builds/).
 * Extraer archivos a `C:\` path.
 * Cambie el nombre de la carpeta extraída a `ffmpeg`.
