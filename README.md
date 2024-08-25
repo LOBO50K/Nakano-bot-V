@@ -133,15 +133,15 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 
 ---
 
-#### **`🌴 Colaboradores de la bot`**
+#### **`🌴 COLABORADORES`**
 <a href="https://github.com/Dev-Diego/YaemoriBot-MD/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=Dev-Diego/YaemoriBot-MD" /> 
 </a>
 
-### **`👑 Creador de la bot`**
+### **`👑 PROPIETARIO`**
 <a
 href="https://github.com/Dev-Diego"><img src="https://github.com/Dev-Diego.png" width="130" height="130" alt="OfcDiego"/></a>
 
-### **`🌹 Creditos de la base`**
+### **`🌹 CREDITOS`**
 <a
 href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png" width="130" height="130" alt="GataDios"/></a>
