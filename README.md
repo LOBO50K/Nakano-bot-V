@@ -93,7 +93,7 @@
 ```bash
 git clone https://github.com/Dev-/YaemoriBot-MD && cd YaemoriBot-MD && npm install && npm update && node .
 ```
-####### **`💻 Instalación de FFmpeg para Windows`**
+###### **`💻 Instalación de FFmpeg para Windows`**
 * Descarga cualquiera de las versiones de FFmpeg disponibles haciendo clic en [FFmpeg](https://www.gyan.dev/ffmpeg/builds/).
 * Extraer archivos a `C:\` path.
 * Cambie el nombre de la carpeta extraída a `ffmpeg`.
