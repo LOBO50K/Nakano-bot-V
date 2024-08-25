@@ -5,11 +5,6 @@
 
 ---
 
-# 📍 Atajos del README
-| TEMA | DESCRIPCIÓN | ATAJO |
-|------|-------------|-------|
-| 🪴 **COLABORADORES** | *Implicados en este proyecto* |[ver](https://github.com/Dev-Diego/YaemoriBot-MD/#-🌴Info-Bot) |
-
 ### **`❕️ Información importante`**
 
 <details>
