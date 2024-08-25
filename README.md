@@ -5,7 +5,6 @@
 
 ### **`☁️ CORINPLUS HOTS`**
 <a href="https://dash.corinplus.com"><img src="https://qu.ax/ZycD.png" height="125px"></a>
-### Información sobre CorinPlus
 
 <details>
  <summary><b>:paperclip: Enlaces Importantes</b></summary>
