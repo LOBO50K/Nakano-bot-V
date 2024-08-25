@@ -1,137 +1,139 @@
-> 🚩 Versión Actual: 2.0.6
-
-## 🍟 **`Ai Yaemori - MD`**
-
+### **`Yaemori Bot - MD 🌱`**
 ![Yaemori](https://telegra.ph/file/731e8ba1d2a4a506903cf.jpg)
 
----
+<p align="center">
+  <a href="https://github.com/Dev-Diego/YaemoriBot-MD/graphs/contributors">
+    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/Dev-Diego/YaemoriBot-MD?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Dev-Diego/YaemoriBot-MD/issues">
+    <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Dev-Diego/YaemoriBot-MD?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Dev-Diego/YaemoriBot-MD/pulls">
+    <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/Dev-Diego/YaemoriBot-MD?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Dev-Diego/YaemoriBot-MD/commits">
+    <img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/Dev-Diego/YaemoriBot-MD?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Dev-Diego/YaemoriBot-MD">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/Dev-Diego/YaemoriBot-MD?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Dev-Diego/YaemoriBot-MD/fork">
+    <img alt="GitHub Forks" src="https://img.shields.io/github/forks/Dev-Diego/YaemoriBot-MD?style=for-the-badge" />
+  </a>
+</p>
 
-### <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="Prueba La Bot Aqui" width="42" height="42"> Prueba La Bot Aqui
+<p align="center">
+  <a href="https://api.whatsapp.com/send?phone=+573218138672&text=&text=.menu">Demo</a>
+  ·
+  <a href="https://github.com/Dev-Diego/YaemoriBot-MD/issues/new?assignees=&labels=Bug">Reportar un Bug</a>
+  ·
+  <a href="https://github.com/Dev-Diego/YaemoriBot-MD/issues/new?assignees=&labels=Enhancement">Solicitar una Característica</a>
+</p>
 
-> Si Deseas Probar El Bot Antes De Instalarlo, Click Abajo. 🍟
+<!-- <p align="center">
+  <a href="/src/docs/README_en.md">English</a>
+  ·
+  <a href="/src/docs/README_pt-br.md">Português</a>
+</p> -->
 
-[![Click Aquí](https://img.shields.io/badge/Grupo-Yaemori-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/BeukLUNoHtNJDKmMDTfQnd)
+<p align="center">¡Ayuda a mantener el proyecto activo con tu <a href="https://www.paypal.me/DevDiego">donación</a> y contribuye a mejorar las funciones del chatbot para todos!</p>
 
-🍟 **`INSTALACION MANUAL POR TERMUX`**
+# Despliegue, Soporte y Comunidad
 
-[![blog](https://img.shields.io/badge/Video-Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
-](https://youtu.be/0JtOm_ie4CQ?si=kbL823AQmUhC3PmC)
+- [Opciones de Despliegue](#opciones-de-despliegue)
+  - [Despliegue en Cafirexos](#despliegue-en-cafirexos)
+  - [Despliegue en BoxMineWorld](#despliegue-en-boxmineworld)
+  - [Despliegue en Otros](#despliegue-en-otros)
+- [Soporte y Comunidad](#soporte-y-comunidad)
+  - [Comunidades de Ayuda](#guía-de-uso)
+  - [Colaboradores](#colaboradores)
+  - [Agradecimientos](#agradecimientos)
 
-[`🚩 Instalar Termux Clic Aqui`](https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.apk/file)
+# Avisos Importantes
 
-> ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+> [!IMPORTANT]\
+> Este proyecto **no está afiliado de ninguna manera** con `WhatsApp`, `Inc. WhatsApp` es una marca registrada de `WhatsApp LLC`, y este bot es un **desarrollo independiente** que **no tiene ninguna relación oficial con la compañía**.
 
-```bash
-termux-setup-storage
-```
-```bash
-apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
-```
-```bash
-git clone https://github.com/Dev-Diego/YaemoriBot-MD && cd YaemoriBot-MD
-```
-```bash
-yarn install && npm install
-```
-```bash
-npm start
-```
+> [!WARNING]\
+> **Este proyecto no ofrece soporte oficial para su uso en Termux.** Termux es una aplicación de terminal para Android y, aunque puede ser utilizada para ejecutar diversos programas, **este proyecto no está diseñado ni probado específicamente para funcionar en Termux**. Por lo tanto, **no garantizamos compatibilidad ni soporte técnico en este entorno**.
 
-🍟 **`ACTIVAR EN TERMUX EN CASO DE DETENERSE`**
-```bash
-ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd 
-> cd YaemoriBot-MD
-> npm start
-```
 
-🚩 **`OBTENER OTRO CODIGO QR`**
-```bash
-> ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd YaemoriBot-MD
-> rm -rf MiniSession
-> npm start
-```
+# Opciones de despliegue
 
-🍟 **`YAEMORI 24/7 (TERMUX)`**
-```bash
-> termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
-```
+## Despliegue en Cafirexos
 
-🚩 **`ACTUALIZAR YAEMORI`**
-> Note Comandos para actualizar Ai Yaemori  de forma automática
-```bash
-grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/Dev-Diego/YaemoriBot-MD/master/update.sh | bash
-```
-Para que no pierda su progreso en Yaemori, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
-
-> Warning Estos comandos solo funcionan para TERMUX, REPLIT, LINUX
-
----
-
-#### ☂️ ACTIVA EN HEROKU ☂️
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Dev-Diego/YaemoriBot-MD)
-
-#### Heroku Buildpack
-| BuildPack | LINK |
-|--------|--------|
-| **FFMPEG** |[click](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
-| **IMAGEMAGICK** | [click](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
-
----
-
-#### 🟢 ACTIVAR EN CODES SPACES 
-[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=Dev-Diego/YaemoriBot-MD&ref=main&geo=UsEast)
-
----
-
-#### 🤍 ACTIVAR EN RENDER
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2Dev-Diego%YaemoriBot-MD) 
-
----
-
-## <img src="https://static.wikia.nocookie.net/nyancat/images/d/d3/Nyan-cat.gif/revision/latest/scale-to-width-down/400?cb=20131231222500&path-prefix=es" alt="Grupo" width="45" height="43"> Bot Oficial ☄️
-
-<a href="https://wa.me/573218138672?text=!menu"><img alt="Bot Oficial ☄️" src="https://img.shields.io/badge/Bot - Oficial-00FFFF?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
-
-> No Spam A La Bot!
-
----
-
-## <img src="https://i.pinimg.com/originals/73/69/6e/73696e022df7cd5cb3d999c6875361dd.gif" alt="Características" width="42" height="42"> Características
-
-> Bot en creación pronto se agregaran más cosas 
-
-- [x] Interacción con voz y texto
-- [x] Configuración de grupo
-- [x] antidelete, antilink, antispam, etc
-- [x] Bienvenida personalizada
-- [x] Juegos, tictactoe, mate, etc
-- [x] Chatbot (simsimi)
-- [ ] Chatbot (modoia)
-- [x] Crear sticker de image/video/gif/url
-- [x] SubBot (Jadibot)
-- [ ] Buscador Google
-- [x] Juego RPG
-- [ ] Personalizar imagen del menú
-- [x] Descarga de música y video De YT
-- [ ] Otros
-
---- 
-
-### `🚩 DESARROLLADORES`
-<a href="https://github.com/Dev-Diego/YaemoriBot-MD/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=Dev-Diego/YaemoriBot-MD" /> 
+<a href="https://cafirexos.com">
+  <img width="180px" src="https://cdn.cafirexos.com/logos/logo_cfros_2000x2000.png"/>
 </a>
 
-### `✨️ AGRADECIMIENTOS`
-<a
-href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png" width="120" height="120" alt="Agradecimientos"/></a>
+<details>
+ <summary><b>:paperclip: Enlaces Importantes</b></summary>
 
-### `🍟 CREADOR`
-<a
-href="https://github.com/Dev-Diego"><img src="https://github.com/Dev-Diego.png" width="130" height="130" alt="Diego"/></a>
+- **Sitio Web:** [cafirexos.com](https://cafirexos.com)
+- **Área de Clientes:** [clientes.cafirexos.com](https://clientes.cafirexos.com)
+- **Panel de Control:** [panel.cafirexos.com](https://panel.cafirexos.com)
+- **Estado de los Servicios:** [cafirexos.com/estado](https://cafirexos.com/estado)
+- **Documentación:** [docs.cafirexos.com](https://docs.cafirexos.com)
+- **Canal de WhatsApp:** [¡Únete aquí!](https://cafirexos.com/whatsapp)
+- **Comunidad de WhatsApp:** [¡Únete aquí!](https://cafirexos.com/comunidad)
 
-> Copyright (c) 2024 **[Dev Diego](https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A)**.
+</details>
 
-**`¡GRACIAS POR PREFERIRNOS!` 🍟**
+## Despliegue en BoxMineWorld
+
+<a href="https://boxmineworld.com">
+  <img width="180px" src="https://i.ibb.co/sFygw8p/favicon.png"/>
+</a>
+
+<details>
+ <summary><b>:paperclip: Enlaces Importantes</b></summary>
+
+- **Sitio Web:** [boxmineworld.com](https://boxmineworld.com)
+- **Área de Clientes:** [dash.boxmineworld.com](https://dash.boxmineworld.com)
+- **Panel de Control:** [panel.boxmineworld.com](https://panel.boxmineworld.com)
+- **Comunidad de Discord:** [¡Únete aquí!](https://discord.gg/84qsr4v)
+
+</details>
+
+## Despliegue en Otros
+
+En esta sección encontrarás **botones de despliegue** que te permitirán implementar el proyecto en distintos entornos con un solo clic. Este proceso es **automático** y no requiere configuraciones manuales adicionales. Simplemente selecciona la plataforma deseada y haz clic en el botón correspondiente para **desplegar** tu proyecto de manera rápida y sencilla.
+
+[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=514876515&ref=master&geo=EuropeWest)
+[![Deploy to Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/BrunoSobrino/TheMystic-Bot-MD)
+[![Deploy to Heroku](https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg)](https://www.heroku.com/deploy?template=https://github.com/Dev-Diego/YaemoriBot-MD)
+[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&name=themystic-bot-md&repository=https://github.com/Dev-Diego/YaemoriBot-MD)
+[![Run on Repl.it](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://repl.it/github/Dev-Diego/YaemoriBot-MD)
+[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://dashboard.render.com/blueprint/new?repo=https://github.com/Dev-Diego/YaemoriBot-MD)
+<!-- [![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/Dev-Diego/YaemoriBot-MD) -->
+
+# Soporte y Comunidad
+
+## Comunidades de Ayuda
+
+En este espacio podrás encontrar diversas **comunidades de ayuda** donde podrás **resolver tus dudas**, **compartir experiencias** y **colaborar** con otros usuarios. Únete a la comunidad que mejor se adapte a tus necesidades y forma parte de un **entorno de apoyo mutuo**.
+
+<table>
+
+| RRSS | Tipo | Idioma | Enlace |
+| --- | --- | --- |--- |
+| WhatsApp | Canal | Español | [¡Únete aquí!](https://whatsapp.com/channel/0029Vaein6eInlqIsCXpDs3y) |
+| WhatsApp | Grupo | Español | [¡Únete aquí!](https://chat.whatsapp.com/Daa3Fe4A9JeFpRI2QtBS4s) |
+| WhatsApp | Group | English | [¡Join here!](https://chat.whatsapp.com/HTatrQokqODKx9eem0CKuY) |
+| WhatsApp | Grupo | Português | [¡Junte-se aqui!](https://chat.whatsapp.com/J8tFq87Ia0jEnx20NvCQxN) |
+
+</table>
+
+## Colaboradores
+
+Conoce a los **colaboradores** que han aportado al desarrollo de este proyecto. Su apoyo ha sido clave para **mejorar** y **expandir** las funcionalidades del proyecto.
+
+<a href="https://github.com/Dev-Diego/YaemoriBot-MD/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Dev-Diego/YaemoriBot-MD" /> 
+</a>
+
+## Agradecimientos
+
+<a href="https://github.com/GataNina-Li/GataBot-MD/tree/multi-device">
+  <img src="https://github.com/GataNina-Li.png" width="180px"/>
+</a>
