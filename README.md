@@ -40,7 +40,7 @@
 ## **`Soporte Bot`**
 
 <details>
-<summary><b>:paperclip: Info Aquí</b></summary>
+<summary><b>:paperclip: Numeros support</b></summary>
 
 * theyaemoribot@gmail.com
 * https://wa.me/573218138672
