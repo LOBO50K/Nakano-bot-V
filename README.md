@@ -37,10 +37,10 @@
 
 ---
 
-### **`💫 Soporte Bot`**
+### **`💭 Contáctanos`**
 
 <details>
-<summary><b>:paperclip: Numeros support</b></summary>
+<summary><b>:paperclip: Contáctos</b></summary>
 
 * theyaemoribot@gmail.com
 * https://wa.me/573218138672
