@@ -12,6 +12,11 @@
 
 </details>
 
+<details>
+ <summary><b>:paperclip: Info Aquí</b></summary>
+
+</details>
+
 ---
 
 ### **`☁️ CORINPLUS HOTS`**
