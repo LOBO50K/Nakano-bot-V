@@ -29,7 +29,7 @@ let selectedResults = searchResults.splice(0, 7)
 for (let result of selectedResults) {
 results.push({
 body: proto.Message.InteractiveMessage.Body.fromObject({ text: null }),
-footer: proto.Message.InteractiveMessage.Footer.fromObject({ text: textbot }),
+footer: proto.Message.InteractiveMessage.Footer.fromObject({ text: dev }),
 header: proto.Message.InteractiveMessage.Header.fromObject({
 title: '' + result.title,
 hasMediaAttachment: true,
