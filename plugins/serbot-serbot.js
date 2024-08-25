@@ -25,7 +25,7 @@ let crm4 = 'IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz'
 let drm1 = ''
 let drm2 = ''
 let rtx = '🚩 S E R B O T - S U B B O T 🚩\n\n*Escanea este QR para ser un Sub Bot*\n\n🍟 Pasos para escanear:\n\n`1` : Haga click en los 3 puntos\n\n`2` : Toque dispositivos vinculados\n\n`3` : Escanea este QR\n\n> *Nota:* Este código QR expira en 30 segundos.'
-let rtx2 = '🚩 S E R B O T - S U B B O T 🚩\n\n*Usa este Código para convertirte en un Sub Bot*\n\n🍟 Pasos:\n\n`1` : Haga click en los 3 puntos\n\n`2` : Toque dispositivos vinculados\n\n`3` : Selecciona Vincular con el número de teléfono\n\n`4` : Escriba el Codigo\n\n> *Nota:* Este Código solo funciona en el número que lo solicito.';
+let rtx2 = '🚩 S E R B O T - S U B B O T 🚩\n\n*Usa este Código para convertirte en un Sub Bot*\n\n🍟 Pasos:\n\n`1` : Haga click en los 3 puntos\n\n`2` : Toque dispositivos vinculados\n\n`3` : Selecciona Vincular con el número de teléfono\n\n`4` : Escriba el Codigo\n\n> *Nota:* Este Código solo funciona en el número que lo solicito.'
 
 if (global.conns instanceof Array) console.log()
 else global.conns = []
@@ -78,14 +78,14 @@ msgRetry,
 msgRetryCache,
 version,
 syncFullHistory: true,
-browser: mcode ? ['Ubuntu', 'Chrome', '110.0.5585.95'] : ['Sub-Bot', 'Opera', '5.0'],
+browser: mcode ? ['Ubuntu', 'Chrome', '110.0.5585.95'] : ['CuriosityBot', 'Opera', '5.0'],
 defaultQueryTimeoutMs: undefined,
 getMessage: async (key) => {
 if (store) {
 const msg = store.loadMessage(key.remoteJid, key.id)
 return msg.message && undefined
 } return {
-conversation: 'YaemoriBot-MD',
+conversation: 'CuriosityBot-MD',
 }}}
 
 let conn = makeWASocket(connectionOptions)
@@ -95,9 +95,9 @@ let isInit = true
 async function connectionUpdate(update) {
 const { connection, lastDisconnect, isNewLogin, qr } = update
 if (isNewLogin) conn.isInit = false
-if (qr && !mcode) return parentw.sendFile(m.chat, await qrcode.toDataURL(qr, { scale: 8 }), "qrcode.png", rtx2, m, null, rcanal)
+if (qr && !mcode) return parentw.sendMessage(m.chat, { image: await qrcode.toBuffer(qr, { scale: 8 }), caption: rtx + drmer.toString('utf-8')}, { quoted: m})
 if (qr && mcode) {
-await parent.reply(m.chat, rtx2, m, rcanal);
+parentw.sendMessage(m.chat, {text : rtx2 + drmer.toString('utf-8')}, { quoted: m })
 await sleep(5000)
 let secret = await conn.requestPairingCode((m.sender.split`@`[0]))
 await m.reply(secret)}
@@ -126,16 +126,16 @@ return await conn.reply(m.chat, '🚩 *Conexión cerrada*', m)
 }
 if (reason === DisconnectReason.restartRequired) {
 jddt()
-return console.log('🚩 Conexión reemplazada, se ha abierto otra nueva sesion, por favor, cierra la sesión actual primero')
+return console.log('🎌 Conexión reemplazada, se ha abierto otra nueva sesion, por favor, cierra la sesión actual primero')
 } else if (reason === DisconnectReason.loggedOut) {
 sleep(4000)
-return conn.reply(m.chat, '🚩 *La conexión se ha cerrado, tendras que volver a conectarse usando:*\n!deletesesion (Para borrar los datos y poder volver a solitar el QR o el código de emparejamiento', m)
+return conn.reply(m.chat, '🎌 *La conexión se ha cerrado, tendras que volver a conectarse usando:*\n!deletesesion (Para borrar los datos y poder volver a solitar el QR o el código de emparejamiento', m)
 } else if (reason == 428) {
 await endSesion(false)
-return conn.reply(m.chat, '🚩 *La conexión se ha cerrado de manera inesperada, intentaremos reconectar...*', m)
+return conn.reply(m.chat, '🎌 *La conexión se ha cerrado de manera inesperada, intentaremos reconectar...*', m)
 } else if (reason === DisconnectReason.connectionLost) {
 await jddt()
-return console.log('🚩 Conexión perdida con el servidor, reconectando')
+return console.log('🎌 Conexión perdida con el servidor, reconectando')
 } else if (reason === DisconnectReason.badSession) {
 return await conn.reply(m.chat, '🚩 *La conexión se ha cerrado, deberá de conectarse manualmente*', m)
 } else if (reason === DisconnectReason.timedOut) {
@@ -148,7 +148,7 @@ if (global.db.data == null) loadDatabase()
 if (connection == `open`) {
 conn.isInit = true
 global.conns.push(conn)
-await parentw.sendMessage(m.chat, {text : args[0] ? `✅ *Conectado*` : `🚩 *Conectado*\n\nUtilice su ID para volver a conectarse`}, { quoted: m })
+await parentw.sendMessage(m.chat, {text : args[0] ? `✅ *Conectado*` : `🎌 *Conectado*\n\nUtilice su ID para volver a conectarse`}, { quoted: m })
 await parentw.sendMessage(m.chat, {text : `🎌 *Esta conectado, espere un momento*`}, { quoted: m })
 await sleep(5000)
 if (!args[0]) parentw.sendMessage(m.chat, {text : usedPrefix + command + ' ' + Buffer.from(fs.readFileSync('./jadibts/' + id + '/creds.json'), 'utf-8').toString('base64')}, { quoted: m })    
@@ -238,9 +238,10 @@ jddt()
 })
 
 } 
-handler.help = [`serbot`, `serbot --code`]
-handler.tags = [`serbot`]
-handler.command = ['jadibot', 'serbot']
+handler.help = [`jadibot`, `serbot`, `getcode`, `rentbot`]
+handler.tags = [`jadibot`]
+handler.command = /^(jadibot|serbot|rentbot)/i
+
 handler.private = false
 
 export default handler
