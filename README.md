@@ -16,7 +16,11 @@
 </table>
 
 ### **`👑 Creador de la bot`**
+<a
+href="https://github.com/Dev-Diego"><img src="https://github.com/Dev-Diego.png" width="130" height="130" alt="OfcDiego"/></a>
 
 ### **`🌹 Creditos de la base`**
+<a
+href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png" width="130" height="130" alt="GataDios"/></a>
 
 #### **`🌴 Colaboradores de la bot`**
