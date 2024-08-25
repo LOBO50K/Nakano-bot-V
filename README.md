@@ -37,7 +37,7 @@
 
 ---
 
-## **`💫 Soporte Bot`**
+### **`💫 Soporte Bot`**
 
 <details>
 <summary><b>:paperclip: Numeros support</b></summary>
