@@ -52,7 +52,7 @@ let handler = async (_0x10bd40, {
         'text': "Imagen -" + (" " + _0x2913ed++)
       }),
       'footer': proto.Message.InteractiveMessage.Footer.fromObject({
-        'text': textbot
+        'text': dev
       }),
       'header': proto.Message.InteractiveMessage.Header.fromObject({
         'title': '',
