@@ -69,18 +69,18 @@
 
 ---
 
-### **`💣 Instalación por cloudshell`**
+#### **`💣 Instalación por cloudshell`**
 
 <details>
  <summary><b> 🦎 Comandos</b></summary>
 
-bash```
+```
 > git clone https://github.com/Dev-Diego/YaemoriBot-MD
-```
-
 ```bash
-> cd YaemoriBot-MD
+
 ```
+> cd YaemoriBot-MD
+```bash
 
 </details>
 
