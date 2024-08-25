@@ -19,6 +19,22 @@
 
 </details>
 
+<details>
+ <summary><b>:paperclip: Info Aquí</b></summary>
+
+* 📢 USER DE TERMUX
+🌱 Para los usuarios que intentan instalar el bot vía la aplicación termux, tenemos esta noticia.
+
+🌹 El staff de YaemoriBot da aviso a los usuarios de Termux que ya no es posible instalar el Bot debido a las actualizaciones y los últimos commits realizados por el equipo del bot
+
+🌴 como tal más, esto se ah removido del repositorio oficial como tal, aquel usuario que intente instalar, deberá tener en cuenta que ya no se brindará soporte ni ya es instalable.
+
+🌱 Gracias por visitar el repositorio YaemoriBot
+
+
+
+</details>
+
 ---
 
 ### **`☁️ CORINPLUS HOTS`**
