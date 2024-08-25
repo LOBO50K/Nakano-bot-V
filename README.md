@@ -74,13 +74,13 @@
 <details>
  <summary><b> 🦎 Comandos</b></summary>
 
-```
+```bash
 > git clone https://github.com/Dev-Diego/YaemoriBot-MD
-```bash
-
 ```
-> cd YaemoriBot-MD
+
 ```bash
+> cd YaemoriBot-MD
+```
 
 </details>
 
