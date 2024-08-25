@@ -1,4 +1,4 @@
-> 🚩 Versión Actual: 2.0.5
+> 🚩 Versión Actual: 2.0.6
 
 ## 🍟 **`Ai Yaemori - MD`**
 
