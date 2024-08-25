@@ -4,8 +4,6 @@
 
 ---
 
- - [Colaboradores](#-##**`🔗-Enlaces-útiles`**)
-
 ### **`❕️ Información importante`**
 
 <details>
