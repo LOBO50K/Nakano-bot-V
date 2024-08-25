@@ -183,28 +183,68 @@ conn = makeWASocket(connectionOptions, { chats: oldChats })
 isInit = true
 }
 if (!isInit) {
-conn.ev.off("messages.upsert", conn.handler)
-conn.ev.off("connection.update", conn.connectionUpdate)
+conn.ev.off('messages.upsert', conn.handler)
+conn.ev.off('group-participants.update', conn.participantsUpdate)
+conn.ev.off('groups.update', conn.groupsUpdate)
+conn.ev.off('message.delete', conn.onDelete)
+conn.ev.off('call', conn.onCall)
+conn.ev.off('connection.update', conn.connectionUpdate)
 conn.ev.off('creds.update', conn.credsUpdate)
-} 
+}
+conn.welcome = '*• Hola, Gracias por unirte!!*\n*━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user\n*⚠️  Recuerda leer la descripción*\n@desc'
+conn.bye = '*• Gracias por haber sido parte del grupo*\n*━━━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user'
+conn.spromote = '*@user* ¡Se suma al grupo de admins¡'
+conn.sdemote = '*@user* ¡Abandona el grupo!'
+conn.sDesc = '¡Se ha modificado la descripción!\n\n*Nueva descripción:* @desc'
+conn.sSubject = '¡Se ha modificado el título del grupo!'
+conn.sIcon = '¡Se ha cambiado la foto del grupo!'
+conn.sRevoke = '¡Se ha actualizado el enlace del grupo!*\n*Nuevo enlace:* @revoke'
+
 conn.handler = handler.handler.bind(conn)
+conn.participantsUpdate = handler.participantsUpdate.bind(conn)
+conn.groupsUpdate = handler.groupsUpdate.bind(conn)
+conn.onDelete = handler.deleteUpdate.bind(conn)
+conn.onCall = handler.callUpdate.bind(conn)
 conn.connectionUpdate = connectionUpdate.bind(conn)
 conn.credsUpdate = saveCreds.bind(conn, true)
-conn.ev.on("messages.upsert", conn.handler)
-conn.ev.on("connection.update", conn.connectionUpdate)
-conn.ev.on("creds.update", conn.credsUpdate)
+
+const currentDateTime = new Date()
+const messageDateTime = new Date(conn.ev * 1000)
+if (currentDateTime.getTime() - messageDateTime.getTime() <= 300000) {
+console.log('Leyendo mensaje entrante:', conn.ev)
+Object.keys(conn.chats).forEach(jid => {
+conn.chats[jid].isBanned = false
+})
+} else {
+console.log(conn.chats, `🚩 Omitiendo mensajes en espera.`, conn.ev)
+Object.keys(conn.chats).forEach(jid => {
+conn.chats[jid].isBanned = true
+})
+}
+
+conn.ev.on(`messages.upsert`, conn.handler)
+conn.ev.on(`group-participants.update`, conn.participantsUpdate)
+conn.ev.on(`groups.update`, conn.groupsUpdate)
+conn.ev.on(`message.delete`, conn.onDelete)
+conn.ev.on(`call`, conn.onCall)
+conn.ev.on(`connection.update`, conn.connectionUpdate)
+conn.ev.on(`creds.update`, conn.credsUpdate)
 isInit = false
 return true
 }
 creloadHandler(false)
 }
-serbot()
-}
-handler.help = ["serbot"]
-handler.tags = ["serbot"]
-handler.command = ["serbot", "jadibot", "qr", "botclone"]
-// handler.register = true
+jddt()
+})
+
+} 
+handler.help = [`serbot`, `serbot --code`]
+handler.tags = [`serbot`]
+handler.command = ['jadibot', 'serbot']
+handler.private = false
+
 export default handler
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 function sleep(ms) {
-return new Promise(resolve => setTimeout(resolve, ms))
-}
+return new Promise(resolve => setTimeout(resolve, ms));}
