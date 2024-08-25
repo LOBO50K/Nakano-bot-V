@@ -5,9 +5,9 @@
 
 ---
 
-| TEMA | DESCRIPCIÓN | ATAJO |
+| APP | TIPO | ENLACE |
 |------|-------------|-------|
-| ☁️ **CORINPLUS HOST** | *Activar en CorinPlus Host* |[ver](https://github.com/Dev-Diego/YaemoriBot-MD/edit/master/README.md#%EF%B8%8F-corinplus-hots) |
+| 🌱 **Youtube** | *Youtube* |[Click aquí](https://www.com/youtube/@OfcDiego) |
 
 ### **`❕️ Información importante`**
 
