@@ -5,6 +5,10 @@
 
 ---
 
+| TEMA | DESCRIPCIÓN | ATAJO |
+|------|-------------|-------|
+| ☁️ **CORINPLUS HOST** | *Activar en CorinPlus Host* |[ver](https://github.com/Dev-Diego/YaemoriBot-MD/edit/master/README.md#%EF%B8%8F-corinplus-hots) |
+
 ### **`❕️ Información importante`**
 
 <details>
