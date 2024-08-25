@@ -10,7 +10,7 @@
 
 > Si Deseas Probar El Bot Antes De Instalarlo, Click Abajo. 🍟
 
-[![Click Aquí](https://img.shields.io/badge/Grupo-Yaemori-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/Em1J2VaglHc1fe26YtBDCS)
+[![Click Aquí](https://img.shields.io/badge/Grupo-Yaemori-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/BeukLUNoHtNJDKmMDTfQnd)
 
 🍟 **`INSTALACION MANUAL POR TERMUX`**
 
