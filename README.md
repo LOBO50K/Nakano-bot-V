@@ -43,10 +43,10 @@
 <summary><b>:paperclip: Info Aquí</b></summary>
 
 * theyaemoribot@gmail.com
-* Wa.me/573218138672
-* Wa.me/5351524614
-* Wa.me/573205853665
-* Wa.me/573106909511
+* https://wa.me/573218138672
+* https://wa.me/5351524614
+* https://wa.me/573205853665
+* https://wa.me/573106909511
 
 </details>
 
