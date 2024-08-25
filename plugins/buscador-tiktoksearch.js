@@ -34,7 +34,8 @@ carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({ c
 await conn.relayMessage(message.chat, responseMessage.message, { messageId: responseMessage.key.id });
 catch {
 await m.react(error)
-await conn.sendMessage(message.chat, { text: error.toString() }, { quoted: message });
+await conn.reply(m.chat, '🚩 *Ocurrió un error', m, fake);
+//await conn.sendMessage(message.chat, { text: error.toString() }, { quoted: message });
 };
 };
 handler.help = ['tiktoksearch <txt>'];
