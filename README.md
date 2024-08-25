@@ -1,5 +1,5 @@
 <h1 align="center">Yaemori Bot - MD 🌱</h1>
- <p align="center">🌴 Un bot funcional para WhatsApp, el bot funciona para crear codigos o buscar información de algo que quieras buscar!.</p>
+ <p align="center">🌴 WhatsApp Bot Node-Js.</p>
 </p>
 
 ---
