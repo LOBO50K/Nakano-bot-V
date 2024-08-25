@@ -40,7 +40,7 @@
 ### **`💭 Contáctanos`**
 
 <details>
-<summary><b>: Contáctos</b></summary>
+<summary><b> 🌹 Contáctos</b></summary>
 
 * theyaemoribot@gmail.com
 * https://wa.me/573218138672
