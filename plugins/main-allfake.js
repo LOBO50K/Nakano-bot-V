@@ -96,12 +96,12 @@ global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo
 }}, { quoted: m }
 
 global.icono = [ 
-'https://qu.ax/dXNm.jpg',
-'https://qu.ax/rFzc.jpg',
-'https://qu.ax/boUA.jpg',
-'https://qu.ax/rEeU.jpg',
-'https://qu.ax/yDiL.jpg',
-'https://qu.ax/JoTF.jpg'
+'https://telegra.ph/file/8474acd4e14eaf74b6178.jpg',
+'https://telegra.ph/file/e5f71b0eb703f5bfa310a.jpg',
+'https://telegra.ph/file/87fbc327a8ba125fd6889.jpg',
+'https://telegra.ph/file/f46f4db056d8219f8bcbe.jpg',
+'https://telegra.ph/file/f9ac1339753f712d3c3f2.jpg',
+'https://telegra.ph/file/7a203693aabead69e4972.jpg'
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363283921434745@newsletter", serverMessageId: 100, newsletterName: '『✯ 𝚌𝚊𝚗𝚊𝚕 𝚘𝚏𝚒𝚌𝚒𝚊𝚕 𝚗𝚊𝚔𝚊𝚗𝚘 𝚋𝚘𝚝 ✯』', }, externalAdReply: { showAdAttribution: true, title: packname, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
