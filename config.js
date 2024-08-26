@@ -10,12 +10,12 @@ import moment from 'moment-timezone'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-   ['573218138672', 'Owner 🍭', true],
-   ['573012482597', 'Dev Diego 👑', true],
-   ['50558124470'],
-   ['573218138672'],
-   ['5351524614'],
-   ['573027866596']
+   ['5493405480284', '𝕺𝖜𝖓𝖊𝖗 💞', true],
+   ['5493405480284', '𝕷𝖔𝖇𝖔-𝖔𝖋𝖈 👑', true],
+   ['5493405480284'],
+   ['5493405480284'],
+   ['5493405480284'],
+   ['5493405480284']
 ]
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -27,13 +27,13 @@ global.isBaileysFail = false
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⪛✰ 𝐀𝐢 𝐘𝐚𝐞𝐦𝐨𝐫𝐢 - 𝐌𝐃 ✰⪜'
-global.botname = '𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶 - 𝗠𝗗 🍭'
-global.wm = '𝗬𝗮𝗲𝗺𝗼𝗿𝗶 𝗕𝗼𝘁 - 𝗠𝗗 ⭐️'
-global.author = '𝖮𝖿𝖼.𝖣𝗂𝖾𝗀𝗈 👑'
-global.dev = '© Powered By Sunlight Team ⚡︎'
+global.packname = '༒✰𝕹𝖆𝖐𝖆𝖓𝖔-𝕭𝖔𝖙✰༒'
+global.botname = '𝕹𝖆𝖐𝖆𝖓𝖔-𝕭𝖔𝖙 ♥︎'
+global.wm = '𝕹𝖆𝖐𝖆𝖓𝖔 𝕭𝖔𝖙 - 𝕸𝕯 ⭐️'
+global.author = '𝙾𝙵𝙲 - 𝙻𝙾𝙱𝙾 👑'
+global.dev = '© Powered By Nakano-Bot'
 6
-global.textbot = '𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶 : 𝗢𝗳𝗰𝗗𝗶𝗲𝗴𝗼 🚩'
+global.textbot = '𝕹𝖆𝖐𝖆𝖓𝖔-𝕭𝖔𝖙 : 𝕺𝕱𝕮 𝕷𝕺𝕭𝕺'
 global.vs = '2.0.6'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -48,12 +48,12 @@ global.miniurl = fs.readFileSync('./storage/img/miniurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.grupo = 'https://chat.whatsapp.com/BeukLUNoHtNJDKmMDTfQnd' //YaemoriBot
-global.grupo2 = 'https://chat.whatsapp.com/EVc2XJuZwjnKKdWUsRYmms' //YaemoriBot2
-global.grupo3 = 'https://chat.whatsapp.com/Fy74b6fgE9SJJpHVi6CKJY' //team oficial
-global.grupo4 = 'https://chat.whatsapp.com/Ksd32KH9zFoDmO1PJt44M7' //GataBot & YaemoriBot
-global.channel = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A'
-global.channel2 = 'https://whatsapp.com/channel/0029Vam7yUg77qVaz3sIAp0z'
+global.grupo = 'https://chat.whatsapp.com/DToXV6TAU8xFH1vBFT9lrq' //YaemoriBot
+global.grupo2 = 'https://chat.whatsapp.com/DToXV6TAU8xFH1vBFT9lrq' //YaemoriBot2
+global.grupo3 = 'https://chat.whatsapp.com/DToXV6TAU8xFH1vBFT9lrq' //team oficial
+global.grupo4 = 'https://chat.whatsapp.com/DToXV6TAU8xFH1vBFT9lrq' //GataBot & YaemoriBot
+global.channel = 'https://whatsapp.com/channel/0029VaXDEwlC1FuFm82otA0K'
+global.channel2 = 'https://whatsapp.com/channel/0029VaXDEwlC1FuFm82otA0K'
 global.md = 'https://github.com/Dev-Diego/YaemoriBot-MD' 
 global.yt = 'https://www.youtube.com/@OfcDiego'
 global.tiktok = 'https://tiktok.com/@theyaemoribot'
@@ -61,7 +61,7 @@ global.correo = 'theyaemoribot@gmail.com'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '🍭 𝗦𝘂𝗽𝗲𝗿 𝗔𝗶 𝗬𝗮𝗲𝗺𝗼𝗿𝗶 🍟', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '💞 𝙽𝙰𝙺𝙰𝙽𝙾-𝙱𝙾𝚃 𝙼𝙳💖', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
