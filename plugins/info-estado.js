@@ -14,14 +14,14 @@ let muptime = clockString(_muptime)
 const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
 const groupsIn = chats.filter(([id]) => id.endsWith('@g.us')) 
 const used = process.memoryUsage()
-let yaemori = `╭─⬣「 *Estado De Ai Yaemori* 」⬣\n`
-yaemori += `│ 🚩 *Creador ∙* DevDiego\n`
-yaemori += `│ 📚 *Grupos Unidos ∙* ${groupsIn.length}\n`
-yaemori += `│ 👤 *Chats Privados ∙* ${chats.length - groupsIn.length}\n`
-yaemori += `│ 💬 *Total De Chats ∙* ${chats.length}\n`
-yaemori += `│ 🍟 *Usuarios Registrados ∙* ${totalreg}\n`
-yaemori += `│ 🍭 *Grupos Registrados ∙* ${totalchats}\n`
-yaemori += `│ 🕜 *Actividad ∙* ${muptime}\n`
+let yaemori = `╭─⬣「 *𝑬𝒔𝒕𝒂𝒅𝒐 𝒅𝒆 𝑵𝒂𝒌𝒂𝒏𝒐 𝑩𝒐𝒕* 」⬣\n`
+yaemori += `│ 🜲 *𝑪𝒓𝒆𝒂𝒅𝒐𝒓 ∙* 𝑳𝒐𝒃𝒐\n`
+yaemori += `│ 🜅 *𝑮𝒓𝒖𝒑𝒐𝒔 𝒖𝒏𝒊𝒅𝒐𝒔 ∙* ${groupsIn.length}\n`
+yaemori += `│ 🜋 *𝑪𝒉𝒂𝒕𝒔 𝒑𝒓𝒊𝒗𝒂𝒅𝒐 ∙* ${chats.length - groupsIn.length}\n`
+yaemori += `│ 🜊 *𝑻𝒐𝒕𝒂𝒍 𝒅𝒆 𝒄𝒉𝒂𝒕𝒔 ∙* ${chats.length}\n`
+yaemori += `│ 🝠 *𝑼𝒔𝒖𝒂𝒓𝒊𝒐𝒔 𝒓𝒆𝒈𝒊𝒔𝒕𝒓𝒂𝒅𝒐𝒔 ∙* ${totalreg}\n`
+yaemori += `│ 🜾 *𝑮𝒓𝒖𝒑𝒐𝒔 𝒓𝒆𝒈𝒊𝒔𝒕𝒓𝒂𝒅𝒐𝒔 ∙* ${totalchats}\n`
+yaemori += `│ 🜚 *𝑨𝒄𝒕𝒊𝒗𝒊𝒅𝒂𝒅 ∙* ${muptime}\n`
 yaemori += `╰─⬣`
 await conn.sendFile(m.chat, pp, 'yaemori.jpg', yaemori, fkontak, null, rcanal)
 }
