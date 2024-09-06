@@ -53,10 +53,10 @@ global.grupo3 = 'https://chat.whatsapp.com/DToXV6TAU8xFH1vBFT9lrq' //team oficia
 global.grupo4 = 'https://chat.whatsapp.com/DToXV6TAU8xFH1vBFT9lrq' //GataBot & YaemoriBot
 global.channel = 'https://whatsapp.com/channel/0029VaXDEwlC1FuFm82otA0K'
 global.channel2 = 'https://whatsapp.com/channel/0029VaXDEwlC1FuFm82otA0K'
-global.md = 'https://github.com/Dev-Diego/YaemoriBot-MD' 
+global.md = 'https://github.com/LOBO50K/Nakano-bot-V.git' 
 global.yt = 'https://www.youtube.com/@OfcDiego'
 global.tiktok = 'https://tiktok.com/@theyaemoribot'
-global.correo = 'theyaemoribot@gmail.com'
+global.correo = 'playperfect344@gmail.com
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
