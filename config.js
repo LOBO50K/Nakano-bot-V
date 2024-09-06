@@ -56,7 +56,7 @@ global.channel2 = 'https://whatsapp.com/channel/0029VaXDEwlC1FuFm82otA0K'
 global.md = 'https://github.com/LOBO50K/Nakano-bot-V.git' 
 global.yt = 'https://www.youtube.com/@OfcDiego'
 global.tiktok = 'https://tiktok.com/@theyaemoribot'
-global.correo = 'playperfect344@gmail.com
+global.correo = 'playperfect344@gmail.com'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
