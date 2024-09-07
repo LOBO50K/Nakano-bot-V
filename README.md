@@ -1,6 +1,10 @@
-<h1 align="center">Yaemori Bot - MD 🌱</h1>
- <p align="center">🚩 WhatsApp Bot Node-Js.</p>
-</p>
+> 🚩 Versión Actual: 2.0.6
+
+## 💞 **`𝙽𝙰𝙺𝙰𝙽𝙾 - 𝙱𝙾𝚃 - 𝙾𝙵𝙲`**
+## 💞 **`𝙴𝙻 𝙱𝙾𝚃 𝙼𝙰𝚂 𝙻𝙸𝙽𝙳𝙾 𝙳𝙴 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿`**
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=FF0000&lines=Bienvenido+al+Repositorio;Nakano+-+Bot+-+OFC;Gracias+por+preferirnos;Creado+por+Lobo;💖+Sensei!!!;💞)](https://git.io/typing-svg)
+![Nakano](https://telegra.ph/file/ba3bb9737d903a0994570.jpg)
+
 
 ---
 
