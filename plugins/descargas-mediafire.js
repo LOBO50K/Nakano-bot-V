@@ -17,7 +17,7 @@ await conn.reply(m.chat, `Error, pruebe con ${usedPrefix + command}2`)
 console.log(e)
 handler.limit = false      
 }}
-handler.help = ['mediafire'].map(v => v + ' <url>')
+handler.help = ['mediafire','md','mfire].map(v => v + ' <url>')
 handler.tags = ['descargas']
 handler.command = /^(mediafire|mdfire|mf)$/i
 handler.register = true
