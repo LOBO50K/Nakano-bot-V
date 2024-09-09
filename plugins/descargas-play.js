@@ -22,7 +22,7 @@ let txt = `*乂  Y O U T U B E  -  P L A Y  乂*\n\n`
     txt += `🕜 *Duración:*\n${secondString(yt_play[0].duration.seconds)}\n\n`
     txt += `📎 *Url:*\n${'https://youtu.be/' + yt_play[0].videoId}\n\n`    
     txt += `✨️ *Nota:* Para descargar etiqueta este mensaje con su respuesta 
-🌸Sʜɪᴋɪᴍᴏʀɪ-BOT🌸*1* o *2*.\n\n`
+💞NAKANO-BOT💞 *1* o *2*.\n\n`
     txt += `*1:* Video\n*2:* Audio`
 
 await conn.sendMessage(m.chat, {
