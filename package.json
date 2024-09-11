@@ -1,5 +1,5 @@
 {
-  "name": "YaemoriBot-MD",
+  "name": "THE-QUINTUPLETS-",
   "version": "2.0.6",
   "description": "Simple WhatsApp Bot Multi Device",
   "main": "index.js",
@@ -16,13 +16,13 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/Dev-Diego/YaemoriBot-MD",
+  "homepage": "https://github.com/LOBO50K/THE-QUINTUPLETS-.git",
   "author": {
     "name": "Dev-Diego"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dev-Diego/YaemoriBot-MD.git"
+    "url": "git+https://github.com/LOBO50K/THE-QUINTUPLETS-.git"
   },
   "bugs": {
     "url": "https://github.com/Dev-Diego/YaemoriBot-MD/issues"
